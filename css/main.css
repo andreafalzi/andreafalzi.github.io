@@ -22,8 +22,14 @@
 /*========TAGS========*/
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -86,7 +92,7 @@ section {
   padding: 7rem 18px;
   background-color: var(--pri-color);
   color: var(--sec-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
 }
 
@@ -121,7 +127,7 @@ section {
 /* !!!SECTION WORKS!!! */
 .works {
   background-color: var(--qua-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   text-align: center;
 }
@@ -159,7 +165,7 @@ section {
   background-color: var(--pri-color);
   color: var(--sec-color);
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .about .watermark {
@@ -189,7 +195,7 @@ section {
 /* !!!SECTION CONTACT!!! */
 .contact {
   background-color: var(--qua-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
 }
 
@@ -214,16 +220,19 @@ section {
   width: 100%;
 }
 
-.contact .contact-form input, .contact .contact-form textarea, .contact .contact-form button {
+.contact .contact-form input,
+.contact .contact-form textarea,
+.contact .contact-form button {
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--pri-color);
   color: var(--sec-color);
   border: none;
   margin-bottom: 3rem;
 }
 
-.contact .contact-form input, .contact .contact-form textarea {
+.contact .contact-form input,
+.contact .contact-form textarea {
   padding: 2rem;
 }
 
@@ -243,7 +252,7 @@ footer {
   text-align: center;
   background-color: var(--pri-color);
   color: var(--sec-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 footer a {
