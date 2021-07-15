@@ -1,0 +1,268 @@
+/*========IMPORT========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+
+/*========ROOT========*/
+:root {
+  --black-color: #333;
+  --pri-color: #5e5e5e;
+  --sec-color: #f2f2f2;
+  --ter-color: #00ff99;
+  --qua-color: #d2d2d2;
+  --pen-color: rgba(46, 46, 46, 0.02);
+  --sex-color: rgba(242, 242, 242, 0.02);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*========TAGS========*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 7rem 18px;
+}
+/*========REUSABLE========*/
+
+/*========CONTENT========*/
+
+/* !!!NAVBAR!!! */
+.navbar {
+  padding: 40px 18px;
+  display: flex;
+  align-items: center;
+  background-color: var(--pri-color);
+
+  .logo img {
+    width: 40%;
+  }
+
+  nav {
+    width: 60%;
+    margin-left: auto;
+    display: grid;
+
+    ul {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 20px;
+      place-items: end;
+
+      li a {
+        font-size: 1.6rem;
+        color: var(--sec-color);
+        font-family: "Poppins", sans-serif;
+
+        span {
+          color: var(--ter-color);
+        }
+      }
+    }
+  }
+}
+
+/* !!!HERO!!! */
+.hero {
+  padding: 7rem 18px;
+  background-color: var(--pri-color);
+  color: var(--sec-color);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+
+  .hero-title {
+    text-align: center;
+
+    h1 {
+      font-size: 3.7rem;
+      line-height: 87px;
+      font-weight: 700;
+      margin-bottom: 6rem;
+    }
+
+    i{
+      color: var(--ter-color);
+    }
+
+    p{
+      font-size: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    svg {
+      width: 45px;
+    }
+  }
+
+  .hero-social {
+    display: none;
+  }
+}
+
+/* !!!SECTION WORKS!!! */
+.works {
+  background-color: var(--qua-color);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  text-align: center;
+
+  .watermark {
+    font-weight: 700;
+    font-size: 15rem;
+    position: absolute;
+    top: -5%;
+    left: -20%;
+    color: var(--pen-color);
+  }
+
+  h3.title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--black-color);
+  }
+
+  .works-cards-container {
+    margin: 7rem 0 2rem 0;
+
+    .card-container {
+      width: 100%;
+      margin-bottom: 5rem;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+/* !!!SECTION ABOUT!!! */
+.about{
+  background-color: var(--pri-color);
+  color: var(--sec-color);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+
+  .watermark {
+    font-weight: 700;
+    font-size: 15rem;
+    position: absolute;
+    top: -25%;
+    left: -20%;
+    color: var(--sex-color);
+  }
+
+  h3.title {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-top: 7rem;
+  }
+
+  .right {
+    display: none;
+  }
+}
+/* !!!SECTION CONTACT!!! */
+.contact {
+  background-color: var(--qua-color);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+
+  .watermark {
+    font-weight: 700;
+    font-size: 15rem;
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    color: var(--pen-color);
+  }
+
+  h3.title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--black-color);
+    margin-bottom: 7rem;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+
+    input, textarea, button {
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--pri-color);
+      color: var(--sec-color);
+      border: none;
+      margin-bottom: 3rem;
+    }
+
+    input, textarea {
+      padding: 2rem;
+    }
+
+    button {
+      background-color: var(--ter-color);
+      color: var(--black-color);
+      font-size: 2rem;
+      font-weight: 700;
+      height: 5rem;
+      border-radius: 4rem;
+      cursor: pointer;
+    }
+  }
+
+}
+/* !!!FOOTER!!! */
+footer {
+  padding: 7rem 0;
+  text-align: center;
+  background-color: var(--pri-color);
+  color: var(--sec-color);
+  font-family: 'Poppins', sans-serif;
+
+  a{
+    color: var(--sec-color);
+    font-size: 2rem;
+  }
+
+  .footer-links ul{
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    row-gap: 15px;
+  }
+
+  .copy {
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+  }
+}
+
+/*========MEDIA QUERY========*/
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 560px) {
+}
+@media screen and (max-width: 400px) {
+}
