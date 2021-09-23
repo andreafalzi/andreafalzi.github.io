@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+$poppins: "Poppins", sans-serif;
+
+$colors: (
+  primary: #5e5e5e,
+  secondary: #d2d2d2,
+  tertiary: #00ff99,
+  black: #333,
+  white: #f2f2f2,
+  darkOpacity: rgba(46, 46, 46, 0.02),
+  lightOpacity: rgba(242, 242, 242, 0.02),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$font-sizes: (
+  xxl: 4rem,
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.5rem,
+  xs: 1rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}

@@ -1,49 +1,3 @@
-/*========IMPORT========*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
-/* font-family: 'Poppins', sans-serif; */
-
-/*========ROOT========*/
-:root {
-  --black-color: #333;
-  --pri-color: #5e5e5e;
-  --sec-color: #f2f2f2;
-  --ter-color: #00ff99;
-  --qua-color: #d2d2d2;
-  --pen-color: rgba(46, 46, 46, 0.02);
-  --sex-color: rgba(242, 242, 242, 0.02);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-/*========TAGS========*/
-html {
-  font-size: 62.5%;
-}
-
-html, body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-section {
-  padding: 7rem 18px;
-}
-/*========REUSABLE========*/
-
-/*========CONTENT========*/
-
 /* !!!NAVBAR!!! */
 .navbar {
   padding: 40px 18px;
@@ -53,7 +7,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--pri-color);
+  background-color: color(primary);
 
   .logo img {
     width: 40%;
@@ -72,11 +26,11 @@ section {
 
       li a {
         font-size: 1.6rem;
-        color: var(--sec-color);
+        color: color(white);
         font-family: "Poppins", sans-serif;
 
         span {
-          color: var(--ter-color);
+          color: color(tertiary);
         }
       }
     }
@@ -86,8 +40,8 @@ section {
 /* !!!HERO!!! */
 .hero {
   padding: 7rem 18px;
-  background-color: var(--pri-color);
-  color: var(--sec-color);
+  background-color: color(primary);
+  color: color(white);
   font-family: "Poppins", sans-serif;
   height: 100vh;
 
@@ -102,7 +56,7 @@ section {
     }
 
     i {
-      color: var(--ter-color);
+      color: color(tertiary);
     }
 
     p {
@@ -122,7 +76,7 @@ section {
 
 /* !!!SECTION WORKS!!! */
 .works {
-  background-color: var(--qua-color);
+  background-color: color(secondary);
   font-family: "Poppins", sans-serif;
   position: relative;
   text-align: center;
@@ -133,13 +87,13 @@ section {
     position: absolute;
     top: -5%;
     left: -20%;
-    color: var(--pen-color);
+    color: color(darkOpacity);
   }
 
   h3.title {
     font-size: 5rem;
     font-weight: 700;
-    color: var(--black-color);
+    color: color(black);
   }
 
   .works-cards-container {
@@ -158,8 +112,8 @@ section {
 
 /* !!!SECTION ABOUT!!! */
 .about {
-  background-color: var(--pri-color);
-  color: var(--sec-color);
+  background-color: color(primary);
+  color: color(white);
   position: relative;
   font-family: "Poppins", sans-serif;
 
@@ -169,7 +123,7 @@ section {
     position: absolute;
     top: -25%;
     left: -20%;
-    color: var(--sex-color);
+    color: color(lightOpacity);
   }
 
   h3.title {
@@ -189,7 +143,7 @@ section {
 }
 /* !!!SECTION CONTACT!!! */
 .contact {
-  background-color: var(--qua-color);
+  background-color: color(secondary);
   font-family: "Poppins", sans-serif;
   position: relative;
 
@@ -199,13 +153,13 @@ section {
     position: absolute;
     top: -10%;
     left: -20%;
-    color: var(--pen-color);
+    color: color(darkOpacity);
   }
 
   h3.title {
     font-size: 5rem;
     font-weight: 700;
-    color: var(--black-color);
+    color: color(black);
     margin-bottom: 7rem;
     text-align: center;
   }
@@ -218,8 +172,8 @@ section {
     button {
       width: 100%;
       font-family: "Poppins", sans-serif;
-      background-color: var(--pri-color);
-      color: var(--sec-color);
+      background-color: color(primary);
+      color: color(white);
       border: none;
       margin-bottom: 3rem;
     }
@@ -230,8 +184,8 @@ section {
     }
 
     button {
-      background-color: var(--ter-color);
-      color: var(--black-color);
+      background-color: color(tertiary);
+      color: color(black);
       font-size: 2rem;
       font-weight: 700;
       height: 5rem;
@@ -244,12 +198,12 @@ section {
 footer {
   padding: 7rem 0;
   text-align: center;
-  background-color: var(--pri-color);
-  color: var(--sec-color);
+  background-color: color(primary);
+  color: color(white);
   font-family: "Poppins", sans-serif;
 
   a {
-    color: var(--sec-color);
+    color: color(white);
     font-size: 2rem;
   }
 
@@ -265,14 +219,4 @@ footer {
     font-size: 1.4rem;
     margin-top: 3.5rem;
   }
-}
-
-/*========MEDIA QUERY========*/
-@media screen and (max-width: 900px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 560px) {
-}
-@media screen and (max-width: 400px) {
 }
