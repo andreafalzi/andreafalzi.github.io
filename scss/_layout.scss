@@ -1,36 +1,67 @@
 /* !!!NAVBAR!!! */
-.navbar {
-  padding: 40px 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+nav {
   background-color: color(primary);
 
-  .logo img {
-    width: 40%;
-  }
+  .navbar {
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1em 2em;
 
-  nav {
-    width: 60%;
-    margin-left: auto;
-    display: grid;
+    &-logo img {
+      width: 40%;
+    }
 
-    ul {
-      display: grid;
-      grid-auto-flow: column;
-      grid-column-gap: 20px;
-      place-items: end;
+    &-list {
+      display: none;
 
       li a {
-        font-size: 1.6rem;
+        font-size: size(sm);
         color: color(white);
-        font-family: "Poppins", sans-serif;
+        font-family: font(paragraph);
 
         span {
           color: color(tertiary);
+        }
+      }
+    }
+
+    &-responsive {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      background-color: color(blackOpa80);
+      z-index: 20;
+      padding: 1em 2em;
+
+      li + li {
+        margin-left: auto;
+      }
+
+      li {
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: size(sm);
+          color: color(white);
+          font-family: font(paragraph);
+
+          i {
+            font-size: size(md);
+          }
+
+          span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: color(tertiary);
+          }
         }
       }
     }
@@ -38,46 +69,52 @@
 }
 
 /* !!!HERO!!! */
-.hero {
-  padding: 7rem 18px;
+header {
   background-color: color(primary);
-  color: color(white);
-  font-family: font(title);
-  height: 100vh;
 
-  .hero-title {
-    text-align: center;
+  .hero {
+    padding: 3em 2em;
+    color: color(white);
+    font-family: font(title);
+    height: 90vh;
 
-    h1 {
-      font-size: 3.7rem;
-      line-height: 87px;
-      font-weight: 700;
-      margin-bottom: 6rem;
+    .hero-title {
+      text-align: center;
+
+      h1 {
+        font-size: size(xl);
+        line-height: 87px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+      }
+
+      i {
+        color: color(tertiary);
+      }
+
+      p {
+        font-size: size(sm);
+        font-family: font(paragraph);
+        font-weight: 300;
+        margin-bottom: 6em;
+      }
+
+      svg {
+        width: 10%;
+      }
     }
 
-    i {
-      color: color(tertiary);
+    .hero-social {
+      display: none;
     }
-
-    p {
-      font-size: 2rem;
-      margin-bottom: 6rem;
-    }
-
-    svg {
-      width: 45px;
-    }
-  }
-
-  .hero-social {
-    display: none;
   }
 }
 
 /* !!!SECTION WORKS!!! */
 .works {
   background-color: color(secondary);
-  font-family: "Poppins", sans-serif;
+  font-family: font(paragraph);
   position: relative;
   text-align: center;
 
@@ -94,14 +131,12 @@
     font-size: 5rem;
     font-weight: 700;
     color: color(black);
+    font-family: font(title);
   }
 
-  .works-cards-container {
-    margin: 7rem 0 2rem 0;
-
-    .card-container {
+  &-cards-container {
+    .card {
       width: 100%;
-      margin-bottom: 5rem;
 
       img {
         width: 80%;
@@ -115,7 +150,8 @@
   background-color: color(primary);
   color: color(white);
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: font(paragraph);
+  padding-inline: 2em;
 
   .watermark {
     font-weight: 700;
@@ -130,6 +166,7 @@
     font-size: 5rem;
     font-weight: 700;
     text-align: center;
+    font-family: font(title);
   }
 
   p {
@@ -144,8 +181,9 @@
 /* !!!SECTION CONTACT!!! */
 .contact {
   background-color: color(secondary);
-  font-family: "Poppins", sans-serif;
+  font-family: font(paragraph);
   position: relative;
+  padding-inline: 2em;
 
   .watermark {
     font-weight: 700;
@@ -162,6 +200,7 @@
     color: color(black);
     margin-bottom: 7rem;
     text-align: center;
+    font-family: font(title);
   }
 
   .contact-form {
@@ -171,7 +210,7 @@
     textarea,
     button {
       width: 100%;
-      font-family: "Poppins", sans-serif;
+      font-family: font(paragraph);
       background-color: color(primary);
       color: color(white);
       border: none;
@@ -196,16 +235,11 @@
 }
 /* !!!FOOTER!!! */
 footer {
-  padding: 7rem 0;
+  padding: 7rem 2em;
   text-align: center;
   background-color: color(primary);
   color: color(white);
-  font-family: "Poppins", sans-serif;
-
-  a {
-    color: color(white);
-    font-size: 2rem;
-  }
+  font-family: font(paragraph);
 
   .footer-links ul {
     margin-top: 4.5rem;
@@ -213,6 +247,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     place-content: center;
     row-gap: 15px;
+
+    a {
+      color: color(white);
+      font-size: 2rem;
+    }
   }
 
   .copy {

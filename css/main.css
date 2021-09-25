@@ -2,80 +2,134 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 /* !!!NAVBAR!!! */
-.navbar {
-  padding: 40px 18px;
+nav {
+  background-color: #5e5e5e;
+}
+
+nav .navbar {
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #5e5e5e;
+  padding: 1em 2em;
 }
 
-.navbar .logo img {
+nav .navbar-logo img {
   width: 40%;
 }
 
-.navbar nav {
-  width: 60%;
-  margin-left: auto;
-  display: -ms-grid;
-  display: grid;
+nav .navbar-list {
+  display: none;
 }
 
-.navbar nav ul {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 20px;
-  place-items: end;
-}
-
-.navbar nav ul li a {
+nav .navbar-list li a {
   font-size: 1.6rem;
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
 }
 
-.navbar nav ul li a span {
+nav .navbar-list li a span {
+  color: #00ff99;
+}
+
+nav .navbar-responsive {
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 20;
+  padding: 1em 2em;
+}
+
+nav .navbar-responsive li + li {
+  margin-left: auto;
+}
+
+nav .navbar-responsive li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+nav .navbar-responsive li a i {
+  font-size: 2rem;
+}
+
+nav .navbar-responsive li a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #00ff99;
 }
 
 /* !!!HERO!!! */
-.hero {
-  padding: 7rem 18px;
+header {
   background-color: #5e5e5e;
-  color: #f2f2f2;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
 }
 
-.hero .hero-title {
+header .hero {
+  padding: 3em 2em;
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+  height: 90vh;
+}
+
+header .hero .hero-title {
   text-align: center;
 }
 
-.hero .hero-title h1 {
-  font-size: 3.7rem;
+header .hero .hero-title h1 {
+  font-size: 3rem;
   line-height: 87px;
   font-weight: 700;
-  margin-bottom: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.hero .hero-title i {
+header .hero .hero-title i {
   color: #00ff99;
 }
 
-.hero .hero-title p {
-  font-size: 2rem;
-  margin-bottom: 6rem;
+header .hero .hero-title p {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 6em;
 }
 
-.hero .hero-title svg {
-  width: 45px;
+header .hero .hero-title svg {
+  width: 10%;
 }
 
-.hero .hero-social {
+header .hero .hero-social {
   display: none;
 }
 
@@ -100,18 +154,14 @@
   font-size: 5rem;
   font-weight: 700;
   color: #333;
+  font-family: "Montserrat", sans-serif;
 }
 
-.works .works-cards-container {
-  margin: 7rem 0 2rem 0;
-}
-
-.works .works-cards-container .card-container {
+.works-cards-container .card {
   width: 100%;
-  margin-bottom: 5rem;
 }
 
-.works .works-cards-container .card-container img {
+.works-cards-container .card img {
   width: 80%;
 }
 
@@ -121,6 +171,7 @@
   color: #f2f2f2;
   position: relative;
   font-family: "Poppins", sans-serif;
+  padding-inline: 2em;
 }
 
 .about .watermark {
@@ -136,6 +187,7 @@
   font-size: 5rem;
   font-weight: 700;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about p {
@@ -152,6 +204,7 @@
   background-color: #d2d2d2;
   font-family: "Poppins", sans-serif;
   position: relative;
+  padding-inline: 2em;
 }
 
 .contact .watermark {
@@ -169,6 +222,7 @@
   color: #333;
   margin-bottom: 7rem;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact .contact-form {
@@ -203,16 +257,11 @@
 
 /* !!!FOOTER!!! */
 footer {
-  padding: 7rem 0;
+  padding: 7rem 2em;
   text-align: center;
   background-color: #5e5e5e;
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
-}
-
-footer a {
-  color: #f2f2f2;
-  font-size: 2rem;
 }
 
 footer .footer-links ul {
@@ -223,6 +272,11 @@ footer .footer-links ul {
       grid-template-columns: 1fr 1fr;
   place-content: center;
   row-gap: 15px;
+}
+
+footer .footer-links ul a {
+  color: #f2f2f2;
+  font-size: 2rem;
 }
 
 footer .copy {
@@ -254,7 +308,8 @@ ul {
   list-style: none;
 }
 
-section {
-  padding: 7rem 18px;
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
