@@ -18,7 +18,15 @@ nav .navbar {
 }
 
 nav .navbar-logo img {
-  width: 40%;
+  width: 50px;
+}
+
+nav .navbar-title {
+  margin-left: auto;
+  color: #00ff99;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
 }
 
 nav .navbar-list {
@@ -139,13 +147,14 @@ header .hero .hero-social {
   font-family: "Poppins", sans-serif;
   position: relative;
   text-align: center;
+  padding: 4em 2em;
 }
 
 .works .watermark {
   font-weight: 700;
   font-size: 15rem;
   position: absolute;
-  top: -5%;
+  top: -15%;
   left: -20%;
   color: rgba(46, 46, 46, 0.02);
 }
@@ -158,11 +167,19 @@ header .hero .hero-social {
 }
 
 .works-cards-container .card {
+  margin-top: 3em;
   width: 100%;
 }
 
 .works-cards-container .card img {
   width: 80%;
+  margin-bottom: 1em;
+}
+
+.works-cards-container .card-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /* !!!SECTION ABOUT!!! */
@@ -171,14 +188,14 @@ header .hero .hero-social {
   color: #f2f2f2;
   position: relative;
   font-family: "Poppins", sans-serif;
-  padding-inline: 2em;
+  padding: 4em 2em;
 }
 
 .about .watermark {
   font-weight: 700;
   font-size: 15rem;
   position: absolute;
-  top: -25%;
+  top: -15%;
   left: -20%;
   color: rgba(242, 242, 242, 0.02);
 }
@@ -190,12 +207,16 @@ header .hero .hero-social {
   font-family: "Montserrat", sans-serif;
 }
 
-.about p {
-  font-size: 2rem;
-  margin-top: 7rem;
+.about .about-content {
+  position: relative;
 }
 
-.about .right {
+.about .about-content .left p {
+  font-size: 1.6rem;
+  margin-top: 2em;
+}
+
+.about .about-content .right {
   display: none;
 }
 
@@ -204,14 +225,14 @@ header .hero .hero-social {
   background-color: #d2d2d2;
   font-family: "Poppins", sans-serif;
   position: relative;
-  padding-inline: 2em;
+  padding: 4em 2em;
 }
 
 .contact .watermark {
   font-weight: 700;
   font-size: 15rem;
   position: absolute;
-  top: -10%;
+  top: -15%;
   left: -20%;
   color: rgba(46, 46, 46, 0.02);
 }
@@ -220,7 +241,7 @@ header .hero .hero-social {
   font-size: 5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 7rem;
+  margin-bottom: 1em;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -257,7 +278,7 @@ header .hero .hero-social {
 
 /* !!!FOOTER!!! */
 footer {
-  padding: 7rem 2em;
+  padding: 4em 2em 7em 2em;
   text-align: center;
   background-color: #5e5e5e;
   color: #f2f2f2;
@@ -276,11 +297,11 @@ footer .footer-links ul {
 
 footer .footer-links ul a {
   color: #f2f2f2;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 footer .copy {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-top: 3.5rem;
 }
 

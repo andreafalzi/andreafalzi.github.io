@@ -13,7 +13,15 @@ nav {
     padding: 1em 2em;
 
     &-logo img {
-      width: 40%;
+      width: 50px;
+    }
+
+    &-title {
+      margin-left: auto;
+      color: color(tertiary);
+      font-family: font(title);
+      font-weight: 900;
+      font-size: size(sm);
     }
 
     &-list {
@@ -117,12 +125,13 @@ header {
   font-family: font(paragraph);
   position: relative;
   text-align: center;
+  padding: 4em 2em;
 
   .watermark {
     font-weight: 700;
     font-size: 15rem;
     position: absolute;
-    top: -5%;
+    top: -15%;
     left: -20%;
     color: color(darkOpacity);
   }
@@ -136,10 +145,18 @@ header {
 
   &-cards-container {
     .card {
+      margin-top: 3em;
       width: 100%;
 
       img {
         width: 80%;
+        margin-bottom: 1em;
+      }
+
+      &-title {
+        font-family: font(title);
+        font-size: size(md);
+        font-weight: 700;
       }
     }
   }
@@ -151,13 +168,13 @@ header {
   color: color(white);
   position: relative;
   font-family: font(paragraph);
-  padding-inline: 2em;
+  padding: 4em 2em;
 
   .watermark {
     font-weight: 700;
     font-size: 15rem;
     position: absolute;
-    top: -25%;
+    top: -15%;
     left: -20%;
     color: color(lightOpacity);
   }
@@ -169,13 +186,36 @@ header {
     font-family: font(title);
   }
 
-  p {
-    font-size: 2rem;
-    margin-top: 7rem;
-  }
+  .about-content {
+    position: relative;
+    // isolation: isolate;
 
-  .right {
-    display: none;
+    .left p {
+      font-size: size(sm);
+      margin-top: 2em;
+
+    }
+
+    .right {
+      display: none;
+      // position: absolute;
+      // top: 0;
+      // z-index: -1;
+
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   inset: 0;
+      //   background-color: rgb(0, 0, 0);
+      //   mix-blend-mode: saturation;
+      // }
+
+    //   img {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+    }
   }
 }
 /* !!!SECTION CONTACT!!! */
@@ -183,13 +223,13 @@ header {
   background-color: color(secondary);
   font-family: font(paragraph);
   position: relative;
-  padding-inline: 2em;
+  padding: 4em 2em;
 
   .watermark {
     font-weight: 700;
     font-size: 15rem;
     position: absolute;
-    top: -10%;
+    top: -15%;
     left: -20%;
     color: color(darkOpacity);
   }
@@ -198,7 +238,7 @@ header {
     font-size: 5rem;
     font-weight: 700;
     color: color(black);
-    margin-bottom: 7rem;
+    margin-bottom: 1em;
     text-align: center;
     font-family: font(title);
   }
@@ -235,7 +275,7 @@ header {
 }
 /* !!!FOOTER!!! */
 footer {
-  padding: 7rem 2em;
+  padding: 4em 2em 7em 2em;
   text-align: center;
   background-color: color(primary);
   color: color(white);
@@ -250,12 +290,12 @@ footer {
 
     a {
       color: color(white);
-      font-size: 2rem;
+      font-size: size(sm);
     }
   }
 
   .copy {
-    font-size: 1.4rem;
+    font-size: size(xs);
     margin-top: 3.5rem;
   }
 }
