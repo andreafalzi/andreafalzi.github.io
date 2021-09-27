@@ -11,6 +11,7 @@ html {
 
 html, body {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 }
 
