@@ -122,15 +122,15 @@ header .hero .hero-title h1 {
           flex-direction: column;
 }
 
-header .hero .hero-title i {
-  color: #00ff99;
-}
-
 header .hero .hero-title p {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-bottom: 6em;
+}
+
+header .hero .hero-title p i {
+  color: #00ff99;
 }
 
 header .hero .hero-title svg {
@@ -139,6 +139,26 @@ header .hero .hero-title svg {
 
 header .hero .hero-social {
   display: none;
+}
+
+.square-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.square {
+  background: #57cbf2;
+  width: 8vw;
+  height: 8vw;
 }
 
 /* !!!SECTION WORKS!!! */
@@ -264,6 +284,10 @@ header .hero .hero-social {
 .contact .contact-form input,
 .contact .contact-form textarea {
   padding: 2rem;
+}
+
+.contact .contact-form textarea {
+  resize: vertical;
 }
 
 .contact .contact-form button {

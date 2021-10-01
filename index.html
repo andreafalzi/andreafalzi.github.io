@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/92c15bccae.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Andrea Falzi Dev</title>
   </head>
@@ -18,7 +19,7 @@
             <img src="img/logo.png" alt="andrea falzi logo" />
           </div>
 
-          <!--           <div class="navbar-title">Andrea Falzi DEV</div> -->
+          <!-- <div class="navbar-title">Andrea Falzi DEV</div> -->
 
           <ul class="navbar-list">
             <li><a href="#works">Works</a></li>
@@ -28,19 +29,19 @@
             </li>
           </ul>
         </div>
-        <ul class="navbar-responsive">
-          <li>
+        <ul class="navbar-responsive xyz-in">
+          <li class="xyz-nested" xyz="fade in-left-100% stagger-2 delay-15">
             <a href="#body"><i class="fas fa-home"></i>Home</a>
           </li>
-          <li>
+          <li class="xyz-nested" xyz="fade in-left-100% stagger-2 delay-15">
             <a href="#works"><i class="fas fa-laptop-code"></i>Works</a>
           </li>
-          <li>
+          <li class="xyz-nested" xyz="fade in-left-100% stagger-2 delay-15">
             <a href="#about"><i class="fas fa-user"></i>About</a>
           </li>
-          <li>
+          <li class="xyz-nested" xyz="fade in-left-100% stagger-2 delay-15">
             <a href="#contact"
-              ><span><i class="far fa-envelope"></i>Contact</span>
+              ><span id="spanContact"><i class="far fa-envelope"></i>Contact</span>
             </a>
           </li>
         </ul>
@@ -50,10 +51,10 @@
     <!-- HEADER -->
     <header>
       <div class="container">
-        <div class="hero">
-          <div class="hero-title">
-            <h1><span>Web Experiences</span><span>Crafted with</span> <span>Coding Powers</span></h1>
-            <p><i class="fas fa-hand-point-down"></i> Meet Andrea Falzi</p>
+        <div class="hero xyz-in">
+          <div class="hero-title" xyz="fade delay-3 stagger-3 ease-out-back">
+            <h1><span class="xyz-nested">Web Experiences</span><span class="xyz-nested">Crafted with</span><span class="xyz-nested">Coding Powers</span></h1>
+            <p class="xyz-nested" xyz="fade delay-10 in-left-100%"><i class="fas fa-hand-point-down"></i> Meet Andrea Falzi</p>
             <svg viewBox="0 0 45 81">
               <g id="Group_25" data-name="Group 25" transform="translate(-347 -697)">
                 <g id="Rectangle_33" data-name="Rectangle 33" transform="translate(347 697)" fill="none" stroke="#0f9" stroke-width="5">
@@ -90,27 +91,35 @@
         <div class="container">
           <div class="watermark">Works</div>
           <h3 class="title">Works</h3>
-          <div class="glide">
-            <div class="works-cards-container glide__track" data-glide-el="track">
-              <div class="glide__slides">
-                <div class="card glide__slide">
-                  <img src="img/iphone-urbangreen.png" alt="urbangreen screen on iphone" />
-                  <div class="card-title">Urbangreen</div>
-                </div>
-                <div class="card glide__slide">
-                  <img src="img/iphone-big-byte.png" alt="big-byte screen on iphone" />
-                </div>
-                <div class="card glide__slide">
-                  <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
-                </div>
-                <div class="card glide__slide">
-                  <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
-                </div>
-                <div class="card glide__slide">
-                  <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
-                </div>
+          <div class="works-cards-container swiper">
+            <div class="swiper-wrapper">
+              <div class="card swiper-slide">
+                <img src="img/iphone-urbangreen.png" alt="urbangreen screen on iphone" />
+                <div class="card-title">Urbangreen</div>
+              </div>
+              <div class="card swiper-slide">
+                <img src="img/iphone-big-byte.png" alt="big-byte screen on iphone" />
+                <div class="card-title">Big.byte</div>
+              </div>
+              <div class="card swiper-slide">
+                <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
+                <div class="card-title">Mario Jump</div>
+              </div>
+              <div class="card swiper-slide">
+                <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
+                <div class="card-title">Urbangreen</div>
+              </div>
+              <div class="card swiper-slide">
+                <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
+                <div class="card-title">Urbangreen</div>
               </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -127,7 +136,7 @@
               <p>I am 31 years old, I live in Randers with my danish wife Aurora. I moved to Denmark for love but also with a desire to develop in a new job and personally. I love Rugby and I have played it for 2 years. I like to keep myself fit and eat healthy food. I like cooking and especially grilling. What? Italian food is my speciality as you can guess. I have a great interest in computers, hardware (building, modding and repairing) and software (fresh OS installation, antivirus, programs, etc.). I love playing computer games, mostly online with my friends. I have built my own little network at home with a little server and six devices between desktop, tablet, phone and Television. Other passions outside the IT are cars, scuba diving and running in nature. I am always very passionate about what I do and I always do my best. I'm really good at listening and showing understanding to others.</p>
             </div>
             <div class="right">
-              <img src="img/CVimg.jpg" alt="my picture"/>
+              <img src="img/CVimg.jpg" alt="my picture" />
             </div>
           </div>
         </div>
@@ -173,7 +182,7 @@
         </div>
       </div>
     </footer>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
