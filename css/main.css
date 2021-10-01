@@ -93,6 +93,12 @@ nav .navbar-responsive li a span {
   color: #00ff99;
 }
 
+@media (min-width: 1000px) {
+  nav .navbar-responsive {
+    display: none;
+  }
+}
+
 /* !!!HERO!!! */
 header {
   background-color: #5e5e5e;

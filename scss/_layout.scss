@@ -72,6 +72,10 @@ nav {
           }
         }
       }
+
+      @include response(lg) {
+        display: none;
+      }
     }
   }
 }
