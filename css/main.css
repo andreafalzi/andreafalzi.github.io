@@ -79,17 +79,7 @@ nav .navbar-responsive li a i {
   font-size: 2rem;
 }
 
-nav .navbar-responsive li a span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+nav .navbar-responsive li .span-icon {
   color: #00ff99;
 }
 
@@ -139,32 +129,62 @@ header .hero .hero-title p i {
   color: #00ff99;
 }
 
-header .hero .hero-title svg {
-  width: 10%;
+header .hero .hero-title .svg {
+  border: 5px #00ff99 solid;
+  width: 35px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+header .hero .hero-title .svg .square-1 {
+  width: 5px;
+  height: 5px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+header .hero .hero-title .svg .square-2 {
+  width: 5px;
+  height: 5px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+header .hero .hero-title .svg .arrow {
+  border: solid #f2f2f2;
+  border-width: 0 5px 5px 0;
+  padding: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 header .hero .hero-social {
   display: none;
-}
-
-.square-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-}
-
-.square {
-  background: #57cbf2;
-  width: 8vw;
-  height: 8vw;
 }
 
 /* !!!SECTION WORKS!!! */
@@ -206,6 +226,29 @@ header .hero .hero-social {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  color: #f2f2f2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  font-weight: 900;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination {
+  bottom: -20px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333;
 }
 
 /* !!!SECTION ABOUT!!! */

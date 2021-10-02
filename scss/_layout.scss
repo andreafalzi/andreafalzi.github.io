@@ -63,13 +63,9 @@ nav {
           i {
             font-size: size(md);
           }
-
-          span {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: color(tertiary);
-          }
+        }
+        .span-icon {
+          color: color(tertiary);
         }
       }
 
@@ -112,8 +108,51 @@ header {
         }
       }
 
-      svg {
-        width: 10%;
+      .svg {
+        border: 5px color(tertiary) solid;
+        width: 35px;
+        height: 60px;
+        border-radius: 10px;
+        position: relative;
+        margin: 0 auto;
+        opacity: 0;
+        transition: opacity 200ms ease-in;
+
+        .square-1 {
+          width: 5px;
+          height: 5px;
+          background-color: color(white);
+          position: absolute;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%);
+          opacity: 0;
+          transition: opacity 200ms ease-in;
+        }
+
+        .square-2 {
+          width: 5px;
+          height: 5px;
+          background-color: color(white);
+          position: absolute;
+          top: 37%;
+          left: 50%;
+          transform: translate(-50%);
+          opacity: 0;
+          transition: opacity 200ms ease-in;
+        }
+
+        .arrow {
+          border: solid color(white);
+          border-width: 0 5px 5px 0;
+          padding: 5px;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 0%;
+          left: 20%;
+          opacity: 0;
+          transition: all 200ms ease-in;
+        }
       }
     }
 
@@ -121,19 +160,6 @@ header {
       display: none;
     }
   }
-}
-
-.square-group {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.square {
-  background: #57cbf2;
-  width: 8vw;
-  height: 8vw;
 }
 
 /* !!!SECTION WORKS!!! */
@@ -174,11 +200,33 @@ header {
         font-family: font(title);
         font-size: size(md);
         font-weight: 700;
+        color: color(white);
       }
     }
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: color(black);
+  font-weight: 900;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination {
+  bottom: -20px !important;
+
+  &-bullet-active {
+    background-color: color(black);
+  }
+}
 /* !!!SECTION ABOUT!!! */
 .about {
   background-color: color(primary);
