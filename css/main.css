@@ -350,6 +350,7 @@ header .hero .hero-social {
 
 .contact .contact-form input,
 .contact .contact-form textarea,
+.contact .contact-form .recaptcha,
 .contact .contact-form button {
   width: 100%;
   font-family: "Poppins", sans-serif;
