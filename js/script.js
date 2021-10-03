@@ -190,3 +190,9 @@ $(document).ready(function () {
     } // End if
   });
 });
+
+/* LOADER */
+$(document).ready(function () {
+  $("#navbar-responsive").addClass("xyz-in");
+  $("#hero").addClass("xyz-in");
+});
