@@ -348,7 +348,7 @@ header {
 /* !!!FOOTER!!! */
 footer {
   padding: 4em 2em 7em 2em;
-  text-align: center;
+  
   background-color: color(primary);
   color: color(white);
   font-family: font(paragraph);
@@ -356,8 +356,8 @@ footer {
   .footer-links ul {
     margin-top: 4.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
+    grid-template-columns: auto auto;
+    place-content: space-evenly;
     row-gap: 15px;
 
     a {
@@ -369,5 +369,6 @@ footer {
   .copy {
     font-size: size(xs);
     margin-top: 3.5rem;
+    text-align: center;
   }
 }
