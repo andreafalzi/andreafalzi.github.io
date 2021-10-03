@@ -196,3 +196,5 @@ $(document).ready(function () {
   $("#navbar-responsive").addClass("xyz-in");
   $("#hero").addClass("xyz-in");
 });
+
+/* MAIL FORM */

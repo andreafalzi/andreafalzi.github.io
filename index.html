@@ -148,10 +148,13 @@
           <div class="watermark">Contact</div>
           <h3 class="title">Contact</h3>
           <div class="contact-form">
-            <form action="">
-              <input type="text" placeholder="Name" />
+            <form id="contact-form" action="POST" data-netlify="true">
+              <input type="text" name="name" placeholder="Name" />
               <input type="email" name="email" id="email" placeholder="Email" />
               <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
               <button type="submit">Send message</button>
             </form>
           </div>
