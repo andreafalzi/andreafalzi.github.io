@@ -312,7 +312,6 @@ header {
 
     input,
     textarea,
-    .recaptcha,
     button {
       width: 100%;
       font-family: font(paragraph);
@@ -329,6 +328,10 @@ header {
 
     textarea {
       resize: vertical;
+    }
+
+    .recaptcha {
+      margin-bottom: 3rem;
     }
 
     button {
