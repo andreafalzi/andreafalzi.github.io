@@ -109,8 +109,6 @@ function validateForm() {
   } else if (formTextarea.value == "") {
     alert("Text cannot be empty!");
     return false;
-  } else {
-    alert("Thank for your feedback!");
   }
 }
 
