@@ -1,8 +1,6 @@
 /*========IMPORT========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -420,35 +418,6 @@ footer .copy {
   font-size: 1rem;
   margin-top: 3.5rem;
   text-align: center;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-.container {
-  max-width: 1366px;
-  margin: 0 auto;
 }
 
 body {

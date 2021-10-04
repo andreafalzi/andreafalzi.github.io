@@ -1,11 +1,10 @@
 /*========IMPORT========*/
-@import 'variables';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-@import 'mixins';
+@import 'base/base';
 
-@import 'base';
-
-@import 'layout';
+@import 'layout/layout';
 
 @import 'pages/success';
 
