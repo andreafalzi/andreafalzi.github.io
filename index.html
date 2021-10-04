@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <script src="https://kit.fontawesome.com/92c15bccae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -148,19 +149,21 @@
           <div class="watermark">Contact</div>
           <h3 class="title">Contact</h3>
           <div class="contact-form">
-            <form id="contact-form" action="POST" data-netlify="true">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" id="email" placeholder="Email" />
-              <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+            <form id="contact-form" action="POST" data-netlify="true" onsubmit="return validateForm()">
+              <input id="name" type="text" name="name" placeholder="Name" />
+              <input id="email" type="email" name="email"  placeholder="Email" />
+              <textarea id="textarea" name="textarea"  cols="30" rows="10" placeholder="Message"></textarea>
               <div class="recaptcha">
                 <div data-netlify-recaptcha="true"></div>
               </div>
-              <button type="submit">Send message</button>
+              <button id="submit" type="submit">Send message</button>
             </form>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <!-- FOOTER -->
     <footer>

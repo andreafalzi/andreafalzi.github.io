@@ -22,61 +22,12 @@ function arrowAnimation() {
 
   setTimeout(() => {
     clearInterval(timerArrow);
-  }, 5000);
+  }, 7000);
 
   function dotArrow() {
-    setTimeout(() => {
-      sq1.style.opacity = "1";
-    }, 1500);
-
-    setTimeout(() => {
-      sq2.style.opacity = "1";
-    }, 1600);
-
-    setTimeout(() => {
-      arrow.style.top = "10%";
-      arrow.style.opacity = "0.1";
-    }, 1400);
-
-    setTimeout(() => {
-      arrow.style.top = "15%";
-      arrow.style.opacity = "0.2";
-    }, 1450);
-
-    setTimeout(() => {
-      arrow.style.top = "20%";
-      arrow.style.opacity = "0.3";
-    }, 1500);
-
-    setTimeout(() => {
-      arrow.style.top = "25%";
-      arrow.style.opacity = "0.4";
-    }, 1550);
-
-    setTimeout(() => {
-      arrow.style.top = "30%";
-      arrow.style.opacity = "0.5";
-    }, 1600);
-
-    setTimeout(() => {
-      arrow.style.top = "35%";
-      arrow.style.opacity = "0.6";
-    }, 1650);
-
-    setTimeout(() => {
-      arrow.style.top = "40%";
-      arrow.style.opacity = "0.7";
-    }, 1700);
-
-    setTimeout(() => {
-      arrow.style.top = "45%";
-      arrow.style.opacity = "0.8";
-    }, 1750);
-
-    setTimeout(() => {
-      arrow.style.top = "50%";
-      arrow.style.opacity = "1";
-    }, 1800);
+    sq1.classList.toggle("svg-square-animation");
+    sq2.classList.toggle("svg-square-animation");
+    arrow.classList.toggle("svg-arrow-animation");
   }
 }
 
@@ -137,6 +88,38 @@ function copyrigthYear() {
   document.querySelector("#copyright").appendChild(document.createTextNode(new Date().getFullYear()));
 }
 
+/* LOADER */
+$(document).ready(function () {
+  $("#navbar-responsive").addClass("xyz-in");
+  $("#hero").addClass("xyz-in");
+});
+
+/* MAIL FORM */
+function validateForm() {
+  let formName = document.querySelector("#name");
+  let formEmail = document.querySelector("#email");
+  let formTextarea = document.querySelector("#textarea");
+
+  if (formName.value == "") {
+    alert("We need your name");
+    return false;
+  } else if (validateEmail(formEmail.value) == false) {
+    alert("This email is not a valid");
+    return false;
+  } else if (formTextarea.value == "") {
+    alert("Text cannot be empty!");
+    return false;
+  } else {
+    alert("Thank for your feedback!");
+  }
+}
+
+//Validate email helper function
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
 /*========EXTERNALS========*/
 
 /* SWIPER SLIDER */
@@ -190,11 +173,3 @@ $(document).ready(function () {
     } // End if
   });
 });
-
-/* LOADER */
-$(document).ready(function () {
-  $("#navbar-responsive").addClass("xyz-in");
-  $("#hero").addClass("xyz-in");
-});
-
-/* MAIL FORM */
