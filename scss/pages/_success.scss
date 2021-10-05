@@ -4,33 +4,3 @@
  display: grid;
  place-content: center;
 }
-
-.modal {
-  background-color: color(primary);
-  padding: 5rem;
-  border-radius: 10px;
-  mix-width: 80%;
-  margin: 0 auto;
-
-  &-logo img{
-    width: 20%;
-    margin-left: auto;
-    margin-bottom: 2em;
-  }
-
-  &-paragraph {
-    font-family: font(paragraph);
-    font-size: size(sm);
-    margin-bottom: 2em;
-    color: color(white);
-  }
-
-  &-button {
-    font-family: font(paragraph);
-    font-size: size(sm);
-    background-color: color(tertiary);
-    padding: .3em;
-    border-radius: 5px;
-    color: color(black)
-  }
-}
