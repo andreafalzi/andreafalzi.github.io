@@ -142,8 +142,6 @@ header {
           transition: opacity 500ms ease-in;
         }
 
-        
-
         .arrow {
           border: solid color(white);
           border-width: 0 5px 5px 0;
@@ -180,25 +178,29 @@ header {
   position: relative;
   text-align: center;
   padding: 4em 2em;
-
-  .watermark {
-    font-weight: 700;
-    font-size: 15rem;
-    position: absolute;
-    top: -15%;
-    left: -20%;
-    color: color(darkOpacity);
-  }
+  
 
   h3.title {
     font-size: 5rem;
     font-weight: 700;
     color: color(black);
     font-family: font(title);
+    isolation: isolate;
+
+    &::before {
+      content: "Works";
+      transform: scale(3);
+      font-weight: 700;
+      font-size: 5rem;
+      position: absolute;
+      color: color(darkOpacity);
+      padding-bottom: 8rem;
+      z-index: -1;
+    }
   }
 
-  &-cards-container {
-    .card {
+  &-slide-container {
+    .slide {
       margin-top: 3em;
       width: 100%;
 
@@ -217,27 +219,7 @@ header {
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: color(black);
-  font-weight: 900;
-}
 
-.swiper-button-prev {
-  left: 0;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-pagination {
-  bottom: -20px !important;
-
-  &-bullet-active {
-    background-color: color(black);
-  }
-}
 /* !!!SECTION ABOUT!!! */
 .about {
   background-color: color(primary);
@@ -246,29 +228,31 @@ header {
   font-family: font(paragraph);
   padding: 4em 2em;
 
-  .watermark {
-    font-weight: 700;
-    font-size: 15rem;
-    position: absolute;
-    top: -15%;
-    left: -20%;
-    color: color(lightOpacity);
-  }
-
   h3.title {
     font-size: 5rem;
     font-weight: 700;
     text-align: center;
     font-family: font(title);
+    isolation: isolate;
+
+    &::before {
+      content: "About";
+      transform: scale(3);
+      font-weight: 700;
+      font-size: 5rem;
+      position: absolute;
+      color: color(lightOpacity);
+      padding-bottom: 8rem;
+      z-index: -1;
+    }
   }
 
   .about-content {
+    margin-top: 40px;
     position: relative;
-    // isolation: isolate;
 
     .left p {
       font-size: size(sm);
-      margin-top: 2em;
     }
 
     .right {
@@ -300,15 +284,6 @@ header {
   position: relative;
   padding: 4em 2em;
 
-  .watermark {
-    font-weight: 700;
-    font-size: 15rem;
-    position: absolute;
-    top: -15%;
-    left: -20%;
-    color: color(darkOpacity);
-  }
-
   h3.title {
     font-size: 5rem;
     font-weight: 700;
@@ -316,6 +291,18 @@ header {
     margin-bottom: 1em;
     text-align: center;
     font-family: font(title);
+    isolation: isolate;
+
+    &::before {
+      content: "Contact";
+      transform: scale(3);
+      font-weight: 700;
+      font-size: 5rem;
+      position: absolute;
+      color: color(darkOpacity);
+      padding-bottom: 8rem;
+      z-index: -1;
+    }
   }
 
   .contact-form {
@@ -359,7 +346,7 @@ header {
 /* !!!FOOTER!!! */
 footer {
   padding: 4em 2em 7em 2em;
-  
+
   background-color: color(primary);
   color: color(white);
   font-family: font(paragraph);

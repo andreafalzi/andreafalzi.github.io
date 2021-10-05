@@ -1,6 +1,51 @@
 /*========IMPORT========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+.about-cards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.about-cards-card {
+  border: 2px #d2d2d2 solid;
+  border-radius: 5px;
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 10;
+}
+
+.about-cards-card-title {
+  border-bottom: 2px #d2d2d2 solid;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.about-cards-card-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.about-cards-card-container-paragraph {
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-cards-card-title.select {
+  color: #00ff99;
+}
+
+.about-cards-card-container.show {
+  opacity: 1;
+}
+
 .modal {
   background-color: #5e5e5e;
   padding: 5rem;
@@ -56,6 +101,28 @@
 .modal-hide {
   opacity: 0;
   z-index: -1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  font-weight: 900;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination {
+  bottom: -20px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333;
 }
 
 * {
@@ -303,59 +370,41 @@ header .hero .hero-social {
   padding: 4em 2em;
 }
 
-.works .watermark {
-  font-weight: 700;
-  font-size: 15rem;
-  position: absolute;
-  top: -15%;
-  left: -20%;
-  color: rgba(46, 46, 46, 0.02);
-}
-
 .works h3.title {
   font-size: 5rem;
   font-weight: 700;
   color: #333;
   font-family: "Montserrat", sans-serif;
+  isolation: isolate;
 }
 
-.works-cards-container .card {
+.works h3.title::before {
+  content: "Works";
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  font-weight: 700;
+  font-size: 5rem;
+  position: absolute;
+  color: rgba(46, 46, 46, 0.02);
+  padding-bottom: 8rem;
+  z-index: -1;
+}
+
+.works-slide-container .slide {
   margin-top: 3em;
   width: 100%;
 }
 
-.works-cards-container .card img {
+.works-slide-container .slide img {
   width: 80%;
   margin-bottom: 1em;
 }
 
-.works-cards-container .card-title {
+.works-slide-container .slide-title {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #f2f2f2;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #333;
-  font-weight: 900;
-}
-
-.swiper-button-prev {
-  left: 0;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-pagination {
-  bottom: -20px !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #333;
 }
 
 /* !!!SECTION ABOUT!!! */
@@ -367,29 +416,33 @@ header .hero .hero-social {
   padding: 4em 2em;
 }
 
-.about .watermark {
-  font-weight: 700;
-  font-size: 15rem;
-  position: absolute;
-  top: -15%;
-  left: -20%;
-  color: rgba(242, 242, 242, 0.02);
-}
-
 .about h3.title {
   font-size: 5rem;
   font-weight: 700;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  isolation: isolate;
+}
+
+.about h3.title::before {
+  content: "About";
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  font-weight: 700;
+  font-size: 5rem;
+  position: absolute;
+  color: rgba(242, 242, 242, 0.02);
+  padding-bottom: 8rem;
+  z-index: -1;
 }
 
 .about .about-content {
+  margin-top: 40px;
   position: relative;
 }
 
 .about .about-content .left p {
   font-size: 1.6rem;
-  margin-top: 2em;
 }
 
 .about .about-content .right {
@@ -404,15 +457,6 @@ header .hero .hero-social {
   padding: 4em 2em;
 }
 
-.contact .watermark {
-  font-weight: 700;
-  font-size: 15rem;
-  position: absolute;
-  top: -15%;
-  left: -20%;
-  color: rgba(46, 46, 46, 0.02);
-}
-
 .contact h3.title {
   font-size: 5rem;
   font-weight: 700;
@@ -420,6 +464,19 @@ header .hero .hero-social {
   margin-bottom: 1em;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  isolation: isolate;
+}
+
+.contact h3.title::before {
+  content: "Contact";
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  font-weight: 700;
+  font-size: 5rem;
+  position: absolute;
+  color: rgba(46, 46, 46, 0.02);
+  padding-bottom: 8rem;
+  z-index: -1;
 }
 
 .contact .contact-form {

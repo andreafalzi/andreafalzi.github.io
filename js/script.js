@@ -128,9 +128,26 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+/* Close Modal */
 function closeModal() {
-  let contactModal = document.querySelector("#contactModal");
+  const contactModal = document.querySelector("#contactModal");
   contactModal.classList.add("modal-hide");
+}
+
+/* Open/Close about cards */
+const acc = document.querySelectorAll(".about-cards-card");
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.children[0].classList.toggle("select");
+    this.children[1].classList.toggle("show");
+    var panel = this.children[1];
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 }
 
 /*========EXTERNALS========*/

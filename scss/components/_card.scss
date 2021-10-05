@@ -1,0 +1,40 @@
+.about-cards {
+  display: grid;
+  grid-gap: 1rem;
+
+  &-card {
+    border: 2px color(secondary) solid;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.4s;
+    z-index: 10;
+
+    &-title {
+      border-bottom: 2px color(secondary) solid;
+      padding: 1rem;
+      font-size: size(md);
+      font-family: font(title);
+      transition: color 0.2s ease-out;
+    }
+
+    &-container {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+
+      &-paragraph {
+        padding: 1rem;
+        font-family: font(paragraph);
+      }
+    }
+  }
+}
+
+.about-cards-card-title.select {
+  color: color(tertiary);
+}
+
+.about-cards-card-container.show {
+  opacity: 1;
+}
