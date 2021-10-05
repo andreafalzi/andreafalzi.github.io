@@ -2,13 +2,17 @@
   background-color: color(primary);
   padding: 5rem;
   border-radius: 10px;
-  mix-width: 80%;
+  min-width: 80%;
   margin: 0 auto;
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 
-  &-logo img{
-    width: 20%;
-    margin-left: auto;
+  &-logo {
     margin-bottom: 2em;
+
+    img {
+      width: 5rem;
+    }
   }
 
   &-paragraph {
@@ -22,8 +26,28 @@
     font-family: font(paragraph);
     font-size: size(sm);
     background-color: color(tertiary);
-    padding: .3em;
+    padding: 0.3em;
     border-radius: 5px;
-    color: color(black)
+    color: color(black);
+    cursor: pointer;
   }
+}
+
+/* modal style inside index.html */
+.modal-background {
+  position: absolute;
+  inset: 0;
+  background-color: color(blackOpa80);
+  z-index: 99;
+}
+.modal-contact {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-hide {
+  opacity: 0;
+  z-index: -1;
 }

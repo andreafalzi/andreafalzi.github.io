@@ -100,14 +100,24 @@ function validateForm() {
   let formEmail = document.querySelector("#email");
   let formTextarea = document.querySelector("#textarea");
 
+  let contactModal = document.querySelector("#contactModal");
+  let contactParagraph = document.querySelector("#contactParagraph");
+  let contactButton = document.querySelector("#contactButton");
+
   if (formName.value == "") {
-    alert("We need your name");
+    contactParagraph.innerHTML = "Insert your name";
+    contactButton.innerHTML = "Close";
+    contactModal.classList.remove("modal-hide");
     return false;
   } else if (validateEmail(formEmail.value) == false) {
-    alert("This email is not a valid");
+    contactParagraph.innerHTML = "Insert a valid email";
+    contactButton.innerHTML = "Close";
+    contactModal.classList.remove("modal-hide");
     return false;
   } else if (formTextarea.value == "") {
-    alert("Text cannot be empty!");
+    contactParagraph.innerHTML = "Don't forget to write your message";
+    contactButton.innerHTML = "Close";
+    contactModal.classList.remove("modal-hide");
     return false;
   }
 }
@@ -116,6 +126,11 @@ function validateForm() {
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
+}
+
+function closeModal() {
+  let contactModal = document.querySelector("#contactModal");
+  contactModal.classList.add("modal-hide");
 }
 
 /*========EXTERNALS========*/
