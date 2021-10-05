@@ -22,7 +22,7 @@ function arrowAnimation() {
 
   setTimeout(() => {
     clearInterval(timerArrow);
-  }, 7000);
+  }, 7500);
 
   function dotArrow() {
     sq1.classList.toggle("svg-square-animation");
