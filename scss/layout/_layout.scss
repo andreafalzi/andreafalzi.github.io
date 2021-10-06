@@ -206,14 +206,30 @@ header {
 
       img {
         width: 80%;
-        margin-bottom: 1em;
+        margin-block: 1em;
       }
 
       &-title {
         font-family: font(title);
-        font-size: size(md);
+        font-size: size(lg);
         font-weight: 700;
         color: color(white);
+        letter-spacing: .3rem;
+        width: fit-content;
+        margin-inline: auto;
+        position: relative;
+      }
+
+      &-btn {
+        font-family: font(paragraph);
+        font-size: size(sm);
+        color: color(black);
+        letter-spacing: .3rem;
+        background-color: color(tertiary);
+        width: fit-content;
+        margin-inline: auto;
+        padding: .3em 1em;
+        border-radius: 50px;
       }
     }
   }

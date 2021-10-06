@@ -88,6 +88,9 @@
   inset: 0;
   background-color: rgba(51, 51, 51, 0.8);
   z-index: 99;
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-in;
+  transition: opacity 250ms ease-in;
 }
 
 .modal-contact {
@@ -397,14 +400,34 @@ header .hero .hero-social {
 
 .works-slide-container .slide img {
   width: 80%;
-  margin-bottom: 1em;
+  margin-block: 1em;
 }
 
 .works-slide-container .slide-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #f2f2f2;
+  letter-spacing: .3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+}
+
+.works-slide-container .slide-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+  letter-spacing: .3rem;
+  background-color: #00ff99;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  padding: .3em 1em;
+  border-radius: 50px;
 }
 
 /* !!!SECTION ABOUT!!! */

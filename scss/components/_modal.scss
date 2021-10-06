@@ -39,6 +39,8 @@
   inset: 0;
   background-color: color(blackOpa80);
   z-index: 99;
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }
 .modal-contact {
   position: fixed;
