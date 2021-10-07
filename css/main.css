@@ -374,7 +374,7 @@ header .hero .hero-social {
 }
 
 .works h3.title {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   color: #333;
   font-family: "Montserrat", sans-serif;
@@ -407,7 +407,7 @@ header .hero .hero-social {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f2f2f2;
+  color: #333;
   letter-spacing: .3rem;
 }
 
@@ -420,7 +420,7 @@ header .hero .hero-social {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-inline: auto;
+  margin: 0 auto;
   padding: .3em 1em;
   border-radius: 50px;
 }
@@ -435,7 +435,7 @@ header .hero .hero-social {
 }
 
 .about h3.title {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -476,7 +476,7 @@ header .hero .hero-social {
 }
 
 .contact h3.title {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 1em;

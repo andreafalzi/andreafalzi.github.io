@@ -181,7 +181,7 @@ header {
   
 
   h3.title {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     color: color(black);
     font-family: font(title);
@@ -213,7 +213,7 @@ header {
         font-family: font(title);
         font-size: size(lg);
         font-weight: 700;
-        color: color(white);
+        color: color(black);
         letter-spacing: .3rem;
  
       }
@@ -225,7 +225,7 @@ header {
         letter-spacing: .3rem;
         background-color: color(tertiary);
         width: fit-content;
-        margin-inline: auto;
+        margin: 0 auto;
         padding: .3em 1em;
         border-radius: 50px;
       }
@@ -243,7 +243,7 @@ header {
   padding: 4em 2em;
 
   h3.title {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     text-align: center;
     font-family: font(title);
@@ -299,7 +299,7 @@ header {
   padding: 4em 2em;
 
   h3.title {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     color: color(black);
     margin-bottom: 1em;
