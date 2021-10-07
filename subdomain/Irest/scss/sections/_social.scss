@@ -1,0 +1,40 @@
+.social {
+
+  &-icon {
+    display: flex;
+    justify-content: space-around;
+
+    @include response(md) {
+      margin-top: 5em;
+      max-width: 70%;
+      margin-inline: auto;
+    }
+
+    @include response(lg) {
+      margin-top: 5em;
+      max-width: 50%;
+      margin-inline: auto;
+    }
+
+
+
+    &-item {
+      list-style: none;
+    }
+
+    &-link {
+      text-decoration: none;
+      width: 6rem;
+      height: 6rem;
+      border: 0.1rem solid;
+      border-radius: 100%;
+      @include flexPosition;
+
+      i {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+

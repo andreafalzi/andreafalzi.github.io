@@ -1,0 +1,19 @@
+.footer {
+  text-align: center;
+
+  &-info {
+    color: color(white);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    font-size: 1.5rem;
+    text-align: start;
+  }
+
+  &-bottom {
+    color: color(white);
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

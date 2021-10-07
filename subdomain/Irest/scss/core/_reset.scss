@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+section,
+footer {
+  padding-block: 3em;
+  padding-inline: 3em;
+  position: relative;
+  z-index: 10;
+
+  @include response(md) {
+    padding-block: 5em;
+  }
+
+  @include response(lg) {
+    padding-block: 7em;
+  }
+}

@@ -1,0 +1,384 @@
+/* 
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive; 
+*/
+
+/* VARIABLES */
+:root {
+  --pri-bg-color: #202225;
+  --sec-bg-color: #2f3136;
+  --tir-bg-color: #36393f;
+  --for-bg-color: #292b2f;
+  --pri-text-color: #f2f2f2;
+}
+
+#contact {
+  font-family: "Fira Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "h1 h1"
+    "form map";
+  padding: 50px 50px;
+}
+
+.ContactH1 {
+  font-family: "Poppins", sans-serif;
+  color: var(--pri-text-color);
+  grid-area: h1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+#contactform {
+  color: var(--pri-text-color);
+  grid-area: form;
+  font-size: 1.6rem;
+  margin-right: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px;
+  background: var(--pri-text-color);
+  border: 1px solid var(--pri-text-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: #14a642;
+  border: none;
+  width: 10vw;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--pri-text-color);
+  font-family: "Fira Sans", sans-serif;
+  box-shadow: 0 9px #999;
+}
+
+input[type="submit"]:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  margin-left: 5px;
+  padding-right: 5px;
+  grid-area: map;
+}
+
+@media (max-width: 769px) {
+  #contact {
+    font-family: "Fira Sans", sans-serif;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "h1 h1"
+      "form form"
+      "map map";
+    padding: 50px 50px;
+  }
+
+  .ContactH1 {
+    font-size: 3rem;
+  }
+
+  #contactform {
+    color: var(--pri-text-color);
+    grid-area: form;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: 0px;
+  }
+
+  .contact-center {
+    text-align: left;
+  }
+
+  .contact-center-center {
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    background-color: #14a642;
+    color: white;
+    padding: 15px 18px;
+    margin-top: 0.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    font-size: 1.2rem;
+  }
+
+  #map {
+    display: inline-block;
+    margin-left: 4%;
+    margin-top: 0.1rem;
+    height: 50vh;
+    width: 88.8vw;
+  }
+
+  #map {
+    display: inline-block;
+    grid-area: map;
+    margin-top: 15px;
+    height: 400px;
+    width: 100%;
+    margin-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 20px 20px;
+  }
+  .ContactH1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #contactform {
+    color: var(--pri-text-color);
+    grid-area: form;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    font-size: 1rem;
+    text-align: left !important;
+  }
+
+  .contact-center {
+    text-align: left;
+  }
+
+  .contact-center-center {
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    background-color: #14a642;
+    color: white;
+    padding: 15px 18px;
+    margin-top: 0.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #map {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+#open-feedback {
+  font-family: "Fira Sans", sans-serif;
+}
+
+#open-feedback h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#open-feedback label {
+  display: none;
+}
+
+/* @media (min-height: 500px){
+    ul #chat{
+      margin-top: 30px;
+    }
+    }
+    @media (min-height: 600px){
+    ul #chat{
+      margin-top: 100px;
+    }
+    }
+    @media (min-height: 700px){
+    ul #chat{
+      margin-top: 200px;
+    }
+    }
+    @media (min-height: 800px){
+    ul #chat{
+      margin-top: 300px;
+    }
+    }
+    @media (min-height: 900px){
+    ul #chat{
+      margin-top: 400px;
+    }
+    }
+    @media (min-height: 1000px){
+    ul #chat{
+      margin-top: 500px;
+    }
+    }
+    @media (min-height: 1100px){
+    ul #chat{
+      margin-top: 600px;
+    }
+    }
+    @media (min-height: 1200px){
+    ul #chat{
+      margin-top: 700px;
+    }
+    }
+    @media (min-height: 1300px){
+    ul #chat{
+      margin-top: 800px;
+    }
+    }
+    @media (min-height: 1400px){
+    ul #chat{
+      margin-top: 900px;
+    }
+    }
+    @media (min-height: 1500px){
+    ul #chat{
+      margin-top: 1000px;
+    }
+    }
+    @media (min-height: 1600px){
+    ul #chat{
+      margin-top: 1100px;
+    }
+    } */
+
+#open-chat {
+  padding-top: 100px;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.open-chat:hover {
+  transition: 0.5s;
+  background-color: #14a642;
+  color: white;
+  border-radius: 25px;
+}
+
+.chat-popup {
+  transition: 5s;
+  display: none;
+  position: fixed;
+  bottom: 8vh;
+  left: 8vw;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 320px;
+  padding: 20px;
+  background-color: var(--sec-bg-color);
+  color: var(--pri-text-color);
+  text-align: center;
+  border-radius: 10px;
+  z-index: 5;
+}
+.chat-text {
+  font-size: 3.2rem;
+}
+
+.sendfeeback {
+  font-size: 1.2rem;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: var(--tir-bg-color);
+  resize: none;
+  min-height: 300px;
+  color: var(--pri-text-color);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.form-container textarea:focus {
+  background-color: var(--tir-bg-color);
+  outline: none;
+}
+
+.form-container .btn {
+  border-radius: 5px;
+  max-height: 80px;
+  margin-top: 25px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background-color: #14a642;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--pri-text-color);
+  font-family: "Fira Sans", sans-serif;
+  box-shadow: 0 9px #999;
+}
+
+.form-container .btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.form-container .cancel {
+  font-family: "Fira Sans", sans-serif;
+  background-color: red;
+  margin-right: 20px;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .open-chat {
+    bottom: 40px;
+    right: 15px;
+  }
+  .chat-popup {
+    bottom: 10vh;
+    right: 8.5vw;
+  }
+}
+
+@media (max-width: 380px) {
+  .open-chat {
+    bottom: 550px;
+    right: 15px;
+  }
+
+  .chat-popup {
+    bottom: 10vh;
+    right: 1vw;
+  }
+}

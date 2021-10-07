@@ -1,0 +1,71 @@
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin-block: 3em;
+  border-radius: 15px;
+  overflow: hidden;
+  
+  
+  &-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: slideShow 28s linear infinite;
+
+    p {
+      color: color(white);
+      font-size: 2rem;
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      background-color: rgba(color(primary), .9);
+    }
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+}
+
+$animList: 1 0s, 2 4s, 3 8s, 4 12s, 5 16s, 6 20s, 7 24s;
+
+@each $item in $animList {
+  .slideshow-slide:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item, 2);
+  }
+}
+
+@keyframes slideShow {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  18% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  20% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

@@ -248,6 +248,7 @@ header {
     text-align: center;
     font-family: font(title);
     isolation: isolate;
+    color: color(white);
 
     &::before {
       content: "About";

@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap");
+/* font-family: 'Luckiest Guy', cursive;
+font-family: 'Poppins', sans-serif; */
+
+html {
+  background-color: orange;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1em;
+}
+
+.title,
+.title-2,
+.paragraph {
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.title-2 {
+  font-size: 2rem;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+}
+
+.paragraph {
+  margin-bottom: 3em;
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+select {
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+option {
+  font-size: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  position: sticky;
+  top: 10%;
+}
+
+.api-data {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+li span {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.image img {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.form label,
+button {
+  font-weight: 700;
+}
+
+.form input,
+button {
+  margin: 0 auto 1em;
+  padding: 0.5em 0;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.result2-text {
+  max-width: 19ch;
+  margin-inline: auto;
+  margin-block: 0;
+}
+
+.bac2 {
+  margin-bottom: 5em;
+}
+
+/* MODAL */
+.modal {
+  height: 300px;
+  width: 90%;
+  box-shadow: 5px 5px 10px black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 250ms ease-in;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.modal-paragraph {
+  text-align: center;
+  font-size: 1rem;
+  max-width: 15ch;
+  margin-inline: auto;
+}
+
+.modal-btn {
+  width: 60%;
+  margin-inline: auto;
+  background-color: rgb(207, 202, 191);
+  padding: 0;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 0 3em;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  select {
+    width: 80%;
+  }
+  .form input,
+  button {
+    font-size: 1rem;
+    width: 60%;
+  }
+  .form label,
+  button {
+    font-size: 1.3rem;
+  }
+  .modal {
+    width: 60%;
+  }
+
+  .modal-paragraph {
+    text-align: center;
+    font-size: 1rem;
+    margin-inline: auto;
+    max-width: unset;
+  }
+
+  .modal-btn {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+.modal {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  body {
+    padding: 0 6em;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  select {
+    font-size: 1.3rem;
+    width: 60%;
+  }
+  .form input,
+  button {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+  .form label,
+  button {
+    font-size: 1.3rem;
+  }
+  .modal {
+    width: 30%;
+  }
+
+  .modal-paragraph {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-inline: auto;
+    max-width: unset;
+  }
+
+  .modal-btn {
+    width: 60%;
+  }
+}

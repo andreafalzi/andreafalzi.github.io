@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  --primary: #038c33;
+  --secondary: #025920;
+  --tertiary: #734014;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* GENERAL */
+section {
+  text-align: center;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.row {
+    height: 20vh;
+    margin: 2em 0;
+}
+
+.title {
+  font-size: clamp(1rem, 2.2vw, 2.2rem);
+  color: #fff;
+}
+
+.title-2x {
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  color: #fff;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+.btn {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 1em;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5em;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0.8em;
+}
+
+/* TEXT COLOR */
+
+.black-text {
+  color: black;
+}
+
+a.gold-button {
+  color: gold;
+}
+
+a.gold-button:hover {
+  color: white;
+  background-color: gold;
+}
+
+/* HR STYLE */
+
+hr {
+  margin: 0 auto 3em auto;
+  width: 50%;
+  border: 2px solid var(--primary);
+}
+
+/* NAVBAR + BURGER CHECKED MENU*/
+
+nav {
+  background-color: var(--primary);
+  height: 87px;
+  width: 100%;
+  z-index: 999;
+}
+
+label.logo {
+  height: 80;
+}
+
+label.logo a img {
+  height: 80px;
+  padding: 0 20px;
+  line-height: 80px;
+  margin-top: 4px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 87px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  line-height: 80px;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+  background-color: white;
+  padding: 3px;
+}
+
+.checkbtn {
+  font-size: 2rem;
+  color: var(--secondary);
+  float: right;
+  line-height: 87px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* MAIN */
+
+main {
+    margin: 4em 2em 0 2em;
+}
+
+.image-top {
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(3rem, 6vw, 4rem);
+    margin-bottom: 1em;
+}
+
+/* CARDS */
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2em;
+  margin: 0 1em;
+}
+
+.card-item {
+  box-shadow: 5px 5px 10px black;
+  border: 5px solid white;
+  padding: 2em;
+  text-align: left;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.5s;
+}
+
+.card-item:hover {
+    border: 5px solid var(--primary);
+}
+
+.card-img img {
+  height: 150px;
+  max-width: 150px;
+}
+
+.card-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-text {
+  margin-top: 1em;
+  max-height: 150px;
+  overflow-x: hidden;
+  word-spacing: 0.15rem;
+  line-height: 1.4rem;
+}
+
+.progress-bar-card {
+    margin-top: 1em;
+    color: #000 !important;
+    background-color: #d3d3d3!important;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.progress-bar-card-20 {
+    width: 20%;
+}
+
+.progress-bar-card-20-color {
+    background-color: #FEFB01 !important;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+
+.progress-bar-card-40 {
+    width: 40%;
+}
+
+.progress-bar-card-40-color {
+    background-color: #CEFB02 !important;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.progress-bar-card-60 {
+    width: 60%;
+}
+
+.progress-bar-card-60-color {
+    background-color: #87FA00 !important;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.progress-bar-card-80 {
+    width: 80%;
+}
+
+.progress-bar-card-80-color {
+    background-color: #3AF901 !important;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.progress-bar-card-100 {
+    width: 100%;
+}
+
+.progress-bar-card-100-color {
+    background-color: #00ED01 !important;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.btn.btn-card {
+    width: 40%;
+    margin-top: 2em;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 3em 3em 1em 3em;
+  background-color: var(--tertiary);
+  color: white;
+}
+
+footer.container {
+    margin-top: 4em;
+}
+
+footer > p {
+  text-align: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  margin-bottom: 5em;
+}
+
+.left {
+  width: 100%;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+.right {
+  width: 100%;
+  justify-items: flex-end;
+}
+
+.first-line {
+  margin-bottom: 2em;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  text-align: end;
+}
+
+.second-line {
+  font-size: 2rem;
+  text-align: end;
+}
+
+footer a {
+  color: white;
+  margin-right: 1em;
+}
+
+.fab {
+  transition: transform 0.2s;
+}
+
+.social-scale-size:hover {
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 768px) {
+
+  /* BURGER MENU */
+
+  .checkbtn {
+    display: block;
+  }
+
+  label.logo a img {
+  height: 75px;
+  margin-top: 6px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary);
+    top: 87px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 999;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+    /* MAIN */
+main.container {
+  margin-top: 119px;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.left {
+  margin-bottom: 2em;
+}
+
+.first-line {
+  text-align: left;
+}
+
+.second-line {
+  text-align: left;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+/* BURGER MENU */
+
+    label.logo a img {
+  height: 60px;
+  margin-top: 13px;
+}
+
+/* MAIN */
+
+main .container, main.container h1{
+    margin: 0 0.5em;
+}
+
+/* CARD */
+
+.card {
+  display: block;
+  margin-top: 2em;
+}
+
+.card-item {
+margin-top: 1em;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.left {
+  margin-bottom: 2em;
+}
+
+.first-line {
+  text-align: left;
+}
+
+.second-line {
+  text-align: left;
+}

@@ -1,0 +1,45 @@
+form {
+  margin-top: 3em;
+
+  input {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.5rem;
+    border: none;
+    margin-bottom: .3em;
+
+    @include response (lg) {
+      font-size: 1.7rem;
+    }
+  }
+
+  button {
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: auto;
+    width: 100%;
+    background-color: color(secondary);
+    border: none;
+    color: color(white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include response (lg) {
+      font-size: 1.7rem;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 300px;
+    padding: 1em;
+    font-size: 1.5rem;
+    resize: none;
+    border: none;
+
+    @include response (lg) {
+      font-size: 1.7rem;
+    }
+  }
+}

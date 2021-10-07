@@ -1,0 +1,31 @@
+@mixin response($breakpoint) {
+  @if($breakpoint == xl) {
+    @media(min-width: 1200px){
+      @content;
+    }
+  }
+
+  @if($breakpoint == lg) {
+    @media(min-width: 1000px){
+      @content;
+    }
+  }
+
+  @if($breakpoint == md) {
+    @media(min-width: 760px){
+      @content;
+    }
+  }
+
+  @if($breakpoint == sm) {
+    @media(min-width: 400px){
+      @content;
+    }
+  }
+}
+
+@mixin flexPosition($justCont: center, $alignIte: center) {
+  display: flex;
+  justify-content: $justCont;
+  align-items: $alignIte;
+}

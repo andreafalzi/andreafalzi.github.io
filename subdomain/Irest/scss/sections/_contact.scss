@@ -1,0 +1,18 @@
+.contact {
+  &-form {
+
+    @include response(md) {
+      margin-inline: auto;
+      width: 80%;
+    }
+
+    @include response(lg) {
+      margin-inline: auto;
+      width: 80%;
+    }
+
+    @include response(xl) {
+      width: 50%;
+    }
+  }
+}

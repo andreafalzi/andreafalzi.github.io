@@ -1,0 +1,31 @@
+.bg-one {
+  background-image: url(../img/products-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color(primary);
+    mix-blend-mode: multiply;
+  }
+}
+
+.bg-two {
+  background-image: url(../img/social-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color(primary);
+    mix-blend-mode: multiply;
+  }
+}

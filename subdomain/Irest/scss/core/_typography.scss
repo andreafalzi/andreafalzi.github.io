@@ -1,0 +1,25 @@
+.section-title {
+  text-align: center;
+  font-size: 5rem;
+  color: transparent;
+  -webkit-text-stroke-color: color(tertiary);
+  -webkit-text-stroke-width: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.3em;
+
+  @include response(lg) {
+    font-size: 7rem;
+  }
+}
+
+.section-paragraph {
+  font-size: 1.2rem;
+  color: color(white);
+  max-width: 50ch;
+  margin-inline: auto;
+
+  @include response(lg) {
+    font-size: 1.5rem;
+  }
+}

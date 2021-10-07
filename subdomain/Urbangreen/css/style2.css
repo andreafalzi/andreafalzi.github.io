@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  --primary: #038c33;
+  --secondary: #025920;
+  --tertiary: #734014;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* GENERAL */
+section {
+  text-align: center;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.row {
+    height: 20vh;
+    margin: 2em 0;
+}
+
+.title {
+  font-size: clamp(1rem, 2.2vw, 2.2rem);
+  color: #fff;
+}
+
+.title-2x {
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  color: #fff;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0.8em;
+}
+
+/* BUTTONS */
+
+.btn {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 1em;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5em;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+a.gold-button {
+  color: gold;
+}
+
+a.gold-button:hover {
+  color: white;
+  background-color: gold;
+}
+
+/* TEXT COLOR */
+
+.black-text {
+  color: black;
+}
+
+
+
+/* HR STYLE */
+
+hr {
+  margin: 0 auto 3em auto;
+  width: 50%;
+  border: 2px solid var(--primary);
+}
+
+/* NAVBAR + BURGER CHECKED MENU*/
+
+nav {
+  background-color: var(--primary);
+  height: 87px;
+  width: 100%;
+  z-index: 999;
+}
+
+label.logo {
+  height: 80;
+}
+
+label.logo a img {
+  height: 80px;
+  padding: 0 20px;
+  line-height: 80px;
+  margin-top: 4px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 87px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  line-height: 80px;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+  background-color: white;
+  padding: 3px;
+}
+
+.checkbtn {
+  font-size: 2rem;
+  color: var(--secondary);
+  float: right;
+  line-height: 87px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* MAIN */
+
+main {
+    margin: 4em 2em 4em 2em;
+}
+
+main.container {
+  margin-bottom: 3em;
+}
+
+.margin-top {
+    margin-top: 5em;
+}
+
+.image-top {
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(3rem, 6vw, 4rem);
+    margin-bottom: 1em;
+}
+
+.list-skill{
+    list-style: "- ";
+}
+
+/* CARDS */
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2em;
+  margin: 0 1em;
+}
+
+.card-item {
+  box-shadow: 5px 5px 10px black;
+  padding: 2em;
+  text-align: left;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.5s;
+}
+
+.card-item:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.card-img img {
+  height: 150px;
+  max-width: 150px;
+}
+
+.card-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-text {
+  margin-top: 1em;
+  max-height: 150px;
+  overflow-x: hidden;
+  word-spacing: 0.15rem;
+  line-height: 1.4rem;
+}
+
+/* ACCORDION */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  font-weight: 300;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel p {
+    margin: 0.8em;
+}
+
+.panel ul {
+margin-left: 3em;
+}
+
+/* APPLICATION FORM */
+
+.form-box {
+    margin: 0 1em 2em 1em;
+}
+
+.column {
+max-width: 60%;
+margin: auto;
+}
+
+input, select {
+    width: 48%;
+    height: 3em;
+    margin: 0 1em 1em 0;
+    border: 1px solid rgb(238, 227, 227);
+    padding: 0.5em;
+    font-weight: 700;
+}
+
+select:required:invalid {
+        color: #666;
+      }
+      option[value=""][disabled] {
+        display: none;
+      }
+      option {
+        color: #000;
+      }
+
+textarea {
+    width: 98%;
+    height: 5em;
+    margin-bottom: 1em;
+    resize: none;
+    border: 1px solid rgb(238, 227, 227);
+}
+
+.small-txt {
+    font-size: 0.8rem;
+}
+
+.file-box {
+    border: 1px dashed #000;
+    margin-bottom: 1em;
+    text-align: center;
+    height: 100px;
+    background-color: rgb(238, 227, 227);
+}
+
+.file-box p {
+    padding: 33px;
+}
+
+.position-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 2em 1em 0;
+}
+
+/* DONATION PAGE */
+
+.container-inner {
+    width: 100%;
+    display: flex;
+    min-height: 700px;
+    background-image: url(../pictures/landscape.jpg);
+    background-size: cover;
+}
+
+.container-inner-left {
+    width: 100%;
+    padding: 5em;
+    background-color: rgba(49, 49, 49, 0.418);
+  border-radius: 5px;
+}
+
+.container-inner-left h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.container-inner-left p {
+    font-size: clamp(1rem, 1vw, 1rem);
+    word-spacing: 0.2rem;
+    line-height: 1.4rem;
+    width: 70%;
+    color: white;
+}
+
+.container-inner-right{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.container-inner-inner-right {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 2em;
+    padding: 3em 1em;
+    border: 3px solid #d3d3d3;
+    border-radius: 10px;
+}
+
+.container-inner-right-radio {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+.container-inner-right-radio-box {
+    font-weight: 700;
+}
+
+.container-inner-right h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.donation-input {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* FAQ */
+
+.container-faq {
+    padding: 1em;
+}
+
+/* TEAM */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+    grid-gap: 2em;
+    margin-bottom: 2em;
+}
+
+.container-grid-card {
+    background-color: #f5f5f5;
+    padding: 1em;
+    display: flex;
+}
+
+.container-grid-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.container-grid-img {
+    height: 100%;
+    width: 200px;
+}
+
+.container-grid-text {
+    padding: 1em;
+    align-content: center;
+}
+
+.container-grid-text .bq {
+    color: #858585;
+    font-weight: 400;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 3em 3em 1em 3em;
+  background-color: var(--tertiary);
+  color: white;
+}
+
+footer > p {
+  text-align: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  margin-bottom: 5em;
+}
+
+.left {
+  width: 100%;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+.right {
+  width: 100%;
+  justify-items: flex-end;
+}
+
+.first-line {
+  margin-bottom: 2em;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  text-align: end;
+}
+
+.second-line {
+  font-size: 2rem;
+  text-align: end;
+}
+
+footer a {
+  color: white;
+  margin-right: 1em;
+}
+
+.fab {
+  transition: transform 0.2s;
+}
+
+.social-scale-size:hover {
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 768px) {
+
+/* BURGER MENU */
+
+  .checkbtn {
+    display: block;
+  }
+
+  label.logo a img {
+  height: 75px;
+  margin-top: 6px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary);
+    top: 87px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 999;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  /* MAIN */
+
+  main {
+    margin: 0 0.5em 2em 0.5em;
+  }
+
+  main.container {
+    margin-top: 119px;
+  }
+
+    /* APPLICATION FORM */
+
+.column {
+    max-width: 100%;
+}
+
+input, select, textarea {
+    width: 100%;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.left {
+  margin-bottom: 2em;
+}
+
+.first-line {
+  text-align: left;
+}
+
+.second-line {
+  text-align: left;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    button.btn {
+    width: 100%;
+}
+
+main {
+    margin: 0 0 2em 0;
+}
+
+  /* BURGER MENU */
+
+    label.logo a img {
+  height: 60px;
+  margin-top: 13px;
+}
+
+/* SECTION 1-1 */
+
+.columns {
+  display: block;
+}
+
+.icon-big {
+  margin-bottom: 0;
+}
+
+/* CARD */
+
+.card {
+  display: block;
+}
+
+.card-item {
+margin-top: 1em;
+}
+
+/* APPLICATION FORM */
+
+.column {
+    max-width: 100%;
+}
+
+input, select, textarea {
+    width: 100%;
+}
+
+.position-right {
+    margin-right: 0em;
+}
+
+/* DONATION FORM */
+
+.container-inner {
+    display: block;
+    padding-bottom: 5em;
+}
+
+.container-inner-left {
+    width: 100%;
+    padding: 2em;
+}
+
+.container-inner-right {
+    width: 100%;
+}
+
+/* TEAM */
+
+.container-grid {
+  grid-template-columns: 1fr;
+}
+
+.container-grid-card {
+  flex-direction: column;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.left {
+  margin-bottom: 2em;
+}
+
+.first-line {
+  text-align: left;
+}
+
+.second-line {
+  text-align: left;
+}

@@ -1,0 +1,8 @@
+.card-grid {
+  display: grid;
+  grid-gap: 2em;
+
+  @include response(md) {
+    grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
+  }
+}

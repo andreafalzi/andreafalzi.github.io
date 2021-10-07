@@ -1,0 +1,56 @@
+$colors: (
+  primary: #433C71,
+  secondary: #B9BE2F,
+  tertiary: #C2C2C2,
+  white: #fff,
+  black: #000
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$socialMediaColors: 1 #b31217, 2 #FCAF45, 3 #517fa4, 4 #55acee;
+
+@each $color in $socialMediaColors {
+  .social-icon-item:nth-child(#{nth($color, 1)}) .social-icon-link {
+    color: nth($color, 2);
+    border: 0.1rem solid nth($color, 2);
+  }
+}
+
+$checkProductArray: 1, 2, 3, 4, 5, 6;
+
+@each $product in $checkProductArray {
+  #checkProduct-#{nth($product, 1)}:checked ~ .circle::before {
+  background: color(secondary);
+  clip-path: circle(400px at center);
+}
+
+#checkProduct-#{nth($product, 1)}:checked ~ .content {
+  left: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+
+#checkProduct-#{nth($product, 1)}:checked ~ img {
+  right: 72%;
+}
+
+#checkProduct-#{nth($product, 1)}:checked ~ .show-button {
+  left: 90%;
+  top: 10%;
+}
+
+#checkProduct-#{nth($product, 1)}:checked ~ .show-button .open {
+  visibility: hidden;
+  opacity: 0;
+}
+#checkProduct-#{nth($product, 1)}:checked ~ .show-button .close {
+  visibility: visible;
+  opacity: 1;
+}
+#checkProduct-#{nth($product, 1)}:checked ~ .show-button::before {
+  visibility: hidden;
+}
+}

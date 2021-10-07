@@ -1,0 +1,58 @@
+.see-more {
+  padding: 2em 2em;
+
+  h1.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: color(black);
+    font-family: font(title);
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  h3.title {
+    font-size: size(md);
+    font-weight: 700;
+    color: color(black);
+    font-family: font(title);
+  }
+
+  .paragraph {
+    font-size: size(sm);
+    font-family: font(paragraph);
+    font-weight: 400;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    width: 40px;
+    margin-top: 5px;
+
+    + img {
+      margin-left: 10px;
+    }
+  }
+
+  .square {
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+
+    + .square {
+      margin-left: 10px;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  a {
+    color: color(black);
+    text-decoration: none;
+  }
+}

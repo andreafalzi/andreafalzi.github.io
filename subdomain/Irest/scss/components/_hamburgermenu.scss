@@ -1,0 +1,24 @@
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  z-index: 40;
+  margin-left: auto;
+
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.4s;
+
+    &-line {
+      width: 100%;
+      height: 2px;
+      background-color: color(white);
+      transform-origin: right;
+      transition: all 0.4s 0.4s;
+    }
+  }
+}

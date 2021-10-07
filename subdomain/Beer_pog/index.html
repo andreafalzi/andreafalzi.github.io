@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>API</title>
+  </head>
+  <body>
+    <h1 class="title">🍻BEER POG</h1>
+    <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, tenetur fugiat. Nemo, corrupti voluptates! Id neque atque veniam recusandae nobis!</p>
+    <select name="beer-select" id="beerSelect" onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' onblur="this.size=0;">
+      <option id="0">--Choose your beer--</option>
+    </select>
+
+    <div class="flex">
+      <div class="image"></div>
+      <div class="api-data"></div>
+    </div>
+
+    <!-- MODAL START -->
+    <div id="modal" class="modal">
+      <h3 class="modal-title">Alert box!</h3>
+      <p class="modal-paragraph"></p>
+      <button class="modal-btn">Close</button>
+    </div>
+    <!-- MODAL END -->
+    <section id="BAC2" class="bac2">
+      <h2 class="title-2">Alcohol Test (BAC)</h2>
+      <p class="paragraph">Limit in Denmark is 0.05</p>
+      <div class="form">
+        <label for="mLOfBeers">Beer quantity in mL</label>
+        <input id="mLOfBeers" type="text" />
+        <label for="bodyWeight2">Your weight in kg</label>
+        <input id="bodyWeight2" type="text" />
+        <label for="gender2">Gender(Male or Female)</label>
+        <input id="gender2" type="text" />
+        <button id="bacSubmit2">Can I drive?</button>
+        <h2 id="result2" class="result2-text"></h2>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
