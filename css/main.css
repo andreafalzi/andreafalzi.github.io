@@ -409,11 +409,6 @@ header .hero .hero-social {
   font-weight: 700;
   color: #f2f2f2;
   letter-spacing: .3rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-inline: auto;
-  position: relative;
 }
 
 .works-slide-container .slide-btn {
