@@ -499,6 +499,7 @@ header .hero .hero-social {
 
 .contact .contact-form {
   width: 100%;
+  position: relative;
 }
 
 .contact .contact-form input,
