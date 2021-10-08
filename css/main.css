@@ -484,6 +484,7 @@ header .hero .hero-social {
   margin: 0 auto;
   padding: .3em 1em;
   border-radius: 50px;
+  z-index: 10;
 }
 
 /* !!!SECTION ABOUT!!! */
