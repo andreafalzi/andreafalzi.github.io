@@ -224,7 +224,7 @@ header {
         color: color(black);
         letter-spacing: .3rem;
         background-color: color(tertiary);
-        width: fit-content;
+        display: inline-block;
         margin: 0 auto;
         padding: .3em 1em;
         border-radius: 50px;
