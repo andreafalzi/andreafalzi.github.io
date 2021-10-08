@@ -157,7 +157,7 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: false,
-  effect: "cube",
+  effect: "flip",
 
   // If we need pagination
   pagination: {
