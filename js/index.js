@@ -1,32 +1,9 @@
 /*========GLOBAL VARIABLES========*/
 
 /*========FUNCTIONS========*/
-
-/* LOADER */
-// $(document).ready(function () {
-//   $("#navbar-responsive").addClass("xyz-in");
-//   $("#hero").addClass("xyz-in");
-// });
-// window.addEventListener("DOMContentLoaded", () => {
-//   document.querySelector("#navbar-responsive").classList.add("xyz-in");
-//   document.querySelector("#hero").classList.add("xyz-in");
-// });
-
-window.addEventListener("DOMContentLoaded", () => {
-  if (document.body.id == "body") {
-    document.querySelector("#navbar-responsive").classList.add("xyz-in");
-    document.querySelector("#hero").classList.add("xyz-in");
-    onScrollNavMenu();
-    openCloseCards();
-    arrowAnimation();
-    validateForm();
-    closeModal();
-    myAge();
-    copyrigthYear();
-  } else if (document.body.id == "worksBody") {
-    copyrigthYear();
-  }
-});
+arrowAnimation();
+myAge();
+copyrigthYear();
 
 /* HEADER ARROW ANIMATION */
 function arrowAnimation() {
@@ -55,41 +32,39 @@ function arrowAnimation() {
 }
 
 /* ON SCROLL RESPONSIVE NAVBAR ICON COLOR SHIFT */
-function onScrollNavMenu() {
-  window.addEventListener("scroll", () => {
-    let pageYOffset = window.pageYOffset;
-    const works = document.getElementById("works");
-    const worksTop = works.offsetTop - 10;
-    const about = document.getElementById("about");
-    const aboutTop = about.offsetTop - 10;
-    const contact = document.getElementById("contact");
-    const contactTop = contact.offsetTop - 10;
-    const bodyNav = document.getElementById("bodyNav");
-    const worksNav = document.getElementById("worksNav");
-    const aboutNav = document.getElementById("aboutNav");
-    const contactNav = document.getElementById("contactNav");
+window.addEventListener("scroll", () => {
+  let pageYOffset = window.pageYOffset;
+  const works = document.getElementById("works");
+  const worksTop = works.offsetTop - 10;
+  const about = document.getElementById("about");
+  const aboutTop = about.offsetTop - 10;
+  const contact = document.getElementById("contact");
+  const contactTop = contact.offsetTop - 10;
+  const bodyNav = document.getElementById("bodyNav");
+  const worksNav = document.getElementById("worksNav");
+  const aboutNav = document.getElementById("aboutNav");
+  const contactNav = document.getElementById("contactNav");
 
-    if (pageYOffset >= worksTop) {
-      bodyNav.classList.remove("span-icon");
-      worksNav.classList.add("span-icon");
-    } else {
-      worksNav.classList.remove("span-icon");
-      bodyNav.classList.add("span-icon");
-    }
-    if (pageYOffset >= aboutTop) {
-      worksNav.classList.remove("span-icon");
-      aboutNav.classList.add("span-icon");
-    } else {
-      aboutNav.classList.remove("span-icon");
-    }
-    if (pageYOffset >= contactTop) {
-      aboutNav.classList.remove("span-icon");
-      contactNav.classList.add("span-icon");
-    } else {
-      contactNav.classList.remove("span-icon");
-    }
-  });
-}
+  if (pageYOffset >= worksTop) {
+    bodyNav.classList.remove("span-icon");
+    worksNav.classList.add("span-icon");
+  } else {
+    worksNav.classList.remove("span-icon");
+    bodyNav.classList.add("span-icon");
+  }
+  if (pageYOffset >= aboutTop) {
+    worksNav.classList.remove("span-icon");
+    aboutNav.classList.add("span-icon");
+  } else {
+    aboutNav.classList.remove("span-icon");
+  }
+  if (pageYOffset >= contactTop) {
+    aboutNav.classList.remove("span-icon");
+    contactNav.classList.add("span-icon");
+  } else {
+    contactNav.classList.remove("span-icon");
+  }
+});
 
 /* MY AGE */
 function myAge() {
@@ -112,6 +87,12 @@ function myAge() {
 function copyrigthYear() {
   document.querySelector("#copyright").appendChild(document.createTextNode(new Date().getFullYear()));
 }
+
+/* LOADER */
+$(document).ready(function () {
+  $("#navbar-responsive").addClass("xyz-in");
+  $("#hero").addClass("xyz-in");
+});
 
 /* MAIL FORM */
 function validateForm() {
@@ -154,21 +135,19 @@ function closeModal() {
 }
 
 /* Open/Close about cards */
-function openCloseCards() {
-  const acc = document.querySelectorAll(".about-cards-card");
+const acc = document.querySelectorAll(".about-cards-card");
 
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.children[0].classList.toggle("select");
-      this.children[1].classList.toggle("show");
-      var panel = this.children[1];
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.children[0].classList.toggle("select");
+    this.children[1].classList.toggle("show");
+    var panel = this.children[1];
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 }
 
 /*========EXTERNALS========*/
