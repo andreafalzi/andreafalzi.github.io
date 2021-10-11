@@ -6,16 +6,41 @@
 
 .swiper-button-prev {
   left: 0;
+
+  @include response(md) {
+    left: 5%;
+  }
 }
 
 .swiper-button-next {
   right: 0;
+
+  @include response(md) {
+    right: 5%;
+  }
 }
 
 .swiper-pagination {
-  bottom: -20px !important;
+  bottom: -30px !important;
+
+  @include response(md) {
+    bottom: 10px !important;
+  }
 
   &-bullet-active {
     background-color: color(black);
+  }
+}
+
+.swiper {
+  @include response(md) {
+    display: none;
+  }
+}
+
+.swiper-desktop {
+  display: none;
+  @include response(md) {
+    display: grid;
   }
 }

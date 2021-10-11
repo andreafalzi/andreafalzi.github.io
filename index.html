@@ -20,16 +20,13 @@
             <img src="img/logo.png" alt="andrea falzi logo" />
           </div>
 
-          <!-- <div class="navbar-title">Andrea Falzi DEV</div> -->
-
           <ul class="navbar-list">
             <li><a href="#works">Works</a></li>
             <li><a href="#about">About</a></li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+
         <ul id="navbar-responsive" class="navbar-responsive" xyz="fade in-left-100% stagger-2 delay-15">
           <li class="xyz-nested" >
             <a id="bodyNav" class="span-icon" href="#body"><i class="fas fa-home"></i>Home</a>
@@ -53,31 +50,36 @@
       <div class="container">
         <div id="hero" class="hero">
           <div class="hero-title" xyz="fade delay-3 stagger-3 ease-out-back">
-            <h1><span class="xyz-nested">Web Experiences</span><span class="xyz-nested">Crafted with</span><span class="xyz-nested">Coding Powers</span></h1>
+            <h1><span class="xyz-nested">Web Experiences</span><span class="xyz-nested">Crafted With</span><span class="xyz-nested">Coding Powers</span></h1>
             <p class="xyz-nested" xyz="fade delay-10 in-left-100%"><i class="fas fa-hand-point-down"></i> Meet Andrea Falzi</p>
-            <a href="#works">
-              <div class="svg">
-                <div class="square-1"></div>
-                <div class="square-2"></div>
-                <div class="arrow"></div>
-              </div>
-            </a>
+            
+              
+
           </div>
           <div class="hero-social">
             <ul>
               <li>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/andreafalzi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-codepen"></i></a>
+                <a href="https://codepen.io/andreafalzi" target="_blank"><i class="fab fa-codepen"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i></a>
               </li>
             </ul>
+          </div>
+        </div>
+        <div class="svg-container">
+          <div class="svg">
+            <a href="#works">
+              <div class="square-1"></div>
+              <div class="square-2"></div>
+              <div class="arrow"></div>
+            </a>
           </div>
         </div>
       </div>
@@ -88,6 +90,8 @@
       <div class="works">
         <div class="container">
           <h3 class="title">Works</h3>
+
+          <!-- Swiper-responsive -->
           <div class="works-slide-container swiper">
             <div class="swiper-wrapper">
               <div class="slide swiper-slide">
@@ -121,6 +125,53 @@
               <div class="slide swiper-slide">
                 <div class="slide-title">Beer POG</div>
                 <img src="img/iphone-beerPOG.png" alt="iphone beerpog" />
+                <a href="pages/beerpog.html">
+                  <div class="slide-btn">See more</div>
+                </a>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <!-- Swiper-desktop -->
+          <div class="works-slide-container swiper-desktop">
+            <div class="swiper-wrapper">
+              <div class="slide swiper-slide">
+                <div class="slide-title">Urbangreen</div>
+                <img src="img/thumbnail-MacBook-Air_2x.png" alt="urbangreen screen on iphone" />
+                <a href="pages/urbangreen.html">
+                  <div class="slide-btn">See more</div>
+                </a>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-title">Big.byte</div>
+                <img src="img/thumbnail-MacBook-Air_2x.png" alt="big-byte screen on iphone" />
+                <a href="pages/bigbyte.html">
+                  <div class="slide-btn">See more</div>
+                </a>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-title">Mario Jump</div>
+                <img src="img/thumbnail-MacBook-Air_2x.png"src="img/thumbnail-MacBook-Air_2x.png" alt="mario jump screen on iphone" />
+                <a href="pages/mariojump.html">
+                  <div class="slide-btn">See more</div>
+                </a>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-title">Irest</div>
+                <img src="img/thumbnail-MacBook-Air_2x.png" alt="iphone irest" />
+                <a href="pages/irest.html">
+                  <div class="slide-btn">See more</div>
+                </a>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-title">Beer POG</div>
+                <img src="img/thumbnail-MacBook-Air_2x.png" alt="iphone beerpog" />
                 <a href="pages/beerpog.html">
                   <div class="slide-btn">See more</div>
                 </a>
@@ -227,7 +278,7 @@
       <div  class="modal modal-contact ">
         <div id="contactLogo" class="modal-logo"><img src="../img/logo.png" alt="andrea falzi logo"></div>
         <div id="contactParagraph" class="modal-paragraph"></div>
-        <a id="contactButton" class="modal-button" onclick="closeModal()"></a>
+        <div class="modal-button-box"><a id="contactButton" class="modal-button" onclick="closeModal()"></a></div>
       </div>
     </div>
 
