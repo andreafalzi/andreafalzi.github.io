@@ -178,7 +178,6 @@ header {
   position: relative;
   text-align: center;
   padding: 4em 2em;
-  
 
   h3.title {
     font-size: 6rem;
@@ -214,26 +213,24 @@ header {
         font-size: size(lg);
         font-weight: 700;
         color: color(black);
-        letter-spacing: .3rem;
- 
+        letter-spacing: 0.3rem;
       }
 
       &-btn {
         font-family: font(paragraph);
         font-size: size(sm);
         color: color(black);
-        letter-spacing: .3rem;
+        letter-spacing: 0.3rem;
         background-color: color(tertiary);
         display: inline-block;
         margin: 0 auto;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         border-radius: 50px;
         z-index: 10;
       }
     }
   }
 }
-
 
 /* !!!SECTION ABOUT!!! */
 .about {
@@ -324,7 +321,7 @@ header {
   .contact-form {
     width: 100%;
     position: relative;
-    
+
     input,
     textarea,
     button {
@@ -334,6 +331,7 @@ header {
       color: color(white);
       border: none;
       margin-bottom: 3rem;
+      font-size: size(sm);
     }
 
     input,
