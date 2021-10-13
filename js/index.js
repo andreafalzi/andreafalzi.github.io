@@ -185,15 +185,15 @@ const swiperDesktop = new Swiper(".swiper-desktop", {
   spaceBetween: 10,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 320px
     900: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
+      centeredSlides: true,
     },
-    // when window width is >= 480px
     1100: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
+      centeredSlides: true,
     },
   },
 

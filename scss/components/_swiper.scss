@@ -2,22 +2,15 @@
 .swiper-button-next {
   color: color(black);
   font-weight: 900;
+  z-index: 15;
 }
 
 .swiper-button-prev {
   left: 0;
-
-  @include response(md) {
-    left: 5%;
-  }
 }
 
 .swiper-button-next {
   right: 0;
-
-  @include response(md) {
-    right: 5%;
-  }
 }
 
 .swiper-pagination {
@@ -41,6 +34,11 @@
 .swiper-desktop {
   display: none;
   @include response(md) {
-    display: grid;
+    display: flex;
+    position: relative;
+
+    .swiper-pagination {
+      bottom: -30px !important;
+    }
   }
 }

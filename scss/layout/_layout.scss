@@ -37,7 +37,7 @@ nav {
           transition: color 200ms ease-in;
 
           &:hover {
-            color: color(tertiary)
+            color: color(tertiary);
           }
         }
       }
@@ -241,6 +241,24 @@ header {
 
   @include response(lg) {
     padding: 4em 4em;
+  }
+
+  .container {
+    @include response(xxxl) {
+      &::before,
+      &::after {
+        content: "";
+        background-color: color(secondary);
+        width: calc((100vw - 1366px) / 2);
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+      }
+
+      &::after {
+        margin-left: auto;
+      }
+    }
   }
 
   h3.title {

@@ -135,26 +135,15 @@
 .swiper-button-next {
   color: #333;
   font-weight: 900;
+  z-index: 15;
 }
 
 .swiper-button-prev {
   left: 0;
 }
 
-@media (min-width: 767px) {
-  .swiper-button-prev {
-    left: 5%;
-  }
-}
-
 .swiper-button-next {
   right: 0;
-}
-
-@media (min-width: 767px) {
-  .swiper-button-next {
-    right: 5%;
-  }
 }
 
 .swiper-pagination {
@@ -183,8 +172,13 @@
 
 @media (min-width: 767px) {
   .swiper-desktop {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .swiper-desktop .swiper-pagination {
+    bottom: -30px !important;
   }
 }
 
@@ -584,6 +578,20 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 @media (min-width: 900px) {
   .works {
     padding: 4em 4em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .works .container::before, .works .container::after {
+    content: "";
+    background-color: #d2d2d2;
+    width: calc((100vw - 1366px) / 2);
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+  .works .container::after {
+    margin-left: auto;
   }
 }
 
