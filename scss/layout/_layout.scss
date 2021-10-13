@@ -34,6 +34,11 @@ nav {
           color: color(white);
           font-family: font(paragraph);
           margin-left: 20px;
+          transition: color 200ms ease-in;
+
+          &:hover {
+            color: color(tertiary)
+          }
         }
       }
     }
@@ -145,6 +150,11 @@ header {
           a {
             font-size: size(xl);
             color: color(white);
+            transition: color 200ms ease-in;
+
+            &:hover {
+              color: color(tertiary);
+            }
           }
         }
       }
@@ -154,7 +164,11 @@ header {
   .svg-container {
     height: 30vh;
 
-    .svg {
+    .svg-box {
+      width: fit-content;
+      margin: 0 auto;
+
+      .svg {
         border: 5px color(tertiary) solid;
         width: 35px;
         height: 60px;
@@ -209,8 +223,8 @@ header {
           opacity: 1;
         }
       }
+    }
   }
-  
 }
 
 /* !!!SECTION WORKS!!! */

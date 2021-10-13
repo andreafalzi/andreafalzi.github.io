@@ -8,6 +8,7 @@
     position: relative;
     transition: 0.4s;
     z-index: 10;
+    cursor: pointer;
 
     &-title {
       border-bottom: 2px color(secondary) solid;

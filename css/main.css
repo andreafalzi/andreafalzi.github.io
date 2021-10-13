@@ -14,6 +14,7 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 10;
+  cursor: pointer;
 }
 
 .about-cards-card-title {
@@ -47,7 +48,7 @@
 }
 
 .modal {
-  background-color: #5e5e5e;
+  background-color: #424242;
   padding: 5rem;
   border-radius: 10px;
   min-width: 80%;
@@ -297,7 +298,7 @@ ul {
 
 /* !!!NAVBAR!!! */
 nav {
-  background-color: #5e5e5e;
+  background-color: #424242;
 }
 
 nav .navbar {
@@ -339,6 +340,11 @@ nav .navbar-list {
     color: #f2f2f2;
     font-family: "Poppins", sans-serif;
     margin-left: 20px;
+    -webkit-transition: color 200ms ease-in;
+    transition: color 200ms ease-in;
+  }
+  nav .navbar-list li a:hover {
+    color: #00ff99;
   }
 }
 
@@ -396,7 +402,7 @@ nav .navbar-responsive li .span-icon {
 
 /* !!!HERO!!! */
 header {
-  background-color: #5e5e5e;
+  background-color: #424242;
 }
 
 header .hero {
@@ -478,6 +484,11 @@ header .hero .hero-social {
   header .hero .hero-social li a {
     font-size: 3rem;
     color: #f2f2f2;
+    -webkit-transition: color 200ms ease-in;
+    transition: color 200ms ease-in;
+  }
+  header .hero .hero-social li a:hover {
+    color: #00ff99;
   }
 }
 
@@ -485,7 +496,14 @@ header .svg-container {
   height: 30vh;
 }
 
-header .svg-container .svg {
+header .svg-container .svg-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+header .svg-container .svg-box .svg {
   border: 5px #00ff99 solid;
   width: 35px;
   height: 60px;
@@ -497,7 +515,7 @@ header .svg-container .svg {
   transition: opacity 200ms ease-in;
 }
 
-header .svg-container .svg .square-1 {
+header .svg-container .svg-box .svg .square-1 {
   width: 5px;
   height: 5px;
   background-color: #f2f2f2;
@@ -511,7 +529,7 @@ header .svg-container .svg .square-1 {
   transition: opacity 500ms ease-in;
 }
 
-header .svg-container .svg .square-2 {
+header .svg-container .svg-box .svg .square-2 {
   width: 5px;
   height: 5px;
   background-color: #f2f2f2;
@@ -525,7 +543,7 @@ header .svg-container .svg .square-2 {
   transition: opacity 500ms ease-in;
 }
 
-header .svg-container .svg .arrow {
+header .svg-container .svg-box .svg .arrow {
   border: solid #f2f2f2;
   border-width: 0 5px 5px 0;
   padding: 5px;
@@ -539,11 +557,11 @@ header .svg-container .svg .arrow {
   transition: all 500ms ease-in;
 }
 
-header .svg-container .svg .svg-square-animation {
+header .svg-container .svg-box .svg .svg-square-animation {
   opacity: 1;
 }
 
-header .svg-container .svg .svg-arrow-animation {
+header .svg-container .svg-box .svg .svg-arrow-animation {
   top: 50%;
   opacity: 1;
 }
@@ -659,7 +677,7 @@ header .svg-container .svg .svg-arrow-animation {
 
 /* !!!SECTION ABOUT!!! */
 .about {
-  background-color: #5e5e5e;
+  background-color: #424242;
   color: #f2f2f2;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -752,7 +770,7 @@ header .svg-container .svg .svg-arrow-animation {
 .contact .contact-form button {
   width: 100%;
   font-family: "Poppins", sans-serif;
-  background-color: #5e5e5e;
+  background-color: #424242;
   color: #f2f2f2;
   border: none;
   margin-bottom: 3rem;
@@ -785,7 +803,7 @@ header .svg-container .svg .svg-arrow-animation {
 /* !!!FOOTER!!! */
 footer {
   padding: 4em 2em 7em 2em;
-  background-color: #5e5e5e;
+  background-color: #424242;
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
 }
