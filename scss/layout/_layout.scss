@@ -164,9 +164,18 @@ header {
   .svg-container {
     height: 30vh;
 
+    @include response(md) {
+      height: unset;
+    }
+
     .svg-box {
       width: fit-content;
       margin: 0 auto;
+
+      @include response(md) {
+      margin: 0;
+      padding: 3em 4em;
+    }
 
       .svg {
         border: 5px color(tertiary) solid;
@@ -275,8 +284,12 @@ header {
       font-size: 5rem;
       position: absolute;
       color: color(darkOpacity);
-      padding-bottom: 8rem;
+      padding-top: 4rem;
       z-index: -1;
+
+      @include response(sm) {
+        transform: scale(4);
+      }
     }
   }
 
@@ -366,14 +379,22 @@ header {
       font-size: 5rem;
       position: absolute;
       color: color(lightOpacity);
-      padding-bottom: 8rem;
+      padding-top: 4rem;
       z-index: -1;
+
+      @include response(sm) {
+        transform: scale(4);
+      }
     }
   }
 
   .about-content {
     margin-top: 40px;
     position: relative;
+
+    @include response(md) {
+      margin-top: 100px;
+    }
 
     .left p {
       font-size: size(sm);
@@ -428,8 +449,12 @@ header {
       font-size: 5rem;
       position: absolute;
       color: color(darkOpacity);
-      padding-bottom: 8rem;
+      padding-top: 4rem;
       z-index: -1;
+
+      @include response(sm) {
+        transform: scale(4);
+      }
     }
   }
 

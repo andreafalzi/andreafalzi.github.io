@@ -15,6 +15,7 @@
   transition: 0.4s;
   z-index: 10;
   cursor: pointer;
+  background-color: #424242;
 }
 
 .about-cards-card-title {
@@ -490,11 +491,24 @@ header .svg-container {
   height: 30vh;
 }
 
+@media (min-width: 767px) {
+  header .svg-container {
+    height: unset;
+  }
+}
+
 header .svg-container .svg-box {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+@media (min-width: 767px) {
+  header .svg-container .svg-box {
+    margin: 0;
+    padding: 3em 4em;
+  }
 }
 
 header .svg-container .svg-box .svg {
@@ -611,8 +625,15 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-size: 5rem;
   position: absolute;
   color: rgba(46, 46, 46, 0.02);
-  padding-bottom: 8rem;
+  padding-top: 4rem;
   z-index: -1;
+}
+
+@media (min-width: 600px) {
+  .works h3.title::before {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
 }
 
 .works-slide-container .slide {
@@ -715,13 +736,26 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-size: 5rem;
   position: absolute;
   color: rgba(242, 242, 242, 0.02);
-  padding-bottom: 8rem;
+  padding-top: 4rem;
   z-index: -1;
+}
+
+@media (min-width: 600px) {
+  .about h3.title::before {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
 }
 
 .about .about-content {
   margin-top: 40px;
   position: relative;
+}
+
+@media (min-width: 767px) {
+  .about .about-content {
+    margin-top: 100px;
+  }
 }
 
 .about .about-content .left p {
@@ -764,8 +798,15 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-size: 5rem;
   position: absolute;
   color: rgba(46, 46, 46, 0.02);
-  padding-bottom: 8rem;
+  padding-top: 4rem;
   z-index: -1;
+}
+
+@media (min-width: 600px) {
+  .contact h3.title::before {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
 }
 
 .contact .contact-form {
