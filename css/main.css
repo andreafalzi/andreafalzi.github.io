@@ -313,6 +313,12 @@ nav .navbar {
   }
 }
 
+@media (min-width: 1367px) {
+  nav .navbar {
+    padding: 1em 0em;
+  }
+}
+
 nav .navbar-logo img {
   width: 50px;
 }
@@ -334,7 +340,7 @@ nav .navbar-list {
     font-family: "Montserrat", sans-serif;
     color: #f2f2f2;
     font-family: "Poppins", sans-serif;
-    margin-left: 20px;
+    margin-left: 3em;
     -webkit-transition: color 200ms ease-in;
     transition: color 200ms ease-in;
   }
@@ -403,6 +409,9 @@ header {
 header .hero {
   padding: 3em 2em;
   color: #f2f2f2;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   height: 60vh;
 }
 
@@ -421,6 +430,12 @@ header .hero {
   }
 }
 
+@media (min-width: 1367px) {
+  header .hero {
+    padding: 15em 0em 3em;
+  }
+}
+
 header .hero .hero-title {
   text-align: center;
 }
@@ -433,7 +448,7 @@ header .hero .hero-title {
 
 header .hero .hero-title h1 {
   font-size: 3rem;
-  line-height: 87px;
+  line-height: 57px;
   font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,7 +462,8 @@ header .hero .hero-title h1 {
 
 @media (min-width: 900px) {
   header .hero .hero-title h1 {
-    font-size: 5rem;
+    font-size: 7rem;
+    line-height: 87px;
     letter-spacing: 0.3rem;
   }
 }
@@ -456,6 +472,7 @@ header .hero .hero-title p {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  margin-top: 2em;
   margin-bottom: 6em;
 }
 
@@ -474,10 +491,10 @@ header .hero .hero-social {
     margin-left: auto;
   }
   header .hero .hero-social li {
-    margin-top: 3rem;
+    margin-top: 2.5em;
   }
   header .hero .hero-social li a {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #f2f2f2;
     -webkit-transition: color 200ms ease-in;
     transition: color 200ms ease-in;
@@ -489,25 +506,39 @@ header .hero .hero-social {
 
 header .svg-container {
   height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 900px) {
   header .svg-container {
-    height: unset;
+    padding: 3em 4em;
   }
 }
 
-header .svg-container .svg-box {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+@media (min-width: 1367px) {
+  header .svg-container {
+    padding: 3em 0em;
+  }
 }
 
-@media (min-width: 767px) {
-  header .svg-container .svg-box {
-    margin: 0;
-    padding: 3em 4em;
+header .svg-container .svg-text {
+  color: #d2d2d2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin-right: 1em;
+}
+
+@media (min-width: 900px) {
+  header .svg-container .svg-text {
+    font-size: 3rem;
   }
 }
 
@@ -517,7 +548,6 @@ header .svg-container .svg-box .svg {
   height: 60px;
   border-radius: 10px;
   position: relative;
-  margin: 0 auto;
   opacity: 0;
   -webkit-transition: opacity 200ms ease-in;
   transition: opacity 200ms ease-in;
@@ -580,18 +610,18 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-family: "Poppins", sans-serif;
   position: relative;
   text-align: center;
-  padding: 4em 2em;
+  padding: 4em 2em 8em;
 }
 
 @media (min-width: 767px) {
   .works {
-    padding: 4em 4em;
+    padding: 4em 4em 8em;
   }
 }
 
 @media (min-width: 900px) {
   .works {
-    padding: 4em 4em;
+    padding: 10em 4em 16em;
   }
 }
 
@@ -615,6 +645,12 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   color: #333;
   font-family: "Montserrat", sans-serif;
   isolation: isolate;
+}
+
+@media (min-width: 1100px) {
+  .works h3.title {
+    font-size: 8rem;
+  }
 }
 
 .works h3.title::before {
@@ -719,6 +755,12 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   }
 }
 
+@media (min-width: 900px) {
+  .about {
+    padding: 10em 4em 16em;
+  }
+}
+
 .about h3.title {
   font-size: 6rem;
   font-weight: 700;
@@ -726,6 +768,12 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-family: "Montserrat", sans-serif;
   isolation: isolate;
   color: #f2f2f2;
+}
+
+@media (min-width: 1100px) {
+  .about h3.title {
+    font-size: 8rem;
+  }
 }
 
 .about h3.title::before {
@@ -780,6 +828,12 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   }
 }
 
+@media (min-width: 900px) {
+  .contact {
+    padding: 10em 4em 10em;
+  }
+}
+
 .contact h3.title {
   font-size: 6rem;
   font-weight: 700;
@@ -788,6 +842,12 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   isolation: isolate;
+}
+
+@media (min-width: 1100px) {
+  .contact h3.title {
+    font-size: 8rem;
+  }
 }
 
 .contact h3.title::before {
@@ -809,14 +869,23 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   }
 }
 
-.contact .contact-form {
-  width: 100%;
-  position: relative;
+@media (min-width: 900px) {
+  .contact .contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 5em;
+            column-gap: 5em;
+  }
 }
 
-.contact .contact-form input,
-.contact .contact-form textarea,
-.contact .contact-form button {
+.contact .contact-form-left {
+  width: 100%;
+}
+
+.contact .contact-form-left input,
+.contact .contact-form-left textarea,
+.contact .contact-form-left button {
   width: 100%;
   font-family: "Poppins", sans-serif;
   background-color: #424242;
@@ -826,20 +895,20 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-size: 1.6rem;
 }
 
-.contact .contact-form input,
-.contact .contact-form textarea {
+.contact .contact-form-left input,
+.contact .contact-form-left textarea {
   padding: 2rem;
 }
 
-.contact .contact-form textarea {
+.contact .contact-form-left textarea {
   resize: vertical;
 }
 
-.contact .contact-form .recaptcha {
+.contact .contact-form-left .recaptcha {
   margin-bottom: 3rem;
 }
 
-.contact .contact-form button {
+.contact .contact-form-left button {
   background-color: #00ff99;
   color: #333;
   font-size: 2rem;
@@ -847,6 +916,25 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   height: 5rem;
   border-radius: 4rem;
   cursor: pointer;
+}
+
+.contact .contact-form-right {
+  display: none;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .contact .contact-form-right {
+    display: inherit;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.contact .contact-form-right i {
+  font-size: 30rem;
+  color: #424242;
 }
 
 /* !!!FOOTER!!! */

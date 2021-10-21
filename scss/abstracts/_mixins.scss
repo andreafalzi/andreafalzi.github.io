@@ -6,7 +6,7 @@
   }
 
   @if($breakpoint == xxl) {
-    @media(min-width: 1300px){
+    @media(min-width: 1367px){
       @content;
     }
   }

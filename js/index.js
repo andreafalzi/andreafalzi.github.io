@@ -188,12 +188,12 @@ const swiperDesktop = new Swiper(".swiper-desktop", {
     900: {
       slidesPerView: 2,
       spaceBetween: 10,
-      centeredSlides: true,
+      // centeredSlides: true,
     },
     1100: {
       slidesPerView: 3,
       spaceBetween: 20,
-      centeredSlides: true,
+      // centeredSlides: true,
     },
   },
 

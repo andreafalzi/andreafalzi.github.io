@@ -16,6 +16,10 @@ nav {
       padding: 1em 4em;
     }
 
+    @include response(xxl) {
+      padding: 1em 0em;
+    }
+
     &-logo img {
       width: 50px;
     }
@@ -33,7 +37,7 @@ nav {
           font-family: font(title);
           color: color(white);
           font-family: font(paragraph);
-          margin-left: 20px;
+          margin-left: 3em;
           transition: color 200ms ease-in;
 
           &:hover {
@@ -92,7 +96,8 @@ header {
   .hero {
     padding: 3em 2em;
     color: color(white);
-
+    display: grid;
+    place-content: center;
     height: 60vh;
 
     @include response(md) {
@@ -104,6 +109,10 @@ header {
       padding: 15em 4em 3em;
     }
 
+    @include response(xxl) {
+      padding: 15em 0em 3em;
+    }
+
     .hero-title {
       text-align: center;
 
@@ -113,14 +122,15 @@ header {
 
       h1 {
         font-size: size(xl);
-        line-height: 87px;
+        line-height: 57px;
         font-weight: 700;
         display: flex;
         flex-direction: column;
         font-family: font(title);
 
         @include response(lg) {
-          font-size: size(xxl);
+          font-size: 7rem;
+          line-height: 87px;
           letter-spacing: 0.3rem;
         }
       }
@@ -129,6 +139,7 @@ header {
         font-size: size(sm);
         font-family: font(paragraph);
         font-weight: 300;
+        margin-top: 2em;
         margin-bottom: 6em;
 
         i {
@@ -145,10 +156,10 @@ header {
         margin-left: auto;
 
         li {
-          margin-top: 3rem;
+          margin-top: 2.5em;
 
           a {
-            font-size: size(xl);
+            font-size: 4rem;
             color: color(white);
             transition: color 200ms ease-in;
 
@@ -163,19 +174,42 @@ header {
 
   .svg-container {
     height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include response(md) {
-      height: unset;
+    @include response(lg) {
+      padding: 3em 4em;
+    }
+
+    @include response(xxl) {
+      padding: 3em 0em;
+    }
+
+    .svg-text {
+      color: color(secondary);
+      font-family: font(title);
+      font-size: size(sm);
+      margin-right: 1em;
+
+      @include response(lg) {
+        font-size: size(xl);
+      }
     }
 
     .svg-box {
-      width: fit-content;
-      margin: 0 auto;
+      //   width: fit-content;
+      //   margin: 0 auto;
 
-      @include response(md) {
-      margin: 0;
-      padding: 3em 4em;
-    }
+      //   @include response(lg) {
+      //   margin: 0;
+      //   padding: 3em 4em;
+      // }
+
+      // @include response(xxl) {
+      //   margin: 0;
+      //   padding: 3em 0em;
+      // }
 
       .svg {
         border: 5px color(tertiary) solid;
@@ -183,7 +217,7 @@ header {
         height: 60px;
         border-radius: 10px;
         position: relative;
-        margin: 0 auto;
+        // margin: 0 auto;
         opacity: 0;
         transition: opacity 200ms ease-in;
 
@@ -242,14 +276,14 @@ header {
   font-family: font(paragraph);
   position: relative;
   text-align: center;
-  padding: 4em 2em;
+  padding: 4em 2em 8em;
 
   @include response(md) {
-    padding: 4em 4em;
+    padding: 4em 4em 8em;
   }
 
   @include response(lg) {
-    padding: 4em 4em;
+    padding: 10em 4em 16em;
   }
 
   .container {
@@ -276,6 +310,10 @@ header {
     color: color(black);
     font-family: font(title);
     isolation: isolate;
+
+    @include response(xl) {
+      font-size: 8rem;
+    }
 
     &::before {
       content: "Works";
@@ -364,6 +402,10 @@ header {
     padding: 4em 4em 6em;
   }
 
+  @include response(lg) {
+    padding: 10em 4em 16em;
+  }
+
   h3.title {
     font-size: 6rem;
     font-weight: 700;
@@ -371,6 +413,10 @@ header {
     font-family: font(title);
     isolation: isolate;
     color: color(white);
+
+    @include response(xl) {
+      font-size: 8rem;
+    }
 
     &::before {
       content: "About";
@@ -433,6 +479,10 @@ header {
     padding: 4em 4em;
   }
 
+  @include response(lg) {
+    padding: 10em 4em 10em;
+  }
+
   h3.title {
     font-size: 6rem;
     font-weight: 700;
@@ -441,6 +491,10 @@ header {
     text-align: center;
     font-family: font(title);
     isolation: isolate;
+
+    @include response(xl) {
+      font-size: 8rem;
+    }
 
     &::before {
       content: "Contact";
@@ -459,42 +513,64 @@ header {
   }
 
   .contact-form {
-    width: 100%;
-    position: relative;
 
-    input,
-    textarea,
-    button {
+    @include response(lg) {
+      display: flex;
+      column-gap: 5em;
+    }
+
+    &-left {
       width: 100%;
-      font-family: font(paragraph);
-      background-color: color(primary);
-      color: color(white);
-      border: none;
-      margin-bottom: 3rem;
-      font-size: size(sm);
+
+      input,
+      textarea,
+      button {
+        width: 100%;
+        font-family: font(paragraph);
+        background-color: color(primary);
+        color: color(white);
+        border: none;
+        margin-bottom: 3rem;
+        font-size: size(sm);
+      }
+
+      input,
+      textarea {
+        padding: 2rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .recaptcha {
+        margin-bottom: 3rem;
+      }
+
+      button {
+        background-color: color(tertiary);
+        color: color(black);
+        font-size: 2rem;
+        font-weight: 700;
+        height: 5rem;
+        border-radius: 4rem;
+        cursor: pointer;
+      }
     }
 
-    input,
-    textarea {
-      padding: 2rem;
-    }
+    &-right {
+      display: none;
+      width: 100%;
 
-    textarea {
-      resize: vertical;
-    }
+      @include response(lg) {
+        display: inherit;
+        justify-content: center;
+      }
 
-    .recaptcha {
-      margin-bottom: 3rem;
-    }
-
-    button {
-      background-color: color(tertiary);
-      color: color(black);
-      font-size: 2rem;
-      font-weight: 700;
-      height: 5rem;
-      border-radius: 4rem;
-      cursor: pointer;
+      i {
+        font-size: 30rem;
+        color: color(primary);
+      }
     }
   }
 }

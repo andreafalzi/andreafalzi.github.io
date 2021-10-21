@@ -47,33 +47,33 @@
 
     <!-- HEADER -->
     <header>
-      <div class="container">
+      <div class="container header">
         <div id="hero" class="hero">
           <div class="hero-title" xyz="fade delay-3 stagger-3 ease-out-back">
             <h1><span class="xyz-nested">Web Experiences</span><span class="xyz-nested">Crafted With</span><span class="xyz-nested">Coding Powers</span></h1>
-            <p class="xyz-nested" xyz="fade delay-10 in-left-100%">Student Front End Developer</p>
-            
-              
-
+            <p class="xyz-nested" xyz="fade delay-10 in-left-100%"><i class="fas fa-handshake"></i> Meet Andrea Falzi</p>
           </div>
+
           <div class="hero-social">
-            <ul>
-              <li>
+            <ul xyz="fade delay-3 stagger-3 in-right-100%">
+              <li class="xyz-nested">
                 <a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i></a>
               </li>
-              <li>
+              <li class="xyz-nested">
                 <a href="https://www.linkedin.com/in/andreafalzi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               </li>
-              <li>
+              <li class="xyz-nested">
                 <a href="https://codepen.io/andreafalzi" target="_blank"><i class="fab fa-codepen"></i></a>
               </li>
-              <li>
+              <li class="xyz-nested">
                 <a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i></a>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="svg-container">
+          <div class="svg-text xyz-in" xyz="fade delay-10 in-up-100%">Explore my craftings</div>
           <div class="svg-box">
             <a href="#works">
               <div class="svg">
@@ -148,38 +148,27 @@
               <div class="slide swiper-slide">
                 <div class="slide-title">Urbangreen</div>
                 <img src="img/thumbnail-MacBook-Air_2x.png" alt="urbangreen screen on iphone" />
-                  
-                    <a class="slide-btn"href="pages/urbangreen.html">See more</a>
-                  
-                </a>
+                    <a class="slide-btn" href="pages/urbangreen.html">See more</a>
               </div>
               <div class="slide swiper-slide">
                 <div class="slide-title">Big.byte</div>
                 <img src="img/thumbnail-MacBook-Air_2x.png" alt="big-byte screen on iphone" />
-                <a href="pages/bigbyte.html">
-                  <div class="slide-btn">See more</div>
-                </a>
+                <a class="slide-btn" href="pages/bigbyte.html">See more</a>
               </div>
               <div class="slide swiper-slide">
                 <div class="slide-title">Mario Jump</div>
                 <img src="img/thumbnail-MacBook-Air_2x.png"src="img/thumbnail-MacBook-Air_2x.png" alt="mario jump screen on iphone" />
-                <a href="pages/mariojump.html">
-                  <div class="slide-btn">See more</div>
-                </a>
+                <a class="slide-btn" href="pages/mariojump.html">See more</a>
               </div>
               <div class="slide swiper-slide">
                 <div class="slide-title">Irest</div>
                 <img src="img/thumbnail-MacBook-Air_2x.png" alt="iphone irest" />
-                <a href="pages/irest.html">
-                  <div class="slide-btn">See more</div>
-                </a>
+                <a class="slide-btn" href="pages/irest.html">See more</a>
               </div>
               <div class="slide swiper-slide">
                 <div class="slide-title">Beer POG</div>
                 <img src="img/thumbnail-MacBook-Air_2x.png" alt="iphone beerpog" />
-                <a href="pages/beerpog.html">
-                  <div class="slide-btn">See more</div>
-                </a>
+                <a class="slide-btn" href="pages/beerpog.html">See more</a>
               </div>
             </div>
             <!-- If we need pagination -->
@@ -265,7 +254,8 @@
         <div class="container">
           <h3 class="title">Contact</h3>
           <div class="contact-form">
-            <form id="contact-form" method="POST" action="/pages/success" data-netlify="true" onsubmit="return validateForm()">
+            <div class="contact-form-left">
+<form id="contact-form" method="POST" action="/pages/success" data-netlify="true" onsubmit="return validateForm()">
               <input id="name" type="text" name="name" placeholder="Name" />
               <input id="email" type="email" name="email"  placeholder="Email" />
               <textarea id="textarea" name="textarea"  cols="30" rows="10" placeholder="Message"></textarea>
@@ -274,6 +264,10 @@
               </div> -->
               <button id="submit" type="submit">Send message</button>
             </form>
+            </div>
+            <div class="contact-form-right">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
           </div>
         </div>
       </div>
