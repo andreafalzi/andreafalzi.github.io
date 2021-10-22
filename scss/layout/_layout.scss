@@ -39,6 +39,7 @@ nav {
           font-family: font(paragraph);
           margin-left: 3em;
           transition: color 200ms ease-in;
+          text-transform: uppercase;
 
           &:hover {
             color: color(tertiary);
@@ -570,6 +571,10 @@ header {
       i {
         font-size: 30rem;
         color: color(primary);
+      }
+
+      img {
+        height: 30rem;
       }
     }
   }

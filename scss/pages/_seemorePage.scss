@@ -5,6 +5,10 @@
     padding: 2em 4em;
   }
 
+  @include response(xxl) {
+    padding: 2em 0em;
+  }
+
   h1.title {
     font-size: 3.5rem;
     font-weight: 700;

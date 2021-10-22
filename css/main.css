@@ -234,6 +234,12 @@ ul {
   }
 }
 
+@media (min-width: 1367px) {
+  .see-more {
+    padding: 2em 0em;
+  }
+}
+
 .see-more h1.title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -343,6 +349,7 @@ nav .navbar-list {
     margin-left: 3em;
     -webkit-transition: color 200ms ease-in;
     transition: color 200ms ease-in;
+    text-transform: uppercase;
   }
   nav .navbar-list li a:hover {
     color: #00ff99;
@@ -935,6 +942,10 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 .contact .contact-form-right i {
   font-size: 30rem;
   color: #424242;
+}
+
+.contact .contact-form-right img {
+  height: 30rem;
 }
 
 /* !!!FOOTER!!! */
