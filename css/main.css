@@ -813,12 +813,62 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   }
 }
 
+@media (min-width: 900px) {
+  .about .about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.about .about-content .left {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .about .about-content .left {
+    width: 50%;
+  }
+}
+
 .about .about-content .left p {
   font-size: 1.6rem;
 }
 
+.about .about-content .center {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .about .about-content .center {
+    display: unset;
+    width: 50%;
+    margin: 10em 2em auto 0;
+    -webkit-transform: rotate(339deg);
+            transform: rotate(339deg);
+  }
+}
+
 .about .about-content .right {
   display: none;
+}
+
+@media (min-width: 900px) {
+  .about .about-content .right {
+    display: unset;
+  }
+  .about .about-content .right .blend-effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    mix-blend-mode: saturation;
+    width: inherit;
+    height: inherit;
+  }
+  .about .about-content .right img {
+    border-radius: 5px;
+  }
 }
 
 /* !!!SECTION CONTACT!!! */
@@ -932,20 +982,46 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 
 @media (min-width: 900px) {
   .contact .contact-form-right {
-    display: inherit;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
   }
 }
 
 .contact .contact-form-right i {
-  font-size: 30rem;
+  font-size: 5rem;
   color: #424242;
 }
 
-.contact .contact-form-right img {
-  height: 30rem;
+.contact .contact-form-right i.envelope {
+  margin-top: 0.8em;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.contact .contact-form-right i.server {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contact .contact-form-right i.laptop {
+  grid-column: 3 / -1;
+  grid-row: 1 / -1;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 /* !!!FOOTER!!! */
