@@ -2,26 +2,26 @@
   background-color: color(primary);
   padding: 5rem;
   border-radius: 10px;
-  min-width: 80%;
+  width: 350px;
   margin: 0 auto;
   opacity: 1;
   transition: opacity 250ms ease-in;
 
-  @include response(xs) {
-    min-width: 60%;
-  }
+  // @include response(xs) {
+  //   min-width: 60%;
+  // }
 
-  @include response(sm) {
-    min-width: 50%;
-  }
+  // @include response(sm) {
+  //   min-width: 50%;
+  // }
 
-  @include response(md) {
-    min-width: 40%;
-  }
+  // @include response(md) {
+  //   min-width: 40%;
+  // }
 
-  @include response(lg) {
-    min-width: 35%;
-  }
+  // @include response(lg) {
+  //   min-width: 35%;
+  // }
 
   &-logo {
     margin-bottom: 2em;
@@ -58,6 +58,7 @@
   opacity: 1;
   transition: opacity 250ms ease-in;
 }
+
 .modal-contact {
   position: fixed;
   top: 50%;

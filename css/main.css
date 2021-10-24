@@ -52,35 +52,11 @@
   background-color: #424242;
   padding: 5rem;
   border-radius: 10px;
-  min-width: 80%;
+  width: 350px;
   margin: 0 auto;
   opacity: 1;
   -webkit-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
-}
-
-@media (min-width: 400px) {
-  .modal {
-    min-width: 60%;
-  }
-}
-
-@media (min-width: 600px) {
-  .modal {
-    min-width: 50%;
-  }
-}
-
-@media (min-width: 767px) {
-  .modal {
-    min-width: 40%;
-  }
-}
-
-@media (min-width: 900px) {
-  .modal {
-    min-width: 35%;
-  }
 }
 
 .modal-logo {
@@ -938,6 +914,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 
 .contact .contact-form-left {
   width: 100%;
+  z-index: 10;
 }
 
 .contact .contact-form-left input,

@@ -108,16 +108,22 @@ function validateForm() {
     contactParagraph.innerHTML = "Insert your name";
     contactButton.innerHTML = "Close";
     contactModal.classList.remove("modal-hide");
+    document.querySelector("body").style.overflowY = "hidden";
+    document.querySelector("html").style.overflowY = "hidden";
     return false;
   } else if (validateEmail(formEmail.value) == false) {
     contactParagraph.innerHTML = "Insert a valid email";
     contactButton.innerHTML = "Close";
     contactModal.classList.remove("modal-hide");
+    document.querySelector("body").style.overflowY = "hidden";
+    document.querySelector("html").style.overflowY = "hidden";
     return false;
   } else if (formTextarea.value == "") {
     contactParagraph.innerHTML = "Don't forget to write your message";
     contactButton.innerHTML = "Close";
     contactModal.classList.remove("modal-hide");
+    document.querySelector("body").style.overflowY = "hidden";
+    document.querySelector("html").style.overflowY = "hidden";
     return false;
   }
 }
@@ -132,6 +138,8 @@ function validateEmail(email) {
 function closeModal() {
   const contactModal = document.querySelector("#contactModal");
   contactModal.classList.add("modal-hide");
+  document.querySelector("body").style.overflowY = "visible";
+  document.querySelector("html").style.overflowY = "visible";
 }
 
 /* Open/Close about cards */
