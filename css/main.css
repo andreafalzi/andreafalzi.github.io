@@ -863,7 +863,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 
 @media (min-width: 900px) {
   .contact {
-    padding: 10em 4em 10em;
+    padding: 10em 4em 16em;
   }
 }
 
@@ -917,6 +917,13 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   z-index: 10;
 }
 
+@media (min-width: 900px) {
+  .contact .contact-form-left form {
+    width: 90%;
+    margin-left: auto;
+  }
+}
+
 .contact .contact-form-left input,
 .contact .contact-form-left textarea,
 .contact .contact-form-left button {
@@ -925,13 +932,13 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   background-color: #424242;
   color: #f2f2f2;
   border: none;
-  margin-bottom: 3rem;
   font-size: 1.6rem;
 }
 
 .contact .contact-form-left input,
 .contact .contact-form-left textarea {
   padding: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contact .contact-form-left textarea {
@@ -952,6 +959,13 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   cursor: pointer;
 }
 
+@media (min-width: 900px) {
+  .contact .contact-form-left button {
+    width: 40%;
+    float: right;
+  }
+}
+
 .contact .contact-form-right {
   display: none;
   width: 100%;
@@ -961,44 +975,66 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   .contact .contact-form-right {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[18];
+        grid-template-columns: repeat(18, 1fr);
+    -ms-grid-rows: (31px)[18];
+        grid-template-rows: repeat(18, 31px);
   }
 }
 
-.contact .contact-form-right i {
-  font-size: 5rem;
-  color: #424242;
+.contact .contact-form-right .box {
+  background-color: #424242;
+  padding: 1em;
+  font-size: 1.6rem;
+  color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  place-content: center;
+  position: relative;
 }
 
-.contact .contact-form-right i.envelope {
-  margin-top: 0.8em;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.contact .contact-form-right .box::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background-color: #00ff99;
 }
 
-.contact .contact-form-right i.server {
+.contact .contact-form-right .box-two {
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
+  -ms-grid-column-span: 9;
+  grid-column: 2 / 11;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-row-span: 5;
+  grid-row: 2 / 7;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
-.contact .contact-form-right i.laptop {
-  grid-column: 3 / -1;
-  grid-row: 1 / -1;
-  -ms-grid-column-align: end;
-      justify-self: end;
+.contact .contact-form-right .box-three {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 9;
+  grid-column: 9 / 18;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 6;
+  grid-row: 6 / 12;
+  padding: 2em;
+  font-size: 2rem;
+}
+
+.contact .contact-form-right .box-four {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 9;
+  grid-column: 2 / 11;
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 5;
+  grid-row: 11 / 16;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
 /* !!!FOOTER!!! */
@@ -1007,6 +1043,11 @@ footer {
   background-color: #424242;
   color: #f2f2f2;
   font-family: "Poppins", sans-serif;
+}
+
+footer .logo {
+  width: 10rem;
+  margin: 0 auto;
 }
 
 footer .footer-links ul {
