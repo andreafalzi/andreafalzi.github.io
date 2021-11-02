@@ -1,9 +1,6 @@
 /*========GLOBAL VARIABLES========*/
 
 /*========FUNCTIONS========*/
-arrowAnimation();
-myAge();
-copyrigthYear();
 
 /* HEADER ARROW ANIMATION */
 function arrowAnimation() {
@@ -22,7 +19,7 @@ function arrowAnimation() {
 
   setTimeout(() => {
     clearInterval(timerArrow);
-  }, 7500);
+  }, 7000);
 
   function dotArrow() {
     sq1.classList.toggle("svg-square-animation");

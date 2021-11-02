@@ -32,6 +32,7 @@ nav {
         margin-left: auto;
 
         li a {
+          position: relative;
           font-size: size(md);
           font-weight: 900;
           font-family: font(title);
@@ -40,9 +41,25 @@ nav {
           margin-left: 3em;
           transition: color 200ms ease-in;
           text-transform: uppercase;
+          isolation: isolate;
 
-          &:hover {
-            color: color(tertiary);
+          &::after {
+            content: "";
+            width: 20px;
+            height: 5px;
+            border-radius: 2px;
+            background-color: color(tertiary);
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 700ms ease;
+            z-index: -1;
+          }
+
+          &:hover::after {
+            width: 100%;
+            // height: 130%;
+            // left: -5%;
           }
         }
       }
@@ -137,11 +154,12 @@ header {
       }
 
       p {
-        font-size: size(sm);
+        font-size: size(lg);
         font-family: font(paragraph);
         font-weight: 300;
         margin-top: 2em;
         margin-bottom: 6em;
+        color: color(secondary);
 
         i {
           color: color(tertiary);
@@ -311,9 +329,12 @@ header {
     color: color(black);
     font-family: font(title);
     isolation: isolate;
+    display: flex;
+    justify-content: center;
 
     @include response(xl) {
       font-size: 8rem;
+      margin-bottom: 1em;
     }
 
     &::before {
@@ -368,7 +389,7 @@ header {
 
       &-btn {
         font-family: font(paragraph);
-        font-size: size(sm);
+        font-size: size(md);
         color: color(black);
         letter-spacing: 0.3rem;
         background-color: color(tertiary);
@@ -414,9 +435,12 @@ header {
     font-family: font(title);
     isolation: isolate;
     color: color(white);
+    display: flex;
+    justify-content: center;
 
     @include response(xl) {
       font-size: 8rem;
+      margin-bottom: 2em;
     }
 
     &::before {
@@ -510,7 +534,7 @@ header {
   }
 
   @include response(lg) {
-    padding: 10em 4em 16em;
+    padding: 10em 4em 10em;
   }
 
   h3.title {
@@ -521,9 +545,12 @@ header {
     text-align: center;
     font-family: font(title);
     isolation: isolate;
+    display: flex;
+    justify-content: center;
 
     @include response(xl) {
       font-size: 8rem;
+      margin-bottom: 2em;
     }
 
     &::before {
@@ -546,6 +573,8 @@ header {
     @include response(lg) {
       display: flex;
       column-gap: 5em;
+      background: url("/img/contact-bg.svg") no-repeat;
+      background-position: center;
     }
 
     &-left {
@@ -554,26 +583,22 @@ header {
 
       form {
         @include response(lg) {
-          width: 90%;
-          margin-left: auto;
+          width: 50%;
+          margin: 0 auto;
         }
       }
 
       input,
-      textarea,
-      button {
+      textarea {
         width: 100%;
         font-family: font(paragraph);
         background-color: color(primary);
         color: color(white);
         border: none;
         font-size: size(sm);
-      }
-
-      input,
-      textarea {
         padding: 2rem;
         margin-bottom: 3rem;
+        border-radius: 5px;
       }
 
       textarea {
@@ -587,15 +612,18 @@ header {
       button {
         background-color: color(tertiary);
         color: color(black);
-        font-size: 2rem;
-        font-weight: 700;
+        font-family: font(paragraph);
+        font-size: size(md);
+        letter-spacing: 0.3rem;
         height: 5rem;
         border-radius: 4rem;
         cursor: pointer;
+        border: none;
 
         @include response(lg) {
           width: 40%;
-          float: right;
+          margin: 0 auto;
+          display: inherit;
         }
       }
     }
@@ -603,68 +631,12 @@ header {
     &-right {
       display: none;
       width: 100%;
-
-      @include response(lg) {
-        display: grid;
-        grid-template-columns: repeat(18, 1fr);
-        grid-template-rows: repeat(18, 31px);
-      }
-
-      .box {
-        background-color: color(primary);
-        padding: 1em;
-        font-size: size(sm);
-        color: color(white);
-        width: 100%;
-        height: 100%;
-        display: inherit;
-        place-content: center;
-        position: relative;
-      }
-
-      .box::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        width: 15px;
-        height: 100%;
-        background-color: color(tertiary);
-      }
-
-      // .box-one {
-      //   grid-column: 3 / 12;
-      //   grid-row: 1 / 6;
-      //   background-color: color(tertiary);
-      //   margin-top: 1em;
-      // }
-
-      .box-two {
-        grid-column: 2 / 11;
-        grid-row: 2 / 7;
-        font-size: size(lg);
-        font-family: font(title);
-        font-weight: 700;
-      }
-
-      .box-three {
-        grid-column: 9 / 18;
-        grid-row: 6 / 12;
-        padding: 2em;
-        font-size: size(md);
-      }
-
-      .box-four {
-        grid-column: 2 / 11;
-        grid-row: 11 / 16;
-        font-family: font(paragraph);
-        font-weight: 700;
-      }
     }
   }
 }
 /* !!!FOOTER!!! */
 footer {
-  padding: 4em 2em 7em 2em;
+  padding: 10em 2em;
 
   background-color: color(primary);
   color: color(white);
@@ -673,6 +645,10 @@ footer {
   .logo {
     width: 10rem;
     margin: 0 auto;
+
+    @include response(lg) {
+        width: 15rem;
+      }
   }
 
   .footer-links ul {
@@ -685,6 +661,14 @@ footer {
     a {
       color: color(white);
       font-size: size(sm);
+
+      @include response(md) {
+        font-size: size(md);
+      }
+
+      @include response(lg) {
+        font-size: size(lg);
+      }
     }
   }
 

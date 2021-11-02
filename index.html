@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Andrea Falzi Dev</title>
+    <title>Web Experiences Crafted With Coding Powers</title>
   </head>
-  <body id="body">
+  <body id="body" onload="arrowAnimation(); myAge(); copyrigthYear()">
     <!-- NAVBAR -->
     <nav>
       <div class="container">
@@ -59,7 +59,7 @@
           <div class="hero-social">
             <ul xyz="fade delay-3 stagger-3 in-right-100%">
               <li class="xyz-nested">
-                <a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i></a>
               </li>
               <li class="xyz-nested">
                 <a href="https://www.linkedin.com/in/andreafalzi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -68,17 +68,17 @@
                 <a href="https://codepen.io/andreafalzi" target="_blank"><i class="fab fa-codepen"></i></a>
               </li>
               <li class="xyz-nested">
-                <a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i></a>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="svg-container">
-          <div class="svg-text xyz-in" xyz="fade delay-10 in-up-100%">Explore my craftings</div>
+          <div class="svg-text xyz-in" xyz="fade delay-10 in-left-100%">Explore my craftings</div>
           <div class="svg-box">
             <a href="#works">
-              <div class="svg">
+              <div class="svg xyz-in" xyz="fade delay-10 in-right-100%">
             
                 <div class="square-1"></div>
                 <div class="square-2"></div>
@@ -274,8 +274,6 @@
             <div class="contact-form-right">
               <!-- <div class="box box-one"></div> -->
               <div class="box box-two"><p><span id="typer-id" class="typer" data-delay="150" data-words="Personal Website, Business, Portfolio" data-colors="#f2f2f2"></span><span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|" data-owner="typer-id"></span></p></div>
-              <div class="box box-three"><p>I'll craft a product that suits you with code and creativity.</p></div>
-              <div class="box box-four"><p>Send me your request</p></div>
             </div>
           </div>
         </div>
@@ -290,13 +288,20 @@
       </div>
     </div>
 
+    <div id="topArrow" class="top-arrow">
+      <a href="#body">
+        <div class="outer">
+          <div class="inner"><i class="fas fa-arrow-up"></i></div>
+        </div>
+      </a>
+    </div>
 
     <!-- FOOTER -->
     <footer>
       <div class="footer">
         <div class="container">
           <div class="logo">
-            <a href="#body"><img src="img/logo.svg" alt="andrea falzi logo" /></a>
+            <img src="img/logo.svg" alt="andrea falzi logo" />
           </div>
           <div class="footer-links">
             <ul>

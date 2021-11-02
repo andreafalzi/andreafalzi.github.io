@@ -1,0 +1,41 @@
+.top-arrow {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 50;
+
+  @include response(xxxl) {
+    left: calc((100vw + 1248px) / 2);
+  }
+
+  .outer {
+    height: 50px;
+    width: 50px;
+    background-color: color(tertiary);
+    border-radius: 100%;
+
+    display: grid;
+    place-content: center;
+    position: relative;
+    
+    .inner {
+      position: relative;
+
+      // &::after {
+      //   content: "TO TOP";
+      //   position: absolute;
+      //   left: - 90px;
+      //   top: 0;
+      //   font-size: size(sm);
+      //   font-family: font(title);
+      //   font-weight: 700;
+      //   color: color(black);
+      // }
+
+      i {
+        font-size: 2rem;
+        color: color(black);
+      }
+    }
+  }
+}

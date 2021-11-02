@@ -1,42 +1,42 @@
 @mixin response($breakpoint) {
-  @if($breakpoint == xxxl) {
-    @media(min-width: 1500px){
+  @if ($breakpoint == xxxl) {
+    @media (min-width: 1500px) {
       @content;
     }
   }
 
-  @if($breakpoint == xxl) {
-    @media(min-width: 1367px){
+  @if ($breakpoint == xxl) {
+    @media (min-width: 1367px) {
       @content;
     }
   }
 
-  @if($breakpoint == xl) {
-    @media(min-width: 1100px){
+  @if ($breakpoint == xl) {
+    @media (min-width: 1100px) {
       @content;
     }
   }
 
-  @if($breakpoint == lg) {
-    @media(min-width: 900px){
+  @if ($breakpoint == lg) {
+    @media (min-width: 900px) {
       @content;
     }
   }
 
-  @if($breakpoint == md) {
-    @media(min-width: 767px){
+  @if ($breakpoint == md) {
+    @media (min-width: 767px) {
       @content;
     }
   }
 
-  @if($breakpoint == sm) {
-    @media(min-width: 600px){
+  @if ($breakpoint == sm) {
+    @media (min-width: 600px) {
       @content;
     }
   }
 
-  @if($breakpoint == xs) {
-    @media(min-width: 400px){
+  @if ($breakpoint == xs) {
+    @media (min-width: 400px) {
       @content;
     }
   }
