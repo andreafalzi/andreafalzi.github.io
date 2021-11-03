@@ -1,41 +1,60 @@
 .top-arrow {
-  position: fixed;
-  bottom: 5%;
-  right: 3%;
-  z-index: 50;
+  display: none;
 
-  @include response(xxxl) {
-    left: calc((100vw + 1248px) / 2);
-  }
+  @include response(lg) {
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 300ms ease, opacity 300ms ease;
 
-  .outer {
-    height: 50px;
-    width: 50px;
-    background-color: color(tertiary);
-    border-radius: 100%;
+    @include response(xxxl) {
+      left: calc((100vw + 1248px) / 2);
+    }
 
-    display: grid;
-    place-content: center;
-    position: relative;
-    
-    .inner {
+    .outer {
+      height: 50px;
+      width: 50px;
+      background-color: color(tertiary);
+      border-radius: 100%;
+      cursor: pointer;
+
+      display: grid;
+      place-content: center;
       position: relative;
 
-      // &::after {
-      //   content: "TO TOP";
-      //   position: absolute;
-      //   left: - 90px;
-      //   top: 0;
-      //   font-size: size(sm);
-      //   font-family: font(title);
-      //   font-weight: 700;
-      //   color: color(black);
-      // }
+      &-text {
+        position: absolute;
+        left: -8px;
+        top: 0px;
+        opacity: 0;
+        font-size: size(sm);
+        font-family: font(title);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: color(black333);
+        width: max-content;
+        transition: top 300ms ease-in, opacity 300ms ease-in;
+      }
 
-      i {
-        font-size: 2rem;
-        color: color(black);
+      .inner {
+        i {
+          font-size: 2rem;
+          color: color(black333);
+        }
       }
     }
+    .outer:hover .outer-text {
+      top: -25px;
+      opacity: 1;
+    }
   }
+}
+
+.top-arrow-show {
+  opacity: 1;
+  visibility: visible;
 }

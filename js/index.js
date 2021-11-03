@@ -155,6 +155,43 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
+/* GO TOP */
+document.querySelector("#topArrow").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/* TOP ARROW VISIBILITY TOGGLE */
+window.addEventListener("scroll", () => {
+  const topArrow = document.querySelector("#topArrow");
+  if (window.pageYOffset >= 400) {
+    topArrow.classList.add("top-arrow-show");
+  } else if (topArrow.classList.contains("top-arrow-show") && window.pageYOffset < 400) {
+    topArrow.classList.remove("top-arrow-show");
+  }
+});
+
+/* HEIGTH CALCULATOR */
+// window.addEventListener("scroll", function () {
+//   console.log(window.pageYOffset + "px");
+// });
+
+/* TOP ARROW TEXT COLOR SHIFT */
+window.addEventListener("scroll", () => {
+  const outerText = document.querySelector(".outer-text");
+  if (window.pageYOffset >= 400 && window.pageYOffset < 875) {
+    outerText.style.color = "#333";
+  }
+  if (window.pageYOffset >= 875 && window.pageYOffset <= 1802) {
+    outerText.style.color = "#f2f2f2";
+  }
+  if (window.pageYOffset > 1802 && window.pageYOffset <= 2826) {
+    outerText.style.color = "#333";
+  }
+  if (window.pageYOffset > 2826) {
+    outerText.style.color = "#f2f2f2";
+  }
+});
+
 /*========EXTERNALS========*/
 
 /* SWIPER SLIDER */

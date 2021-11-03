@@ -80,7 +80,7 @@
   background-color: #00ff99;
   padding: 0.3em;
   border-radius: 5px;
-  color: #333;
+  color: #333333;
   cursor: pointer;
 }
 
@@ -110,7 +110,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #333;
+  color: #333333;
   font-weight: 900;
   z-index: 15;
 }
@@ -134,7 +134,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #333;
+  background-color: #333333;
 }
 
 @media (min-width: 767px) {
@@ -160,36 +160,70 @@
 }
 
 .top-arrow {
-  position: fixed;
-  bottom: 5%;
-  right: 3%;
-  z-index: 50;
+  display: none;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 900px) {
+  .top-arrow {
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 300ms ease, opacity 300ms ease;
+    transition: visibility 300ms ease, opacity 300ms ease;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1500px) {
   .top-arrow {
     left: calc((100vw + 1248px) / 2);
   }
 }
 
-.top-arrow .outer {
-  height: 50px;
-  width: 50px;
-  background-color: #00ff99;
-  border-radius: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  position: relative;
+@media (min-width: 900px) {
+  .top-arrow .outer {
+    height: 50px;
+    width: 50px;
+    background-color: #00ff99;
+    border-radius: 100%;
+    cursor: pointer;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    position: relative;
+  }
+  .top-arrow .outer-text {
+    position: absolute;
+    left: -8px;
+    top: 0px;
+    opacity: 0;
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333333;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transition: top 300ms ease-in, opacity 300ms ease-in;
+    transition: top 300ms ease-in, opacity 300ms ease-in;
+  }
+  .top-arrow .outer .inner i {
+    font-size: 2rem;
+    color: #333333;
+  }
+  .top-arrow .outer:hover .outer-text {
+    top: -25px;
+    opacity: 1;
+  }
 }
 
-.top-arrow .outer .inner {
-  position: relative;
-}
-
-.top-arrow .outer .inner i {
-  font-size: 2rem;
-  color: #333;
+.top-arrow-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 * {
@@ -252,7 +286,7 @@ ul {
 .see-more h1.title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0.5em;
   text-transform: uppercase;
@@ -261,7 +295,7 @@ ul {
 .see-more h3.title {
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -302,7 +336,7 @@ ul {
 }
 
 .see-more a {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
 
@@ -674,7 +708,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 .works h3.title {
   font-size: 6rem;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   font-family: "Montserrat", sans-serif;
   isolation: isolate;
   display: -webkit-box;
@@ -688,7 +722,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 @media (min-width: 1100px) {
   .works h3.title {
     font-size: 8rem;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 }
 
@@ -749,14 +783,14 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   letter-spacing: 0.3rem;
 }
 
 .works-slide-container .slide-btn {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
-  color: #333;
+  color: #333333;
   letter-spacing: 0.3rem;
   background-color: #00ff99;
   display: block;
@@ -933,7 +967,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 .contact h3.title {
   font-size: 6rem;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   margin-bottom: 1em;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -1019,7 +1053,7 @@ header .svg-container .svg-box .svg .svg-arrow-animation {
 
 .contact .contact-form-left button {
   background-color: #00ff99;
-  color: #333;
+  color: #333333;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.3rem;

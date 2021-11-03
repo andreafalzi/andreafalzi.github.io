@@ -36,7 +36,7 @@ nav {
           font-size: size(md);
           font-weight: 900;
           font-family: font(title);
-          color: color(white);
+          color: color(whitef2);
           font-family: font(paragraph);
           margin-left: 3em;
           transition: color 200ms ease-in;
@@ -88,7 +88,7 @@ nav {
           flex-direction: column;
           align-items: center;
           font-size: size(sm);
-          color: color(white);
+          color: color(whitef2);
           font-family: font(paragraph);
 
           i {
@@ -113,7 +113,7 @@ header {
 
   .hero {
     padding: 3em 2em;
-    color: color(white);
+    color: color(whitef2);
     display: grid;
     place-content: center;
     height: 60vh;
@@ -179,7 +179,7 @@ header {
 
           a {
             font-size: 4rem;
-            color: color(white);
+            color: color(whitef2);
             transition: color 200ms ease-in;
 
             &:hover {
@@ -243,7 +243,7 @@ header {
         .square-1 {
           width: 5px;
           height: 5px;
-          background-color: color(white);
+          background-color: color(whitef2);
           position: absolute;
           top: 15%;
           left: 50%;
@@ -255,7 +255,7 @@ header {
         .square-2 {
           width: 5px;
           height: 5px;
-          background-color: color(white);
+          background-color: color(whitef2);
           position: absolute;
           top: 37%;
           left: 50%;
@@ -265,7 +265,7 @@ header {
         }
 
         .arrow {
-          border: solid color(white);
+          border: solid color(whitef2);
           border-width: 0 5px 5px 0;
           padding: 5px;
           transform: rotate(45deg);
@@ -326,7 +326,7 @@ header {
   h3.title {
     font-size: 6rem;
     font-weight: 700;
-    color: color(black);
+    color: color(black333);
     font-family: font(title);
     isolation: isolate;
     display: flex;
@@ -334,7 +334,7 @@ header {
 
     @include response(xl) {
       font-size: 8rem;
-      margin-bottom: 1em;
+      margin-bottom: 2em;
     }
 
     &::before {
@@ -383,14 +383,14 @@ header {
         font-family: font(title);
         font-size: size(lg);
         font-weight: 700;
-        color: color(black);
+        color: color(black333);
         letter-spacing: 0.3rem;
       }
 
       &-btn {
         font-family: font(paragraph);
         font-size: size(md);
-        color: color(black);
+        color: color(black333);
         letter-spacing: 0.3rem;
         background-color: color(tertiary);
         display: block;
@@ -415,7 +415,7 @@ header {
 /* !!!SECTION ABOUT!!! */
 .about {
   background-color: color(primary);
-  color: color(white);
+  color: color(whitef2);
   position: relative;
   font-family: font(paragraph);
   padding: 4em 2em;
@@ -434,7 +434,7 @@ header {
     text-align: center;
     font-family: font(title);
     isolation: isolate;
-    color: color(white);
+    color: color(whitef2);
     display: flex;
     justify-content: center;
 
@@ -540,7 +540,7 @@ header {
   h3.title {
     font-size: 6rem;
     font-weight: 700;
-    color: color(black);
+    color: color(black333);
     margin-bottom: 1em;
     text-align: center;
     font-family: font(title);
@@ -593,7 +593,7 @@ header {
         width: 100%;
         font-family: font(paragraph);
         background-color: color(primary);
-        color: color(white);
+        color: color(whitef2);
         border: none;
         font-size: size(sm);
         padding: 2rem;
@@ -611,7 +611,7 @@ header {
 
       button {
         background-color: color(tertiary);
-        color: color(black);
+        color: color(black333);
         font-family: font(paragraph);
         font-size: size(md);
         letter-spacing: 0.3rem;
@@ -639,7 +639,7 @@ footer {
   padding: 10em 2em;
 
   background-color: color(primary);
-  color: color(white);
+  color: color(whitef2);
   font-family: font(paragraph);
 
   .logo {
@@ -659,7 +659,7 @@ footer {
     row-gap: 15px;
 
     a {
-      color: color(white);
+      color: color(whitef2);
       font-size: size(sm);
 
       @include response(md) {

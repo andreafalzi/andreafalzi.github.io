@@ -1,6 +1,6 @@
 .swiper-button-prev,
 .swiper-button-next {
-  color: color(black);
+  color: color(black333);
   font-weight: 900;
   z-index: 15;
 }
@@ -21,7 +21,7 @@
   }
 
   &-bullet-active {
-    background-color: color(black);
+    background-color: color(black333);
   }
 }
 

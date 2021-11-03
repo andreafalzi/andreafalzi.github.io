@@ -12,7 +12,7 @@
   h1.title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: color(black);
+    color: color(black333);
     font-family: font(title);
     margin-bottom: 0.5em;
     text-transform: uppercase;
@@ -21,7 +21,7 @@
   h3.title {
     font-size: size(md);
     font-weight: 700;
-    color: color(black);
+    color: color(black333);
     font-family: font(title);
   }
 
@@ -60,7 +60,7 @@
   }
 
   a {
-    color: color(black);
+    color: color(black333);
     text-decoration: none;
   }
 }
