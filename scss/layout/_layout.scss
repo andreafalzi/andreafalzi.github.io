@@ -173,6 +173,7 @@ header {
       @include response(lg) {
         display: grid;
         margin-left: auto;
+        
 
         li {
           margin-top: 2.5em;
@@ -181,9 +182,29 @@ header {
             font-size: 4rem;
             color: color(whitef2);
             transition: color 200ms ease-in;
+            position: relative;
 
             &:hover {
               color: color(tertiary);
+            }
+
+            p {
+              font-family: font(paragraph);
+              font-size: size(md);
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              visibility: hidden;
+              opacity: 0;
+              color: color(tertiary);
+              transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
+            }
+
+            &:hover p {
+              visibility: visible;
+              left: -250%;
+              opacity: 1;
             }
           }
         }
@@ -235,54 +256,27 @@ header {
         width: 35px;
         height: 60px;
         border-radius: 10px;
-        position: relative;
-        // margin: 0 auto;
-        opacity: 0;
-        transition: opacity 200ms ease-in;
+        display: grid;
+        align-items: center;
+        justify-content: center;
 
-        .square-1 {
+        .square {
           width: 5px;
           height: 5px;
           background-color: color(whitef2);
-          position: absolute;
-          top: 15%;
-          left: 50%;
-          transform: translate(-50%);
-          opacity: 0;
-          transition: opacity 500ms ease-in;
-        }
+          margin: 0 auto;
 
-        .square-2 {
-          width: 5px;
-          height: 5px;
-          background-color: color(whitef2);
-          position: absolute;
-          top: 37%;
-          left: 50%;
-          transform: translate(-50%);
-          opacity: 0;
-          transition: opacity 500ms ease-in;
+          &:first-child {
+            margin-top: 7px;
+          }
         }
 
         .arrow {
-          border: solid color(whitef2);
-          border-width: 0 5px 5px 0;
-          padding: 5px;
-          transform: rotate(45deg);
-          position: absolute;
-          top: 0%;
-          left: 20%;
-          opacity: 0;
-          transition: all 500ms ease-in;
-        }
-
-        .svg-square-animation {
-          opacity: 1;
-        }
-
-        .svg-arrow-animation {
-          top: 50%;
-          opacity: 1;
+          i {
+            color: color(whitef2);
+            font-size: size(md);
+            margin-top: -5px;
+          }
         }
       }
     }
@@ -647,8 +641,8 @@ footer {
     margin: 0 auto;
 
     @include response(lg) {
-        width: 15rem;
-      }
+      width: 15rem;
+    }
   }
 
   .footer-links ul {

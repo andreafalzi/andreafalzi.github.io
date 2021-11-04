@@ -11,9 +11,9 @@
     opacity: 0;
     transition: visibility 300ms ease, opacity 300ms ease;
 
-    @include response(xxxl) {
-      left: calc((100vw + 1248px) / 2);
-    }
+    // @include response(xxxl) {
+    //   left: calc((100vw + 1248px) / 2);
+    // }
 
     .outer {
       height: 50px;

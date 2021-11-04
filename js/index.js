@@ -3,29 +3,23 @@
 /*========FUNCTIONS========*/
 
 /* HEADER ARROW ANIMATION */
+
 function arrowAnimation() {
-  const svg = document.querySelector(".svg");
-  const sq1 = document.querySelector(".square-1");
-  const sq2 = document.querySelector(".square-2");
+  const squares = document.querySelectorAll(".square");
   const arrow = document.querySelector(".arrow");
 
-  setTimeout(() => {
-    svg.style.opacity = "1";
-  }, 1000);
-
   let timerArrow = setInterval(() => {
-    dotArrow();
-  }, 1000);
+    squares.forEach((square) => {
+      square.classList.toggle("xyz-in");
+      square.classList.toggle("xyz-out");
+    });
+    arrow.classList.toggle("xyz-in");
+    arrow.classList.toggle("xyz-out");
+  }, 2000);
 
   setTimeout(() => {
     clearInterval(timerArrow);
-  }, 7000);
-
-  function dotArrow() {
-    sq1.classList.toggle("svg-square-animation");
-    sq2.classList.toggle("svg-square-animation");
-    arrow.classList.toggle("svg-arrow-animation");
-  }
+  }, 8000);
 }
 
 /* ON SCROLL RESPONSIVE NAVBAR ICON COLOR SHIFT */
@@ -163,31 +157,37 @@ document.querySelector("#topArrow").addEventListener("click", () => {
 /* TOP ARROW VISIBILITY TOGGLE */
 window.addEventListener("scroll", () => {
   const topArrow = document.querySelector("#topArrow");
-  if (window.pageYOffset >= 400) {
+  if (window.scrollY >= 400) {
     topArrow.classList.add("top-arrow-show");
-  } else if (topArrow.classList.contains("top-arrow-show") && window.pageYOffset < 400) {
+  } else if (topArrow.classList.contains("top-arrow-show") && window.scrollY < 400) {
     topArrow.classList.remove("top-arrow-show");
   }
 });
 
-/* HEIGTH CALCULATOR */
+// /* HEIGTH CALCULATOR */
 // window.addEventListener("scroll", function () {
-//   console.log(window.pageYOffset + "px");
+//   console.log(window.scrollY + "px");
 // });
 
 /* TOP ARROW TEXT COLOR SHIFT */
 window.addEventListener("scroll", () => {
   const outerText = document.querySelector(".outer-text");
-  if (window.pageYOffset >= 400 && window.pageYOffset < 875) {
+  const sectionWorks = document.querySelector("#works");
+  const sectionAbout = document.querySelector("#about");
+  const sectionContact = document.querySelector("#contact");
+  const footer = document.querySelector("footer");
+  let windowTopArrow = window.scrollY + document.querySelector(".outer-text").offsetParent.offsetParent.offsetTop;
+
+  if (windowTopArrow >= sectionWorks.offsetTop && windowTopArrow < sectionWorks.offsetTop + sectionWorks.offsetHeight) {
     outerText.style.color = "#333";
   }
-  if (window.pageYOffset >= 875 && window.pageYOffset <= 1802) {
+  if (windowTopArrow >= sectionAbout.offsetTop && windowTopArrow < sectionAbout.offsetTop + sectionAbout.offsetHeight) {
     outerText.style.color = "#f2f2f2";
   }
-  if (window.pageYOffset > 1802 && window.pageYOffset <= 2826) {
+  if (windowTopArrow >= sectionContact.offsetTop && windowTopArrow < sectionContact.offsetTop + sectionContact.offsetHeight) {
     outerText.style.color = "#333";
   }
-  if (window.pageYOffset > 2826) {
+  if (windowTopArrow >= footer.offsetTop) {
     outerText.style.color = "#f2f2f2";
   }
 });

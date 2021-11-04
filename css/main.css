@@ -175,15 +175,6 @@
     -webkit-transition: visibility 300ms ease, opacity 300ms ease;
     transition: visibility 300ms ease, opacity 300ms ease;
   }
-}
-
-@media (min-width: 900px) and (min-width: 1500px) {
-  .top-arrow {
-    left: calc((100vw + 1248px) / 2);
-  }
-}
-
-@media (min-width: 900px) {
   .top-arrow .outer {
     height: 50px;
     width: 50px;
@@ -564,9 +555,29 @@ header .hero .hero-social {
     color: #f2f2f2;
     -webkit-transition: color 200ms ease-in;
     transition: color 200ms ease-in;
+    position: relative;
   }
   header .hero .hero-social li a:hover {
     color: #00ff99;
+  }
+  header .hero .hero-social li a p {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    color: #00ff99;
+    -webkit-transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
+    transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
+  }
+  header .hero .hero-social li a:hover p {
+    visibility: visible;
+    left: -250%;
+    opacity: 1;
   }
 }
 
@@ -613,61 +624,31 @@ header .svg-container .svg-box .svg {
   width: 35px;
   height: 60px;
   border-radius: 10px;
-  position: relative;
-  opacity: 0;
-  -webkit-transition: opacity 200ms ease-in;
-  transition: opacity 200ms ease-in;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header .svg-container .svg-box .svg .square-1 {
+header .svg-container .svg-box .svg .square {
   width: 5px;
   height: 5px;
   background-color: #f2f2f2;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 500ms ease-in;
-  transition: opacity 500ms ease-in;
+  margin: 0 auto;
 }
 
-header .svg-container .svg-box .svg .square-2 {
-  width: 5px;
-  height: 5px;
-  background-color: #f2f2f2;
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 500ms ease-in;
-  transition: opacity 500ms ease-in;
+header .svg-container .svg-box .svg .square:first-child {
+  margin-top: 7px;
 }
 
-header .svg-container .svg-box .svg .arrow {
-  border: solid #f2f2f2;
-  border-width: 0 5px 5px 0;
-  padding: 5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: 0%;
-  left: 20%;
-  opacity: 0;
-  -webkit-transition: all 500ms ease-in;
-  transition: all 500ms ease-in;
-}
-
-header .svg-container .svg-box .svg .svg-square-animation {
-  opacity: 1;
-}
-
-header .svg-container .svg-box .svg .svg-arrow-animation {
-  top: 50%;
-  opacity: 1;
+header .svg-container .svg-box .svg .arrow i {
+  color: #f2f2f2;
+  font-size: 2rem;
+  margin-top: -5px;
 }
 
 /* !!!SECTION WORKS!!! */
