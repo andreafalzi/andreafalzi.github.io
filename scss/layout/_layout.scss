@@ -173,7 +173,6 @@ header {
       @include response(lg) {
         display: grid;
         margin-left: auto;
-        
 
         li {
           margin-top: 2.5em;
@@ -197,14 +196,8 @@ header {
               transform: translateY(-50%);
               visibility: hidden;
               opacity: 0;
-              color: color(tertiary);
+              color: color(whitef2);
               transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
-            }
-
-            &:hover p {
-              visibility: visible;
-              left: -250%;
-              opacity: 1;
             }
           }
         }
@@ -565,66 +558,65 @@ header {
 
   .contact-form {
     @include response(lg) {
+      color: color(black333);
+      font-size: size(lg);
+      text-align: center;
+    }
+
+    .subtitle {
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    &-box {
+      background-color: color(primary);
+      position: relative;
       display: flex;
-      column-gap: 5em;
-      background: url("/img/contact-bg.svg") no-repeat;
-      background-position: center;
-    }
+      width: 80%;
+      margin: 0 auto;
 
-    &-left {
-      width: 100%;
-      z-index: 10;
-
-      form {
-        @include response(lg) {
-          width: 50%;
-          margin: 0 auto;
-        }
-      }
-
-      input,
-      textarea {
+      &-left {
         width: 100%;
-        font-family: font(paragraph);
-        background-color: color(primary);
-        color: color(whitef2);
-        border: none;
-        font-size: size(sm);
-        padding: 2rem;
-        margin-bottom: 3rem;
-        border-radius: 5px;
-      }
+        padding: 1em 3em;
+        a {
+          color: color(whitef2);
+          font-size: size(md);
+        }
 
-      textarea {
-        resize: vertical;
-      }
-
-      .recaptcha {
-        margin-bottom: 3rem;
-      }
-
-      button {
-        background-color: color(tertiary);
-        color: color(black333);
-        font-family: font(paragraph);
-        font-size: size(md);
-        letter-spacing: 0.3rem;
-        height: 5rem;
-        border-radius: 4rem;
-        cursor: pointer;
-        border: none;
-
-        @include response(lg) {
-          width: 40%;
-          margin: 0 auto;
-          display: inherit;
+        p {
+          color: color(whitef2);
+          text-align: center;
+          font-size: size(sm);
+          margin-bottom: 1em;
         }
       }
-    }
 
-    &-right {
-      display: none;
-      width: 100%;
+      &-right {
+        padding: 1em 3em;
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+        width: 100%;
+        background-color: color(tertiary);
+        transform: skewX(15deg, 0);
+
+        a {
+          color: color(black333);
+          font-size: size(md);
+        }
+
+        p {
+          margin-bottom: 1em;
+          text-align: center;
+          font-size: size(sm);
+        }
+      }
+
+      .contact-title {
+        font-size: size(xl);
+        font-weight: 700;
+        font-family: font(title);
+        margin-bottom: 1em;
+        text-transform: uppercase;
+      }
     }
   }
 }
