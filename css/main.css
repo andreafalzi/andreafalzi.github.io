@@ -494,6 +494,9 @@ header .hero {
 
 header .hero .hero-title {
   text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 @media (min-width: 900px) {
@@ -516,6 +519,14 @@ header .hero .hero-title h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (min-width: 767px) {
+  header .hero .hero-title h1 {
+    font-size: 5rem;
+    line-height: 67px;
+    letter-spacing: 0.3rem;
+  }
+}
+
 @media (min-width: 900px) {
   header .hero .hero-title h1 {
     font-size: 7rem;
@@ -525,12 +536,17 @@ header .hero .hero-title h1 {
 }
 
 header .hero .hero-title p {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-top: 2em;
-  margin-bottom: 6em;
   color: #d2d2d2;
+}
+
+@media (min-width: 767px) {
+  header .hero .hero-title p {
+    font-size: 2.5rem;
+  }
 }
 
 header .hero .hero-title p i {
@@ -606,6 +622,12 @@ header .svg-container .svg-text {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   margin-right: 1em;
+}
+
+@media (min-width: 767px) {
+  header .svg-container .svg-text {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -693,9 +715,10 @@ header .svg-container .svg-box .svg .arrow i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2em;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 767px) {
   .works h3.title {
     font-size: 8rem;
     margin-bottom: 2em;
@@ -714,7 +737,7 @@ header .svg-container .svg-box .svg .arrow i {
   z-index: -1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
   .works h3.title::before {
     -webkit-transform: scale(4);
             transform: scale(4);
@@ -823,9 +846,10 @@ header .svg-container .svg-box .svg .arrow i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2em;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 767px) {
   .about h3.title {
     font-size: 8rem;
     margin-bottom: 2em;
@@ -844,7 +868,7 @@ header .svg-container .svg-box .svg .arrow i {
   z-index: -1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
   .about h3.title::before {
     -webkit-transform: scale(4);
             transform: scale(4);
@@ -944,7 +968,7 @@ header .svg-container .svg-box .svg .arrow i {
   font-size: 6rem;
   font-weight: 700;
   color: #333333;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   isolation: isolate;
@@ -956,7 +980,7 @@ header .svg-container .svg-box .svg .arrow i {
           justify-content: center;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 767px) {
   .contact h3.title {
     font-size: 8rem;
     margin-bottom: 2em;
@@ -975,39 +999,42 @@ header .svg-container .svg-box .svg .arrow i {
   z-index: -1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
   .contact h3.title::before {
     -webkit-transform: scale(4);
             transform: scale(4);
   }
 }
 
-@media (min-width: 900px) {
-  .contact .contact-form {
-    color: #333333;
-    font-size: 2.5rem;
-    text-align: center;
-  }
-}
-
-.contact .contact-form .subtitle {
-  font-weight: 700;
-  margin-bottom: 1em;
-}
-
 .contact .contact-form-box {
+  display: block;
+  width: 100%;
+  color: #333333;
+  font-size: 2.5rem;
+  text-align: center;
   background-color: #424242;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .contact .contact-form-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .contact .contact-form-box-left {
   width: 100%;
-  padding: 1em 3em;
+  padding: 1em 1em;
+}
+
+@media (min-width: 767px) {
+  .contact .contact-form-box-left {
+    padding: 1em 3em;
+  }
 }
 
 .contact .contact-form-box-left a {
@@ -1019,35 +1046,81 @@ header .svg-container .svg-box .svg .arrow i {
   color: #f2f2f2;
   text-align: center;
   font-size: 1.6rem;
+}
+
+.contact .contact-form-box-left .contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.contact .contact-form-box-left .subtitle {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+.contact .contact-form-box-left .fa-arrow-right {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .contact .contact-form-box-left .fa-arrow-right {
+    display: unset;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact .contact-form-box-left .fa-arrow-down {
+    display: none;
+  }
 }
 
 .contact .contact-form-box-right {
-  padding: 1em 3em;
-  -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+  padding: 1em 1em;
   width: 100%;
   background-color: #00ff99;
   -webkit-transform: skewX(15deg, 0);
           transform: skewX(15deg, 0);
 }
 
+@media (min-width: 900px) {
+  .contact .contact-form-box-right {
+    -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 .contact .contact-form-box-right a {
   color: #333333;
   font-size: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.contact .contact-form-box-right a:first-of-type {
+  margin-bottom: 2em;
+}
+
+.contact .contact-form-box-right a .icon {
+  width: 25px;
 }
 
 .contact .contact-form-box-right p {
-  margin-bottom: 1em;
+  margin-bottom: 0.3em;
   text-align: center;
   font-size: 1.6rem;
 }
 
-.contact .contact-form-box .contact-title {
+.contact .contact-form-box-right .contact-title {
   font-size: 3rem;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 1em;
+  margin-bottom: 0.3em;
   text-transform: uppercase;
 }
 

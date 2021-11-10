@@ -133,6 +133,8 @@ header {
 
     .hero-title {
       text-align: center;
+      display: grid;
+      place-content: center;
 
       @include response(lg) {
         text-align: left;
@@ -146,6 +148,12 @@ header {
         flex-direction: column;
         font-family: font(title);
 
+        @include response(md) {
+          font-size: 5rem;
+          line-height: 67px;
+          letter-spacing: 0.3rem;
+        }
+
         @include response(lg) {
           font-size: 7rem;
           line-height: 87px;
@@ -154,12 +162,15 @@ header {
       }
 
       p {
-        font-size: size(lg);
+        font-size: size(sm);
         font-family: font(paragraph);
         font-weight: 300;
         margin-top: 2em;
-        margin-bottom: 6em;
         color: color(secondary);
+
+        @include response(md) {
+          font-size: size(lg);
+        }
 
         i {
           color: color(tertiary);
@@ -224,6 +235,10 @@ header {
       font-family: font(title);
       font-size: size(sm);
       margin-right: 1em;
+
+      @include response(md) {
+        font-size: size(md);
+      }
 
       @include response(lg) {
         font-size: size(xl);
@@ -318,8 +333,9 @@ header {
     isolation: isolate;
     display: flex;
     justify-content: center;
+    margin-bottom: 2em;
 
-    @include response(xl) {
+    @include response(md) {
       font-size: 8rem;
       margin-bottom: 2em;
     }
@@ -334,7 +350,7 @@ header {
       padding-top: 4rem;
       z-index: -1;
 
-      @include response(sm) {
+      @include response(md) {
         transform: scale(4);
       }
     }
@@ -424,8 +440,9 @@ header {
     color: color(whitef2);
     display: flex;
     justify-content: center;
+    margin-bottom: 2em;
 
-    @include response(xl) {
+    @include response(md) {
       font-size: 8rem;
       margin-bottom: 2em;
     }
@@ -440,7 +457,7 @@ header {
       padding-top: 4rem;
       z-index: -1;
 
-      @include response(sm) {
+      @include response(md) {
         transform: scale(4);
       }
     }
@@ -528,14 +545,14 @@ header {
     font-size: 6rem;
     font-weight: 700;
     color: color(black333);
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-align: center;
     font-family: font(title);
     isolation: isolate;
     display: flex;
     justify-content: center;
 
-    @include response(xl) {
+    @include response(md) {
       font-size: 8rem;
       margin-bottom: 2em;
     }
@@ -550,34 +567,36 @@ header {
       padding-top: 4rem;
       z-index: -1;
 
-      @include response(sm) {
+      @include response(md) {
         transform: scale(4);
       }
     }
   }
 
   .contact-form {
-    @include response(lg) {
+    &-box {
+      display: block;
+      width: 100%;
       color: color(black333);
       font-size: size(lg);
       text-align: center;
-    }
-
-    .subtitle {
-      font-weight: 700;
-      margin-bottom: 1em;
-    }
-
-    &-box {
       background-color: color(primary);
       position: relative;
-      display: flex;
-      width: 80%;
-      margin: 0 auto;
+
+      @include response(lg) {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+      }
 
       &-left {
         width: 100%;
-        padding: 1em 3em;
+        padding: 1em 1em;
+
+        @include response(md) {
+          padding: 1em 3em;
+        }
+
         a {
           color: color(whitef2);
           font-size: size(md);
@@ -587,35 +606,75 @@ header {
           color: color(whitef2);
           text-align: center;
           font-size: size(sm);
+        }
+
+        .contact-title {
+          font-size: size(xl);
+          font-weight: 700;
+          font-family: font(title);
           margin-bottom: 1em;
+          text-transform: uppercase;
+        }
+
+        .subtitle {
+          font-weight: 700;
+          font-size: size(md);
+          text-transform: uppercase;
+          margin-top: 2em;
+        }
+
+        .fa-arrow-right {
+          display: none;
+
+          @include response(lg) {
+            display: unset;
+          }
+        }
+
+        .fa-arrow-down {
+          @include response(lg) {
+            display: none;
+          }
         }
       }
 
       &-right {
-        padding: 1em 3em;
-        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+        padding: 1em 1em;
         width: 100%;
         background-color: color(tertiary);
         transform: skewX(15deg, 0);
 
+        @include response(lg) {
+          clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+        }
+
         a {
           color: color(black333);
           font-size: size(md);
+          display: inline-flex;
+
+          &:first-of-type {
+            margin-bottom: 2em;
+          }
+
+          .icon {
+            width: 25px;
+          }
         }
 
         p {
-          margin-bottom: 1em;
+          margin-bottom: 0.3em;
           text-align: center;
           font-size: size(sm);
         }
-      }
 
-      .contact-title {
-        font-size: size(xl);
-        font-weight: 700;
-        font-family: font(title);
-        margin-bottom: 1em;
-        text-transform: uppercase;
+        .contact-title {
+          font-size: size(xl);
+          font-weight: 700;
+          font-family: font(title);
+          margin-bottom: 0.3em;
+          text-transform: uppercase;
+        }
       }
     }
   }
