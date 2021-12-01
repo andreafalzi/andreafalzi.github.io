@@ -23,39 +23,41 @@ function arrowAnimation() {
 }
 
 /* ON SCROLL RESPONSIVE NAVBAR ICON COLOR SHIFT */
-window.addEventListener("scroll", () => {
-  let pageYOffset = window.pageYOffset;
-  const works = document.getElementById("works");
-  const worksTop = works.offsetTop - 10;
-  const about = document.getElementById("about");
-  const aboutTop = about.offsetTop - 10;
-  const contact = document.getElementById("contact");
-  const contactTop = contact.offsetTop - 10;
-  const bodyNav = document.getElementById("bodyNav");
-  const worksNav = document.getElementById("worksNav");
-  const aboutNav = document.getElementById("aboutNav");
-  const contactNav = document.getElementById("contactNav");
+function navbarIconColorShift() {
+  window.addEventListener("scroll", () => {
+    let pageYOffset = window.pageYOffset;
+    const works = document.getElementById("works");
+    const worksTop = works.offsetTop - 10;
+    const about = document.getElementById("about");
+    const aboutTop = about.offsetTop - 10;
+    const contact = document.getElementById("contact");
+    const contactTop = contact.offsetTop - 10;
+    const bodyNav = document.getElementById("bodyNav");
+    const worksNav = document.getElementById("worksNav");
+    const aboutNav = document.getElementById("aboutNav");
+    const contactNav = document.getElementById("contactNav");
 
-  if (pageYOffset >= worksTop) {
-    bodyNav.classList.remove("span-icon");
-    worksNav.classList.add("span-icon");
-  } else {
-    worksNav.classList.remove("span-icon");
-    bodyNav.classList.add("span-icon");
-  }
-  if (pageYOffset >= aboutTop) {
-    worksNav.classList.remove("span-icon");
-    aboutNav.classList.add("span-icon");
-  } else {
-    aboutNav.classList.remove("span-icon");
-  }
-  if (pageYOffset >= contactTop) {
-    aboutNav.classList.remove("span-icon");
-    contactNav.classList.add("span-icon");
-  } else {
-    contactNav.classList.remove("span-icon");
-  }
-});
+    if (pageYOffset >= worksTop) {
+      bodyNav.classList.remove("span-icon");
+      worksNav.classList.add("span-icon");
+    } else {
+      worksNav.classList.remove("span-icon");
+      bodyNav.classList.add("span-icon");
+    }
+    if (pageYOffset >= aboutTop) {
+      worksNav.classList.remove("span-icon");
+      aboutNav.classList.add("span-icon");
+    } else {
+      aboutNav.classList.remove("span-icon");
+    }
+    if (pageYOffset >= contactTop) {
+      aboutNav.classList.remove("span-icon");
+      contactNav.classList.add("span-icon");
+    } else {
+      contactNav.classList.remove("span-icon");
+    }
+  });
+}
 
 /* MY AGE */
 function myAge() {
@@ -85,46 +87,6 @@ $(document).ready(function () {
   $("#hero").addClass("xyz-in");
 });
 
-/* MAIL FORM */
-function validateForm() {
-  let formName = document.querySelector("#name");
-  let formEmail = document.querySelector("#email");
-  let formTextarea = document.querySelector("#textarea");
-
-  let contactModal = document.querySelector("#contactModal");
-  let contactParagraph = document.querySelector("#contactParagraph");
-  let contactButton = document.querySelector("#contactButton");
-
-  if (formName.value == "") {
-    contactParagraph.innerHTML = "Insert your name";
-    contactButton.innerHTML = "Close";
-    contactModal.classList.remove("modal-hide");
-    document.querySelector("body").style.overflowY = "hidden";
-    document.querySelector("html").style.overflowY = "hidden";
-    return false;
-  } else if (validateEmail(formEmail.value) == false) {
-    contactParagraph.innerHTML = "Insert a valid email";
-    contactButton.innerHTML = "Close";
-    contactModal.classList.remove("modal-hide");
-    document.querySelector("body").style.overflowY = "hidden";
-    document.querySelector("html").style.overflowY = "hidden";
-    return false;
-  } else if (formTextarea.value == "") {
-    contactParagraph.innerHTML = "Don't forget to write your message";
-    contactButton.innerHTML = "Close";
-    contactModal.classList.remove("modal-hide");
-    document.querySelector("body").style.overflowY = "hidden";
-    document.querySelector("html").style.overflowY = "hidden";
-    return false;
-  }
-}
-
-//Validate email helper function
-function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
-
 /* Close Modal */
 function closeModal() {
   const contactModal = document.querySelector("#contactModal");
@@ -134,127 +96,75 @@ function closeModal() {
 }
 
 /* Open/Close about cards */
-const acc = document.querySelectorAll(".about-cards-card");
+var accItem = document.querySelectorAll(".about-cards-card");
+var accHD = document.querySelectorAll(".about-cards-card-title");
 
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.children[0].classList.toggle("select");
-    this.children[1].classList.toggle("show");
-    var panel = this.children[1];
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+for (i = 0; i < accHD.length; i++) {
+  accHD[i].addEventListener("click", toggleItem, false);
+}
+function toggleItem() {
+  var itemClass = this.parentNode.className;
+  for (i = 0; i < accItem.length; i++) {
+    accItem[i].className = "about-cards-card close";
+  }
+
+  if (itemClass == "about-cards-card close") {
+    this.parentNode.className = "about-cards-card open";
+  }
+}
+
+/* GO TOP */
+function goTop() {
+  document.querySelector("#topArrow").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+/* TOP ARROW VISIBILITY TOGGLE */
+function topArrowVisibility() {
+  window.addEventListener("scroll", () => {
+    const topArrow = document.querySelector("#topArrow");
+    if (window.scrollY >= 400) {
+      topArrow.classList.add("top-arrow-show");
+    } else if (topArrow.classList.contains("top-arrow-show") && window.scrollY < 400) {
+      topArrow.classList.remove("top-arrow-show");
     }
   });
 }
 
-/* GO TOP */
-document.querySelector("#topArrow").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+/* HEIGTH CALCULATOR */
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY + "px");
 });
-
-/* TOP ARROW VISIBILITY TOGGLE */
-window.addEventListener("scroll", () => {
-  const topArrow = document.querySelector("#topArrow");
-  if (window.scrollY >= 400) {
-    topArrow.classList.add("top-arrow-show");
-  } else if (topArrow.classList.contains("top-arrow-show") && window.scrollY < 400) {
-    topArrow.classList.remove("top-arrow-show");
-  }
-});
-
-// /* HEIGTH CALCULATOR */
-// window.addEventListener("scroll", function () {
-//   console.log(window.scrollY + "px");
-// });
 
 /* TOP ARROW TEXT COLOR SHIFT */
-window.addEventListener("scroll", () => {
-  const outerText = document.querySelector(".outer-text");
-  const sectionWorks = document.querySelector("#works");
-  const sectionAbout = document.querySelector("#about");
-  const sectionContact = document.querySelector("#contact");
-  const footer = document.querySelector("footer");
-  let windowTopArrow = window.scrollY + document.querySelector(".outer-text").offsetParent.offsetParent.offsetTop;
+function topArrowTextColorShift() {
+  window.addEventListener("scroll", () => {
+    const outerText = document.querySelector(".outer-text");
+    const sectionWorks = document.querySelector("#works");
+    const sectionAbout = document.querySelector("#about");
+    const sectionContact = document.querySelector("#contact");
+    const footer = document.querySelector("footer");
+    if (window.innerWidth > 900) {
+      let windowTopArrow = window.scrollY + document.querySelector(".outer-text").offsetParent.offsetParent.offsetTop;
 
-  if (windowTopArrow >= sectionWorks.offsetTop && windowTopArrow < sectionWorks.offsetTop + sectionWorks.offsetHeight) {
-    outerText.style.color = "#333";
-  }
-  if (windowTopArrow >= sectionAbout.offsetTop && windowTopArrow < sectionAbout.offsetTop + sectionAbout.offsetHeight) {
-    outerText.style.color = "#f2f2f2";
-  }
-  if (windowTopArrow >= sectionContact.offsetTop && windowTopArrow < sectionContact.offsetTop + sectionContact.offsetHeight) {
-    outerText.style.color = "#333";
-  }
-  if (windowTopArrow >= footer.offsetTop) {
-    outerText.style.color = "#f2f2f2";
-  }
-});
+      if (windowTopArrow >= sectionWorks.offsetTop && windowTopArrow < sectionWorks.offsetTop + sectionWorks.offsetHeight) {
+        outerText.style.color = "#333";
+      }
+      if (windowTopArrow >= sectionAbout.offsetTop && windowTopArrow < sectionAbout.offsetTop + sectionAbout.offsetHeight) {
+        outerText.style.color = "#f2f2f2";
+      }
+      if (windowTopArrow >= sectionContact.offsetTop && windowTopArrow < sectionContact.offsetTop + sectionContact.offsetHeight) {
+        outerText.style.color = "#333";
+      }
+      if (windowTopArrow >= footer.offsetTop) {
+        outerText.style.color = "#f2f2f2";
+      }
+    }
+  });
+}
 
 /*========EXTERNALS========*/
-
-/* SWIPER SLIDER */
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: false,
-  effect: "flip",
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-const swiperDesktop = new Swiper(".swiper-desktop", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: false,
-  effect: "slide",
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-  // Responsive breakpoints
-  breakpoints: {
-    900: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      // centeredSlides: true,
-    },
-    1100: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      // centeredSlides: true,
-    },
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
 
 /* SMOOTH SCROLL */
 $(document).ready(function () {
@@ -282,4 +192,10 @@ $(document).ready(function () {
       );
     } // End if
   });
+});
+
+/* SLIDER */
+document.addEventListener("DOMContentLoaded", function () {
+  var splide = new Splide(".splide");
+  splide.mount();
 });

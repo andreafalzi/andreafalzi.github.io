@@ -7,11 +7,10 @@
     <link rel="icon" href="img/logo.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/92c15bccae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Web Experiences Crafted With Coding Powers</title>
   </head>
-  <body id="body" onload="arrowAnimation(); myAge(); copyrigthYear()">
+  <body id="body" onload="arrowAnimation(); myAge(); copyrigthYear(); topArrowTextColorShift(); goTop(); navbarIconColorShift(); topArrowVisibility()">
     <!-- NAVBAR -->
     <nav>
       <div class="container">
@@ -93,89 +92,91 @@
       <div class="works">
         <div class="container">
           <h3 class="title">Works</h3>
-
-          <!-- Swiper-responsive -->
-          <div class="works-slide-container swiper">
-            <div class="swiper-wrapper">
-              <div class="slide swiper-slide">
-                <div class="slide-title">Urbangreen</div>
-                <img src="img/iphone-urbangreen.png" alt="urbangreen screen on iphone" />
-                <a href="pages/urbangreen.html">
-                  <div class="slide-btn">See more</div>
-                </a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Big.byte</div>
-                <img src="img/iphone-big-byte.png" alt="big-byte screen on iphone" />
-                <a href="pages/bigbyte.html">
-                  <div class="slide-btn">See more</div>
-                </a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Mario Jump</div>
-                <img src="img/iphone-mariojump.png" alt="mario jump screen on iphone" />
-                <a href="pages/mariojump.html">
-                  <div class="slide-btn">See more</div>
-                </a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Irest</div>
-                <img src="img/iphone-irest.png" alt="iphone irest" />
-                <a href="pages/irest.html">
-                  <div class="slide-btn">See more</div>
-                </a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Beer POG</div>
-                <img src="img/iphone-beerPOG.png" alt="iphone beerpog" />
-                <a href="pages/beerpog.html">
-                  <div class="slide-btn">See more</div>
-                </a>
-              </div>
+          <div class="works-container">
+            <div class="works-container-object">
+               <a href="pages/urbangreen.html">
+                <div class="top-bar">
+                  <h5 class="title">Urbangreen</h5>
+                </div>
+                <div class="main-content">
+                  <img src="img/urbangreen_works.jpg" alt="first project picture">
+                  <div class="tags">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Responsive</div>
+                    <div class="tag">First Project</div>
+                  </div>
+                </div>
+              </a>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
-          <!-- Swiper-desktop -->
-          <div class="works-slide-container swiper-desktop">
-            <div class="swiper-wrapper">
-              <div class="slide swiper-slide">
-                <div class="slide-title">Urbangreen</div>
-                <img src="img/laptop_urbangreen.png" alt="urbangreen screen on iphone" />
-                    <a class="slide-btn" href="pages/urbangreen.html">See more</a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Big.byte</div>
-                <img src="img/laptop_big_byte.png" alt="big-byte screen on iphone" />
-                <a class="slide-btn" href="pages/bigbyte.html">See more</a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Mario Jump</div>
-                <img src="img/laptop_mario_jump.png"src="img/thumbnail-MacBook-Air_2x.png" alt="mario jump screen on iphone" />
-                <a class="slide-btn" href="pages/mariojump.html">See more</a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Irest</div>
-                <img src="img/laptop_irest.png" alt="iphone irest" />
-                <a class="slide-btn" href="pages/irest.html">See more</a>
-              </div>
-              <div class="slide swiper-slide">
-                <div class="slide-title">Beer POG</div>
-                <img src="img/laptop_beer_pog.png" alt="iphone beerpog" />
-                <a class="slide-btn" href="pages/beerpog.html">See more</a>
-              </div>
+            <div class="works-container-object">
+               <a href="pages/beerpog.html">
+                <div class="top-bar">
+                  <h5 class="title">Beer Pog</h5>
+                </div>
+                <div class="main-content">
+                  <img src="img/beerpog_works.jpg" alt="second project picture">
+                  <div class="tags">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Javascript</div>
+                    <div class="tag">API</div>
+                    <div class="tag">Responsive</div>
+                    <div class="tag">Web App</div>
+                  </div>
+                </div>
+              </a>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="works-container-object">
+               <a href="pages/mariojump.html">
+                <div class="top-bar">
+                  <h5 class="title">Mario Jump</h5>
+                </div>
+                <div class="main-content">
+                  <img src="img/mario_jump_works.jpg" alt="third project picture">
+                  <div class="tags">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Javascript</div>
+                    <div class="tag">Gaming</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="works-container-object">
+               <a href="pages/irest.html">
+                <div class="top-bar">
+                  <h5 class="title">Irest</h5>
+                </div>
+                <div class="main-content">
+                  <img src="img/irest_works.jpg" alt="fourth project picture">
+                  <div class="tags">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Javascript</div>
+                    <div class="tag">SCSS</div>
+                    <div class="tag">Responsive</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="works-container-object">
+               <a href="pages/bigbyte.html">
+                <div class="top-bar">
+                  <h5 class="title">Big.Byte</h5>
+                </div>
+                <div class="main-content">
+                  <img src="img/big_byte_works.jpg" alt="fifth project picture">
+                  <div class="tags">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">Javascript</div>
+                    <div class="tag">Group Project</div>
+                    <div class="tag">Responsive</div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -189,39 +190,39 @@
           <div class="about-content">
             <div class="left">
               <div class="about-cards">
-                <div class="about-cards-card">
-                  <h3 class="about-cards-card-title select">Skills</h3>
-                  <div class="about-cards-card-container show" style="max-height: min-content;">
+                <div class="about-cards-card open">
+                  <h3 class="about-cards-card-title">Skills</h3>
+                  <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">
                       I have a <strong>very good grasp</strong> of <span style='background-color: rgb(187, 127, 17); padding-inline: .2em;'>HTML</span> and <span style="background-color: #2965f1; padding-inline: .2em;">CSS</span>, in particularly I'm using <span style="background-color: #cf649a; padding-inline: .2em;">SASS</span> to build my projects. I have a <em>good understanding</em> and <em>practice</em> about <span style="background-color: rgb(173, 173, 13); padding-inline: .2em;">JavaScript</span>, <span style="background-color: #78cff5; padding-inline: .2em;">JQuery</span> and <span style="background-color: rgb(53, 202, 153); padding-inline: .2em;">API</span>. As framework I have used <span style="background-color: #800af9; padding-inline: .2em;">Bootstrap5</span> quite a few times to build small websites.
                     </p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Personal</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">My name is Andrea <span id="myAge"></span> years old, I live in Randers with my danish wife Aurora. I moved to Denmark for love but also with the desire to grow personally and professionally. I love Rugby and I have played it for 2 years.</p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Pros</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">I like to keep my work tidy and structure. I'm really good at listening and showing understanding to others. I have a positive mindset and always looking forward for the next challange to test myself.</p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Cons</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">I don't like coffee.</p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Ambitions</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">My ambition is to built up a career as web developer step by step with passion and hunger for new exciting challenges. </p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Free Time</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">
@@ -229,7 +230,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="about-cards-card">
+                <div class="about-cards-card close">
                   <h3 class="about-cards-card-title">Hobbies</h3>
                   <div class="about-cards-card-container">
                     <p class="about-cards-card-container-paragraph">
@@ -265,7 +266,7 @@
               </div>
               <div class="contact-form-box-right">
                 <p class="contact-title">E-mail</p>
-                <p><i class="far fa-envelope"></i> Send me and email</p>
+                <p><i class="far fa-envelope"></i> Send me an email</p>
                 <a href="mailto:info@af.dev">hello@af.dev</a>
                 <p class="contact-title">Phone</p>
                 <p><i class="fas fa-phone-alt"></i> Call and let's have a chat</p>
@@ -313,7 +314,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/index.js"></script>
   </body>

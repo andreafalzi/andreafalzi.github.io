@@ -8,7 +8,6 @@
     position: relative;
     transition: 0.4s;
     z-index: 10;
-    cursor: pointer;
     background-color: color(primary);
 
     &-title {
@@ -17,12 +16,11 @@
       font-size: size(md);
       font-family: font(title);
       transition: color 0.2s ease-out;
+      cursor: pointer;
     }
 
     &-container {
-      max-height: 0;
       overflow: hidden;
-      opacity: 0;
       transition: all 0.2s ease-out;
 
       &-paragraph {
@@ -33,10 +31,20 @@
   }
 }
 
-.about-cards-card-title.select {
+.open .about-cards-card-title {
   color: color(tertiary);
 }
 
-.about-cards-card-container.show {
+.close .about-cards-card-container {
+  opacity: 0;
+  max-height: 0;
+  // transform: scaleY(0);
+  // transition: height 1s ease-out;
+}
+
+.open .about-cards-card-container {
+  // transform: scaleY(1);
+  // transform-origin: top;
+  // transition: transform .4s ease;
   opacity: 1;
 }

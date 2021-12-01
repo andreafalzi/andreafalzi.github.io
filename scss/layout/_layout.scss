@@ -125,6 +125,7 @@ header {
     @include response(lg) {
       display: flex;
       padding: 15em 4em 3em;
+      align-items: flex-start;
     }
 
     @include response(xxl) {
@@ -307,23 +308,23 @@ header {
     padding: 10em 4em 16em;
   }
 
-  .container {
-    @include response(xxxl) {
-      &::before,
-      &::after {
-        content: "";
-        background-color: color(secondary);
-        width: calc((100vw - 1366px) / 2);
-        position: absolute;
-        inset: 0;
-        z-index: 10;
-      }
+  // .container {
+  //   @include response(xxxl) {
+  //     &::before,
+  //     &::after {
+  //       content: "";
+  //       background-color: color(secondary);
+  //       width: calc((100vw - 1366px) / 2);
+  //       position: absolute;
+  //       inset: 0;
+  //       z-index: 10;
+  //     }
 
-      &::after {
-        margin-left: auto;
-      }
-    }
-  }
+  //     &::after {
+  //       margin-left: auto;
+  //     }
+  //   }
+  // }
 
   h3.title {
     font-size: 6rem;
@@ -344,7 +345,7 @@ header {
       content: "Works";
       transform: scale(3);
       font-weight: 700;
-      font-size: 5rem;
+      font-size: 3rem;
       position: absolute;
       color: color(darkOpacity);
       padding-top: 4rem;
@@ -356,60 +357,111 @@ header {
     }
   }
 
-  &-slide-container {
-    .slide {
-      margin-top: 3em;
+  .works-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+
+    @include response(sm) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    &-object {
+      cursor: pointer;
       width: 100%;
 
-      img {
-        width: 80%;
-        margin-block: 1em;
+      .top-bar {
+        background-color: color(blackOpa80);
+        width: 100%;
+        border-radius: 5px 5px 0 0;
 
-        @include response(xs) {
-          width: 60%;
+        h5.title {
+          font-size: 2rem;
+          color: color(whitef2);
+          text-transform: uppercase;
+        }
+      }
+
+      .main-content {
+        position: relative;
+
+        &::after {
+          content: "";
+          inset: 0;
+          background-color: color(blackOpa80);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 0 0 5px 5px;
+          height: 0;
+          transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+          transition-delay: 200ms;
         }
 
-        @include response(sm) {
-          width: 50%;
+        &::before {
+          content: "more...";
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translate(-50%) scale(0);
+          background-color: color(primary);
+          color: color(whitef2);
+          font-weight: 700;
+          padding: 0.3em 0.5em;
+          border-radius: 5px;
+          font-size: size(sm);
+          box-shadow: 2px 2px 0px 0px color(blackOpa80);
+          z-index: 1;
+          transition: all 200ms cubic-bezier(0, 0, 1, -0.2);
+          transition-delay: 0ms;
         }
 
-        @include response(md) {
-          width: 70%;
+        img {
+          width: 100%;
+          display: block;
+          border-radius: 0 0 5px 5px;
         }
 
-        @include response(lg) {
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          grid-gap: 1em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
           width: 80%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+
+          .tag {
+            background-color: color(primary);
+            color: color(whitef2);
+            font-weight: 700;
+            padding: 0.5em;
+            border-radius: 5px;
+            font-size: size(sm);
+            box-shadow: 2px 2px 0px 0px color(blackOpa80);
+            transform: scale(0);
+            transition: all 200ms cubic-bezier(0, 0, 1, -0.2);
+            transition-delay: 0ms;
+          }
         }
       }
-
-      &-title {
-        font-family: font(title);
-        font-size: size(lg);
-        font-weight: 700;
-        color: color(black333);
-        letter-spacing: 0.3rem;
+      &:hover .main-content::after {
+        height: 100%;
       }
-
-      &-btn {
-        font-family: font(paragraph);
-        font-size: size(md);
-        color: color(black333);
-        letter-spacing: 0.3rem;
-        background-color: color(tertiary);
-        display: block;
-        margin: 0 auto;
-        padding: 0.3em 1em;
-        border-radius: 50px;
-        z-index: 10;
-        width: 50%;
-
-        @include response(md) {
-          width: 30%;
-        }
-
-        @include response(lg) {
-          width: 50%;
-        }
+      &:hover .main-content::before {
+        transform: translate(-50%) scale(1);
+        transition-delay: 700ms;
+      }
+      &:hover .tags .tag {
+        transform: scale(1);
+        transition-delay: 400ms;
       }
     }
   }
@@ -451,7 +503,7 @@ header {
       content: "About";
       transform: scale(3);
       font-weight: 700;
-      font-size: 5rem;
+      font-size: 3rem;
       position: absolute;
       color: color(lightOpacity);
       padding-top: 4rem;
@@ -561,7 +613,7 @@ header {
       content: "Contact";
       transform: scale(3);
       font-weight: 700;
-      font-size: 5rem;
+      font-size: 3rem;
       position: absolute;
       color: color(darkOpacity);
       padding-top: 4rem;
@@ -582,6 +634,7 @@ header {
       text-align: center;
       background-color: color(primary);
       position: relative;
+      border-radius: 5px;
 
       @include response(lg) {
         display: flex;
@@ -595,6 +648,7 @@ header {
 
         @include response(md) {
           padding: 1em 3em;
+          width: 90%;
         }
 
         a {
@@ -643,9 +697,11 @@ header {
         width: 100%;
         background-color: color(tertiary);
         transform: skewX(15deg, 0);
+        border-radius: 0 0 5px 5px;
 
         @include response(lg) {
           clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+          border-radius: 0 5px 5px 0;
         }
 
         a {
