@@ -133,9 +133,9 @@ function topArrowVisibility() {
 }
 
 /* HEIGTH CALCULATOR */
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY + "px");
-});
+// window.addEventListener("scroll", function () {
+//   console.log(window.scrollY + "px");
+// });
 
 /* TOP ARROW TEXT COLOR SHIFT */
 function topArrowTextColorShift() {
@@ -195,7 +195,9 @@ $(document).ready(function () {
 });
 
 /* SLIDER */
-document.addEventListener("DOMContentLoaded", function () {
-  var splide = new Splide(".splide");
-  splide.mount();
-});
+if (document.querySelector(".splide")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide(".splide");
+    splide.mount();
+  });
+}

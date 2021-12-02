@@ -7,11 +7,12 @@
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
     <script src="https://kit.fontawesome.com/92c15bccae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <title>Web Experiences Crafted With Coding Powers</title>
-<body onload="copyrigthYear()">
-  <!-- NAVBAR -->
+  </head>
+  <body onload="copyrigthYear();">
+    <!-- NAVBAR -->
     <nav>
       <div class="container">
         <div class="navbar">
@@ -19,8 +20,10 @@
             <img src="../img/logo.svg" alt="andrea falzi logo" />
           </div>
 
-           <ul class="navbar-list">
-            <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Back to main site</a></li>
+          <ul class="navbar-list">
+            <li>
+              <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Back to main site</a>
+            </li>
           </ul>
         </div>
         <ul id="navbar-responsive" class="navbar-responsive xyz-in" xyz="fade in-left-100% delay-5">
@@ -32,36 +35,51 @@
     </nav>
 
     <!-- SECTION -->
-    <section>
+    <section id="seeMore">
       <div class="container">
         <div class="see-more">
-          <h1 class="title">Big.byte</h1>
-          <h3 class="title">Case & Develop</h3>
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis porro fugiat saepe quisquam dignissimos, provident cupiditate enim quo ut quidem error distinctio eos iusto id vitae inventore iure officia debitis aut laborum consequuntur mollitia consequatur? Non repudiandae laudantium sed veritatis cupiditate, saepe eum ad ducimus voluptate autem minus voluptatem.</p>
-          <h3 class="title">Code languages</h3>
-          <p class="paragraph"><img src="../img/html-icon.svg" alt="html icon"><img src="../img/css-icon.svg" alt="css icon"><img src="../img/js-icon-2.svg" alt="javascript icon"></p>
-          <h3 class="title">Fonts used</h3>
-          <p class="paragraph">Poppins | Fira Sans</p>
-          <h3 class="title">Color Palette</h3>
-          <div class="paragraph flex">
-            <div class="square" style="background-color:#202225"></div>
-            <div class="square" style="background-color:#2f3136"></div>
-            <div class="square" style="background-color:#36393f"></div>
-            <div class="square" style="background-color:#292b2f"></div>
-            <div class="square" style="background-color:#f2f2f2; border: black solid 2px;"></div>
+          <h1 class="title">Big.Byte</h1>
+          <p class="paragraph">A website concept that want to raise awareness of lack of green inside the hearth of big cities.</p>
+          <a class="btn-url" href="../subdomain/Big.byte/index.html" target="_blank">LINK TO WEBSITE<i class="fas fa-external-link-alt"></i></a>
+          <!-- Slideshow container -->
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="../img/big_byte_00.jpg" alt="" /></li>
+                <li class="splide__slide"><img src="../img/big_byte_01.jpg" alt="" /></li>
+                <li class="splide__slide"><img src="../img/big_byte_02.jpg" alt="" /></li>
+                <li class="splide__slide"><img src="../img/big_byte_03.jpg" alt="" /></li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
+          <!-- Slideshow container end-->
+          <h3 class="title">Case & Develop</h3>
+          <p class="paragraph">First project where we had the freedom to develop our own desing and structure. The task was to develop a new and fresh concepts like <strong>logo, posters and a website</strong> for an organization no-profit that has as a purpose to raise awareness to its users about the lack of green inside the hearth of the metropolis around the world.</p>
+          <p class="paragraph">The logo is a mix between different partnership that this no-profit organization has. It takes inspiration from Greenpeace and Save the Tree.</p>
+          <p class="paragraph last-p">The website is entired build with HTML and CSS without using any framework or libraries. It is fully responsive and it has 9 subpages that are fully implemented and functional.</p>
           <h3 class="title">Development time</h3>
-          <p class="paragraph">3 weeks</p>
-          <h3 class="title">Designed</h3>
-          <p class="paragraph">Andrea Falzi</p>
-          <h3 class="title">Coded</h3>
-          <p class="paragraph">Andrea Falzi</p>
-          <h3 class="title">URL</h3>
-          <p class="paragraph"><a href="../subdomain/Big.byte/index.html" target="_blank">Link to website</a></p>
+          <p class="paragraph last-p">The project was accomplished in a period of 3 weeks.</p>
+          <h3 class="title">Project specifications</h3>
+          <p class="paragraph">Here the list of the tools has been used for the project:</p>
+          <ul>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Adobe XD</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
         </div>
-      </div>      
+      </div>
     </section>
-  
+
     <!-- FOOTER -->
     <footer>
       <div class="footer">
@@ -71,10 +89,18 @@
           </div>
           <div class="footer-links">
             <ul>
-              <li><a href="https://www.linkedin.com/in/andreafalzi/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
-              <li><a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i> Github</a></li>
-              <li><a href="https://codepen.io/andreafalzi" target="_blank"><i class="fab fa-codepen"></i> Codepen</a></li>
-              <li><a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/andreafalzi/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+              </li>
+              <li>
+                <a href="https://github.com/andreafalzi" target="_blank"><i class="fab fa-github"></i> Github</a>
+              </li>
+              <li>
+                <a href="https://codepen.io/andreafalzi" target="_blank"><i class="fab fa-codepen"></i> Codepen</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/andrea_falzi" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
             </ul>
           </div>
           <div class="copy">
@@ -83,8 +109,8 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>
