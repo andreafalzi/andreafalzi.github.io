@@ -23,7 +23,11 @@
   .splide__arrow--prev,
   .splide__arrow--next {
     i {
-      font-size: 5rem;
+      font-size: 2rem;
+
+      @include response(md){
+        font-size: 5rem;
+      }
     }
   }
 

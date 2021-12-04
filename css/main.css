@@ -29,8 +29,6 @@
 
 .about-cards-card-container {
   overflow: hidden;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 
 .about-cards-card-container-paragraph {
@@ -45,10 +43,15 @@
 .close .about-cards-card-container {
   opacity: 0;
   max-height: 0;
+  -webkit-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
 }
 
 .open .about-cards-card-container {
   opacity: 1;
+  max-height: 250px;
+  -webkit-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
 }
 
 .modal {
@@ -137,7 +140,14 @@
 
 .splide .splide__arrow--prev i,
 .splide .splide__arrow--next i {
-  font-size: 5rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 767px) {
+  .splide .splide__arrow--prev i,
+  .splide .splide__arrow--next i {
+    font-size: 5rem;
+  }
 }
 
 .splide .splide__arrow--prev {
@@ -302,12 +312,18 @@ ul {
 }
 
 #seeMore .see-more h1.title {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #f2f2f2;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+}
+
+@media (min-width: 767px) {
+  #seeMore .see-more h1.title {
+    font-size: 5rem;
+  }
 }
 
 #seeMore .see-more h3.title {

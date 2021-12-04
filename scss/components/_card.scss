@@ -21,7 +21,7 @@
 
     &-container {
       overflow: hidden;
-      transition: all 0.2s ease-out;
+      // transition: all 0.2s ease-out;
 
       &-paragraph {
         padding: 1rem;
@@ -39,7 +39,7 @@
   opacity: 0;
   max-height: 0;
   // transform: scaleY(0);
-  // transition: height 1s ease-out;
+  transition: all 700ms ease-out;
 }
 
 .open .about-cards-card-container {
@@ -47,4 +47,6 @@
   // transform-origin: top;
   // transition: transform .4s ease;
   opacity: 1;
+  max-height: 250px;
+  transition: all 700ms ease-out;
 }

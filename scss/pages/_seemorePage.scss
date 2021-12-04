@@ -13,12 +13,16 @@
     }
 
     h1.title {
-      font-size: size(xxl);
+      font-size: 4rem;
       font-weight: 700;
       color: color(whitef2);
       font-family: font(title);
       margin-bottom: 0.5em;
       text-transform: uppercase;
+
+      @include response(md) {
+        font-size: size(xxl);
+      }
     }
 
     h3.title {
