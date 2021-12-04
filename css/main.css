@@ -146,6 +146,13 @@
 @media (min-width: 767px) {
   .splide .splide__arrow--prev i,
   .splide .splide__arrow--next i {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .splide .splide__arrow--prev i,
+  .splide .splide__arrow--next i {
     font-size: 5rem;
   }
 }
@@ -813,8 +820,8 @@ header .svg-container .svg-box .svg .arrow i {
   .works .works-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
@@ -1078,6 +1085,7 @@ header .svg-container .svg-box .svg .arrow i {
   font-family: "Poppins", sans-serif;
   position: relative;
   padding: 4em 2em;
+  overflow: hidden;
 }
 
 @media (min-width: 767px) {
@@ -1160,7 +1168,7 @@ header .svg-container .svg-box .svg .arrow i {
   padding: 1em 1em;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 900px) {
   .contact .contact-form-box-left {
     padding: 1em 3em;
     width: 90%;

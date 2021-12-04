@@ -365,7 +365,7 @@ header {
 
     @include response(sm) {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 
     &-object {
@@ -584,6 +584,7 @@ header {
   font-family: font(paragraph);
   position: relative;
   padding: 4em 2em;
+  overflow: hidden;
 
   @include response(md) {
     padding: 4em 4em;
@@ -618,6 +619,7 @@ header {
       color: color(darkOpacity);
       padding-top: 4rem;
       z-index: -1;
+      
 
       @include response(md) {
         transform: scale(4);
@@ -646,7 +648,7 @@ header {
         width: 100%;
         padding: 1em 1em;
 
-        @include response(md) {
+        @include response(lg) {
           padding: 1em 3em;
           width: 90%;
         }

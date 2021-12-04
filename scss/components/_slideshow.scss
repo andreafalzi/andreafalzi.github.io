@@ -26,6 +26,10 @@
       font-size: 2rem;
 
       @include response(md){
+        font-size: 4rem;
+      }
+
+      @include response(lg){
         font-size: 5rem;
       }
     }
