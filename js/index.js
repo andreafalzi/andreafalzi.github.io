@@ -1,6 +1,19 @@
 /*========GLOBAL VARIABLES========*/
 
 /*========FUNCTIONS========*/
+if (document.querySelector("#index")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    arrowAnimation();
+    myAge();
+    copyrigthYear();
+    topArrowTextColorShift();
+    goTop();
+    navbarIconColorShift();
+    topArrowVisibility();
+  });
+}
+
+copyrigthYear();
 
 /* HEADER ARROW ANIMATION */
 
@@ -195,9 +208,29 @@ $(document).ready(function () {
 });
 
 /* SLIDER */
-if (document.querySelector(".splide")) {
+if (document.querySelector(".swiper")) {
   document.addEventListener("DOMContentLoaded", function () {
-    var splide = new Splide(".splide");
-    splide.mount();
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      grabCursor: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
   });
 }
