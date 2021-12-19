@@ -5,7 +5,6 @@ if (document.querySelector("#index")) {
   document.addEventListener("DOMContentLoaded", function () {
     arrowAnimation();
     myAge();
-    copyrigthYear();
     topArrowTextColorShift();
     goTop();
     navbarIconColorShift();
