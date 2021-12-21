@@ -29,9 +29,9 @@ function arrowAnimation() {
     arrow.classList.toggle("xyz-out");
   }, 2000);
 
-  setTimeout(() => {
-    clearInterval(timerArrow);
-  }, 8000);
+  // setTimeout(() => {
+  //   clearInterval(timerArrow);
+  // }, 8000);
 }
 
 /* ON SCROLL RESPONSIVE NAVBAR ICON COLOR SHIFT */

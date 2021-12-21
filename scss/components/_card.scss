@@ -28,6 +28,10 @@
         font-family: font(paragraph);
       }
     }
+
+    .overflow-card {
+      overflow: auto;
+    }
   }
 }
 

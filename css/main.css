@@ -36,6 +36,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.about-cards-card .overflow-card {
+  overflow: auto;
+}
+
 .open .about-cards-card-title {
   color: #00ff99;
 }
@@ -692,6 +696,8 @@ header .svg-container .svg-box .svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: background-color ease-in 250ms;
+  transition: background-color ease-in 250ms;
 }
 
 header .svg-container .svg-box .svg .square {
@@ -709,6 +715,10 @@ header .svg-container .svg-box .svg .arrow i {
   color: #f2f2f2;
   font-size: 2rem;
   margin-top: -5px;
+}
+
+header .svg-container .svg-box .svg:hover {
+  background-color: #00ff99;
 }
 
 /* !!!SECTION WORKS!!! */
