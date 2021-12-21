@@ -1,7 +1,7 @@
 /*========GLOBAL VARIABLES========*/
 
 /*========FUNCTIONS========*/
-if (document.querySelector("#index")) {
+if (document.querySelector("#home")) {
   document.addEventListener("DOMContentLoaded", function () {
     arrowAnimation();
     myAge();
