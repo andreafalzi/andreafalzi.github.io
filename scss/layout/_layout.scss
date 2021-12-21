@@ -116,13 +116,17 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+
+    @include response(lg) {
+      justify-content: space-evenly;
+    }
 
     .hero {
       padding: 3em 2em;
       color: color(whitef2);
       display: grid;
       place-content: center;
+      margin-top: 5em;
 
       @include response(md) {
         padding: 3em 4em;
@@ -130,9 +134,14 @@ header {
 
       @include response(lg) {
         display: flex;
-        padding: 3em 4em 3em;
+        padding: 3em 4em;
         align-items: flex-start;
+        margin-top: 0;
       }
+
+      @include response(xxl) {
+      padding: 3em 0em;
+    }
 
       .hero-title {
         text-align: center;
@@ -223,9 +232,11 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 5em;
 
       @include response(lg) {
         padding: 3em 4em;
+        margin-top: 0;
       }
 
       @include response(xxl) {
@@ -248,18 +259,6 @@ header {
       }
 
       .svg-box {
-        //   width: fit-content;
-        //   margin: 0 auto;
-
-        //   @include response(lg) {
-        //   margin: 0;
-        //   padding: 3em 4em;
-        // }
-
-        // @include response(xxl) {
-        //   margin: 0;
-        //   padding: 3em 0em;
-        // }
 
         .svg {
           border: 5px color(tertiary) solid;
