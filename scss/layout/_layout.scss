@@ -110,187 +110,193 @@ nav {
 /* !!!HERO!!! */
 header {
   background-color: color(primary);
+  height: 90vh;
 
-  .hero {
-    padding: 3em 2em;
-    color: color(whitef2);
-    display: grid;
-    place-content: center;
-    height: 60vh;
+  .header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    @include response(md) {
-      padding: 3em 4em;
-    }
-
-    @include response(lg) {
-      display: flex;
-      padding: 15em 4em 3em;
-      align-items: flex-start;
-    }
-
-    @include response(xxl) {
-      padding: 15em 0em 3em;
-    }
-
-    .hero-title {
-      text-align: center;
+    .hero {
+      padding: 3em 2em;
+      color: color(whitef2);
       display: grid;
       place-content: center;
 
-      @include response(lg) {
-        text-align: left;
+      @include response(md) {
+        padding: 3em 4em;
       }
 
-      h1 {
-        font-size: size(xl);
-        line-height: 57px;
-        font-weight: 700;
+      @include response(lg) {
         display: flex;
-        flex-direction: column;
+        padding: 15em 4em 3em;
+        align-items: flex-start;
+      }
+
+      @include response(xxl) {
+        padding: 15em 0em 3em;
+      }
+
+      .hero-title {
+        text-align: center;
+        display: grid;
+        place-content: center;
+
+        @include response(lg) {
+          text-align: left;
+        }
+
+        h1 {
+          font-size: size(xl);
+          line-height: 57px;
+          font-weight: 700;
+          display: flex;
+          flex-direction: column;
+          font-family: font(title);
+
+          @include response(md) {
+            font-size: 5rem;
+            line-height: 67px;
+            letter-spacing: 0.3rem;
+          }
+
+          @include response(lg) {
+            font-size: 7rem;
+            line-height: 87px;
+            letter-spacing: 0.3rem;
+          }
+        }
+
+        p {
+          font-size: size(sm);
+          font-family: font(paragraph);
+          font-weight: 300;
+          margin-top: 2em;
+          color: color(secondary);
+
+          @include response(md) {
+            font-size: size(lg);
+          }
+
+          i {
+            color: color(tertiary);
+          }
+        }
+      }
+
+      .hero-social {
+        display: none;
+
+        @include response(lg) {
+          display: grid;
+          margin-left: auto;
+
+          li {
+            margin-top: 2.5em;
+
+            a {
+              font-size: 4rem;
+              color: color(whitef2);
+              transition: color 200ms ease-in;
+              position: relative;
+
+              &:hover {
+                color: color(tertiary);
+              }
+
+              p {
+                font-family: font(paragraph);
+                font-size: size(md);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                visibility: hidden;
+                opacity: 0;
+                color: color(whitef2);
+                transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include response(lg) {
+        padding: 3em 4em;
+      }
+
+      @include response(xxl) {
+        padding: 3em 0em;
+      }
+
+      .svg-text {
+        color: color(secondary);
         font-family: font(title);
+        font-size: size(sm);
+        margin-right: 1em;
 
         @include response(md) {
-          font-size: 5rem;
-          line-height: 67px;
-          letter-spacing: 0.3rem;
+          font-size: size(md);
         }
 
         @include response(lg) {
-          font-size: 7rem;
-          line-height: 87px;
-          letter-spacing: 0.3rem;
+          font-size: size(xl);
         }
       }
 
-      p {
-        font-size: size(sm);
-        font-family: font(paragraph);
-        font-weight: 300;
-        margin-top: 2em;
-        color: color(secondary);
+      .svg-box {
+        //   width: fit-content;
+        //   margin: 0 auto;
 
-        @include response(md) {
-          font-size: size(lg);
-        }
+        //   @include response(lg) {
+        //   margin: 0;
+        //   padding: 3em 4em;
+        // }
 
-        i {
-          color: color(tertiary);
-        }
-      }
-    }
+        // @include response(xxl) {
+        //   margin: 0;
+        //   padding: 3em 0em;
+        // }
 
-    .hero-social {
-      display: none;
+        .svg {
+          border: 5px color(tertiary) solid;
+          width: 35px;
+          height: 60px;
+          border-radius: 10px;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          transition: background-color ease-in 250ms;
 
-      @include response(lg) {
-        display: grid;
-        margin-left: auto;
+          .square {
+            width: 5px;
+            height: 5px;
+            background-color: color(whitef2);
+            margin: 0 auto;
 
-        li {
-          margin-top: 2.5em;
-
-          a {
-            font-size: 4rem;
-            color: color(whitef2);
-            transition: color 200ms ease-in;
-            position: relative;
-
-            &:hover {
-              color: color(tertiary);
+            &:first-child {
+              margin-top: 7px;
             }
+          }
 
-            p {
-              font-family: font(paragraph);
-              font-size: size(md);
-              position: absolute;
-              top: 50%;
-              left: 0;
-              transform: translateY(-50%);
-              visibility: hidden;
-              opacity: 0;
+          .arrow {
+            i {
               color: color(whitef2);
-              transition: visibility 200ms ease-in, opacity 200ms ease-in, left 200ms ease-in;
+              font-size: size(md);
+              margin-top: -5px;
             }
           }
-        }
-      }
-    }
-  }
 
-  .svg-container {
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include response(lg) {
-      padding: 3em 4em;
-    }
-
-    @include response(xxl) {
-      padding: 3em 0em;
-    }
-
-    .svg-text {
-      color: color(secondary);
-      font-family: font(title);
-      font-size: size(sm);
-      margin-right: 1em;
-
-      @include response(md) {
-        font-size: size(md);
-      }
-
-      @include response(lg) {
-        font-size: size(xl);
-      }
-    }
-
-    .svg-box {
-      //   width: fit-content;
-      //   margin: 0 auto;
-
-      //   @include response(lg) {
-      //   margin: 0;
-      //   padding: 3em 4em;
-      // }
-
-      // @include response(xxl) {
-      //   margin: 0;
-      //   padding: 3em 0em;
-      // }
-
-      .svg {
-        border: 5px color(tertiary) solid;
-        width: 35px;
-        height: 60px;
-        border-radius: 10px;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        transition: background-color ease-in 250ms;
-
-        .square {
-          width: 5px;
-          height: 5px;
-          background-color: color(whitef2);
-          margin: 0 auto;
-
-          &:first-child {
-            margin-top: 7px;
+          &:hover {
+            background-color: color(tertiary);
           }
-        }
-
-        .arrow {
-          i {
-            color: color(whitef2);
-            font-size: size(md);
-            margin-top: -5px;
-          }
-        }
-
-        &:hover {
-          background-color: color(tertiary);
         }
       }
     }
@@ -624,7 +630,6 @@ header {
       color: color(darkOpacity);
       padding-top: 4rem;
       z-index: -1;
-      
 
       @include response(md) {
         transform: scale(4);

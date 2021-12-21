@@ -604,25 +604,39 @@ nav .navbar-responsive li .span-icon {
 /* !!!HERO!!! */
 header {
   background-color: #424242;
+  height: 90vh;
 }
 
-header .hero {
+header .header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .header .hero {
   padding: 3em 2em;
   color: #f2f2f2;
   display: -ms-grid;
   display: grid;
   place-content: center;
-  height: 60vh;
 }
 
 @media (min-width: 767px) {
-  header .hero {
+  header .header .hero {
     padding: 3em 4em;
   }
 }
 
 @media (min-width: 900px) {
-  header .hero {
+  header .header .hero {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -634,12 +648,12 @@ header .hero {
 }
 
 @media (min-width: 1367px) {
-  header .hero {
+  header .header .hero {
     padding: 15em 0em 3em;
   }
 }
 
-header .hero .hero-title {
+header .header .hero .hero-title {
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -647,12 +661,12 @@ header .hero .hero-title {
 }
 
 @media (min-width: 900px) {
-  header .hero .hero-title {
+  header .header .hero .hero-title {
     text-align: left;
   }
 }
 
-header .hero .hero-title h1 {
+header .header .hero .hero-title h1 {
   font-size: 3rem;
   line-height: 57px;
   font-weight: 700;
@@ -667,7 +681,7 @@ header .hero .hero-title h1 {
 }
 
 @media (min-width: 767px) {
-  header .hero .hero-title h1 {
+  header .header .hero .hero-title h1 {
     font-size: 5rem;
     line-height: 67px;
     letter-spacing: 0.3rem;
@@ -675,14 +689,14 @@ header .hero .hero-title h1 {
 }
 
 @media (min-width: 900px) {
-  header .hero .hero-title h1 {
+  header .header .hero .hero-title h1 {
     font-size: 7rem;
     line-height: 87px;
     letter-spacing: 0.3rem;
   }
 }
 
-header .hero .hero-title p {
+header .header .hero .hero-title p {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -691,39 +705,39 @@ header .hero .hero-title p {
 }
 
 @media (min-width: 767px) {
-  header .hero .hero-title p {
+  header .header .hero .hero-title p {
     font-size: 2.5rem;
   }
 }
 
-header .hero .hero-title p i {
+header .header .hero .hero-title p i {
   color: #00ff99;
 }
 
-header .hero .hero-social {
+header .header .hero .hero-social {
   display: none;
 }
 
 @media (min-width: 900px) {
-  header .hero .hero-social {
+  header .header .hero .hero-social {
     display: -ms-grid;
     display: grid;
     margin-left: auto;
   }
-  header .hero .hero-social li {
+  header .header .hero .hero-social li {
     margin-top: 2.5em;
   }
-  header .hero .hero-social li a {
+  header .header .hero .hero-social li a {
     font-size: 4rem;
     color: #f2f2f2;
     -webkit-transition: color 200ms ease-in;
     transition: color 200ms ease-in;
     position: relative;
   }
-  header .hero .hero-social li a:hover {
+  header .header .hero .hero-social li a:hover {
     color: #00ff99;
   }
-  header .hero .hero-social li a p {
+  header .header .hero .hero-social li a p {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     position: absolute;
@@ -739,8 +753,7 @@ header .hero .hero-social {
   }
 }
 
-header .svg-container {
-  height: 30vh;
+header .header .svg-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,18 +766,18 @@ header .svg-container {
 }
 
 @media (min-width: 900px) {
-  header .svg-container {
+  header .header .svg-container {
     padding: 3em 4em;
   }
 }
 
 @media (min-width: 1367px) {
-  header .svg-container {
+  header .header .svg-container {
     padding: 3em 0em;
   }
 }
 
-header .svg-container .svg-text {
+header .header .svg-container .svg-text {
   color: #d2d2d2;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
@@ -772,18 +785,18 @@ header .svg-container .svg-text {
 }
 
 @media (min-width: 767px) {
-  header .svg-container .svg-text {
+  header .header .svg-container .svg-text {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 900px) {
-  header .svg-container .svg-text {
+  header .header .svg-container .svg-text {
     font-size: 3rem;
   }
 }
 
-header .svg-container .svg-box .svg {
+header .header .svg-container .svg-box .svg {
   border: 5px #00ff99 solid;
   width: 35px;
   height: 60px;
@@ -800,24 +813,24 @@ header .svg-container .svg-box .svg {
   transition: background-color ease-in 250ms;
 }
 
-header .svg-container .svg-box .svg .square {
+header .header .svg-container .svg-box .svg .square {
   width: 5px;
   height: 5px;
   background-color: #f2f2f2;
   margin: 0 auto;
 }
 
-header .svg-container .svg-box .svg .square:first-child {
+header .header .svg-container .svg-box .svg .square:first-child {
   margin-top: 7px;
 }
 
-header .svg-container .svg-box .svg .arrow i {
+header .header .svg-container .svg-box .svg .arrow i {
   color: #f2f2f2;
   font-size: 2rem;
   margin-top: -5px;
 }
 
-header .svg-container .svg-box .svg:hover {
+header .header .svg-container .svg-box .svg:hover {
   background-color: #00ff99;
 }
 
