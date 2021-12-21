@@ -20,17 +20,13 @@
     }
 
     &-container {
-      overflow: hidden;
+      overflow: auto;
       // transition: all 0.2s ease-out;
 
       &-paragraph {
         padding: 1rem;
         font-family: font(paragraph);
       }
-    }
-
-    .overflow-card {
-      overflow: auto;
     }
   }
 }

@@ -28,16 +28,12 @@
 }
 
 .about-cards-card-container {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .about-cards-card-container-paragraph {
   padding: 1rem;
   font-family: "Poppins", sans-serif;
-}
-
-.about-cards-card .overflow-card {
-  overflow: auto;
 }
 
 .open .about-cards-card-title {
