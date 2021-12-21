@@ -130,12 +130,8 @@ header {
 
       @include response(lg) {
         display: flex;
-        padding: 15em 4em 3em;
+        padding: 3em 4em 3em;
         align-items: flex-start;
-      }
-
-      @include response(xxl) {
-        padding: 15em 0em 3em;
       }
 
       .hero-title {

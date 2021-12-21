@@ -640,16 +640,10 @@ header .header .hero {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 15em 4em 3em;
+    padding: 3em 4em 3em;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-}
-
-@media (min-width: 1367px) {
-  header .header .hero {
-    padding: 15em 0em 3em;
   }
 }
 
