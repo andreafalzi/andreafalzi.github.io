@@ -19,6 +19,32 @@
       font-family: font(title);
       margin-bottom: 0.5em;
       text-transform: uppercase;
+      display: flex;
+
+      span {
+        display: none;
+        margin-left: auto;
+
+        a{
+          border: 1px color(secondary) solid;
+          border-radius: 5px;
+          padding: 0 5px;
+
+          &:hover {
+            background-color: color(tertiary);
+            color: color(primary);
+            border: 1px color(tertiary) solid;
+          }
+        }
+
+        &:last-of-type {
+          margin-left: 1em;
+        }
+
+        @include response(lg) {
+          display: block;
+        }
+      }
 
       @include response(md) {
         font-size: size(xxl);

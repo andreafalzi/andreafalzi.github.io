@@ -176,6 +176,12 @@ function topArrowTextColorShift() {
   });
 }
 
+function loader() {
+  setTimeout(() => {
+    document.querySelector(".loader").style.transform = "translateX(-100%)";
+  }, 1500);
+}
+
 /*========EXTERNALS========*/
 
 /* SMOOTH SCROLL */

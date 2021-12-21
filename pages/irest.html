@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <title>Web Experiences Crafted With Coding Powers</title>
   </head>
-  <body>
+  <body onload="loader()">
     <!-- NAVBAR -->
     <nav>
       <div class="container">
@@ -19,16 +19,21 @@
           <div class="navbar-logo">
             <img src="../img/logo.svg" alt="andrea falzi logo" />
           </div>
-
           <ul class="navbar-list">
             <li>
-              <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Back to main site</a>
+              <a href="../index.html"><i class="fas fa-sign-out-alt"></i> To main</a>
             </li>
           </ul>
         </div>
-        <ul id="navbar-responsive" class="navbar-responsive xyz-in" xyz="fade in-left-100% delay-5">
-          <li>
-            <a id="bodyNav" class="span-icon" href="../index.html"><i class="fas fa-sign-out-alt"></i>Back to main site</a>
+        <ul id="navbar-responsive" class="navbar-responsive xyz-in" xyz="fade in-left-100% stagger-2 delay-5">
+          <li class="xyz-nested">
+            <a id="bodyNav" class="span-icon" href="../index.html"><i class="fas fa-sign-out-alt"></i>To main</a>
+          </li>
+          <li class="xyz-nested">
+            <a href="mariojump.html"><i class="fas fa-arrow-left"></i>Prev Work</a>
+          </li>
+          <li class="xyz-nested">
+            <a href="bigbyte.html"><i class="fas fa-arrow-right"></i>Next Work</a>
           </li>
         </ul>
       </div>
@@ -38,7 +43,7 @@
     <section id="seeMore">
       <div class="container">
         <div class="see-more">
-          <h1 class="title">Irest</h1>
+          <h1 class="title">Irest <span><a href="mariojump.html"><i class="fas fa-arrow-left"></i> Prev Work</a></span><span><a href="bigbyte.html">Next Work <i class="fas fa-arrow-right"></i></a></span></h1>
           <p class="paragraph">A one page website project suite to work with SCSS.</p>
           <a class="btn-url" href="../subdomain/Irest/index.html" target="_blank">LINK TO WEBSITE<i class="fas fa-external-link-alt"></i></a>
           <!-- Slider main container -->
@@ -82,6 +87,15 @@
         </div>
       </div>
     </section>
+
+    <div class="loader">
+      <div class="loader-icon-box">
+        <div class="loader-icon">
+          <div class="loader-core"></div>
+        </div>
+        <img src="../img/logo.svg" alt="andrea falzi logo" />
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
