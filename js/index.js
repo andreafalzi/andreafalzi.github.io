@@ -211,6 +211,23 @@ function loader() {
 //     } // End if
 //   });
 // });
+// Add smooth scrolling to all links
+const links = document.querySelectorAll("[data-nav-anchor]");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop + 75,
+    behavior: "smooth",
+  });
+}
 
 /* SLIDER */
 if (document.querySelector(".swiper")) {

@@ -250,12 +250,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
 html {
   font-size: 62.5%;
   scrollbar-width: normal;
