@@ -9,6 +9,8 @@ if (document.querySelector("#home")) {
     goTop();
     navbarIconColorShift();
     topArrowVisibility();
+    document.querySelector("#navbar-responsive").classList.add("xyz-in");
+    document.querySelector("#hero").classList.add("xyz-in");
   });
 }
 
@@ -92,12 +94,6 @@ function myAge() {
 function copyrigthYear() {
   document.querySelector("#copyright").appendChild(document.createTextNode(new Date().getFullYear()));
 }
-
-/* LOADER */
-$(document).ready(function () {
-  $("#navbar-responsive").addClass("xyz-in");
-  $("#hero").addClass("xyz-in");
-});
 
 /* Close Modal */
 function closeModal() {
