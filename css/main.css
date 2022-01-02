@@ -892,7 +892,7 @@ header .header .svg-container .svg-box .svg:hover {
   }
 }
 
-.works h3.title {
+.works h2.title {
   font-size: 6rem;
   font-weight: 700;
   color: #333333;
@@ -908,13 +908,13 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 @media (min-width: 767px) {
-  .works h3.title {
+  .works h2.title {
     font-size: 8rem;
     margin-bottom: 2em;
   }
 }
 
-.works h3.title::before {
+.works h2.title::before {
   content: "Works";
   -webkit-transform: scale(3);
           transform: scale(3);
@@ -927,7 +927,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 @media (min-width: 767px) {
-  .works h3.title::before {
+  .works h2.title::before {
     -webkit-transform: scale(4);
             transform: scale(4);
   }
@@ -963,7 +963,7 @@ header .header .svg-container .svg-box .svg:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.works .works-container-object .top-bar h5.title {
+.works .works-container-object .top-bar h3.title {
   font-size: 2rem;
   color: #f2f2f2;
   text-transform: uppercase;
