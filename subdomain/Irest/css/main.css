@@ -231,7 +231,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -261,6 +261,11 @@ footer {
   footer {
     padding-block: 7em;
   }
+}
+
+.container {
+  max-width: 1366px;
+  margin-inline: auto;
 }
 
 .section-title {
@@ -327,7 +332,15 @@ footer {
 }
 
 .card .show-button {
+  color: #fff;
+  border-radius: 100%;
+  padding: 1em;
+  font-size: 2rem;
+  z-index: 10;
   position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -336,7 +349,21 @@ footer {
   transition: all 0.4s;
 }
 
-@media (min-width: 1000px) {
+.card .show-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #B9BE2F;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@media (min-width: 1200px) {
   .card .show-button {
     display: none;
   }
@@ -394,10 +421,12 @@ footer {
   transition: all 0.5s;
 }
 
-.card:hover .circle::before {
-  background: #B9BE2F;
-  -webkit-clip-path: circle(400px at center);
-          clip-path: circle(400px at center);
+@media (min-width: 1200px) {
+  .card:hover .circle::before {
+    background: #B9BE2F;
+    -webkit-clip-path: circle(400px at center);
+            clip-path: circle(400px at center);
+  }
 }
 
 .card .content {
@@ -456,10 +485,12 @@ footer {
   }
 }
 
-.card:hover .content {
-  left: 50%;
-  opacity: 1;
-  visibility: visible;
+@media (min-width: 1200px) {
+  .card:hover .content {
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .card img {
@@ -474,8 +505,10 @@ footer {
   transition: all 0.5s;
 }
 
-.card:hover img {
-  right: 72%;
+@media (min-width: 1200px) {
+  .card:hover img {
+    right: 72%;
+  }
 }
 
 .hamburger-menu {
@@ -568,37 +601,6 @@ form textarea {
   form textarea {
     font-size: 1.7rem;
   }
-}
-
-.container {
-  max-width: 1366px;
-  margin-inline: auto;
-}
-
-.show-button {
-  color: #fff;
-  border-radius: 100%;
-  padding: 1em;
-  font-size: 2rem;
-  z-index: 10;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-}
-
-.show-button::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #B9BE2F;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  z-index: -1;
 }
 
 .footer {

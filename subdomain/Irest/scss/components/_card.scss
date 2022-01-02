@@ -10,14 +10,35 @@
   margin-top: 3em;
 
   .show-button {
+    color: color(white);
+    border-radius: 100%;
+    padding: 1em;
+    font-size: 2rem;
+    z-index: 10;
     position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     transition: all 0.4s;
 
-    @include response (lg) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: color(secondary);
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      z-index: -1;
+    }
+
+    @include response(xl) {
       display: none;
     }
 
@@ -74,8 +95,10 @@
   }
 
   &:hover .circle::before {
-    background: color(secondary);
-    clip-path: circle(400px at center);
+    @include response(xl) {
+      background: color(secondary);
+      clip-path: circle(400px at center);
+    }
   }
 
   .content {
@@ -129,9 +152,11 @@
   }
 
   &:hover .content {
-    left: 50%;
-    opacity: 1;
-    visibility: visible;
+    @include response(xl) {
+      left: 50%;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   img {
@@ -148,205 +173,8 @@
   }
 
   &:hover img {
-    right: 72%;
+    @include response(xl) {
+      right: 72%;
+    }
   }
 }
-
-//CODE REFACTORING check maps.scss
-
-// #checkProduct-1:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-1:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-1:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-1:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-1:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-1:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// #checkProduct-1:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
-
-// #checkProduct-2:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-2:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-2:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-2:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-2:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-2:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// #checkProduct-2:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
-
-// #checkProduct-3:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-3:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-3:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-3:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-3:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-3:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// #checkProduct-3:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
-
-// #checkProduct-4:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-4:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-4:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-4:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-4:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-4:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// #checkProduct-4:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
-
-// #checkProduct-5:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-5:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-5:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-5:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-5:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-5:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// #checkProduct-5:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
-
-// #checkProduct-6:checked ~ .circle::before {
-//   background: color(secondary);
-//   clip-path: circle(400px at center);
-// }
-
-// #checkProduct-6:checked ~ .content {
-//   left: 50%;
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// #checkProduct-6:checked ~ img {
-//   right: 72%;
-// }
-
-// #checkProduct-6:checked ~ .show-button {
-//   left: 90%;
-//   top: 10%;
-// }
-
-// #checkProduct-6:checked ~ .show-button .open {
-//   visibility: hidden;
-//   opacity: 0;
-// }
-// #checkProduct-6:checked ~ .show-button .close {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// #checkProduct-6:checked ~ .show-button::before {
-//   visibility: hidden;
-// }
