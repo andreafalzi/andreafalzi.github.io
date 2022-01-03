@@ -140,8 +140,8 @@ header {
       }
 
       @include response(xxl) {
-      padding: 3em 0em;
-    }
+        padding: 3em 0em;
+      }
 
       .hero-title {
         text-align: center;
@@ -259,7 +259,6 @@ header {
       }
 
       .svg-box {
-
         .svg {
           border: 5px color(tertiary) solid;
           width: 35px;
@@ -769,6 +768,10 @@ footer {
     a {
       color: color(whitef2);
       font-size: size(sm);
+
+      &:hover {
+        color: color(tertiary);
+      }
 
       @include response(md) {
         font-size: size(md);
