@@ -323,8 +323,8 @@ ul {
   border-radius: 50%;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(33%, rgba(0, 0, 0, 0)), to(#00ff99));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 33%, #00ff99 100%);
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {

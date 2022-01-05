@@ -25,7 +25,7 @@
       place-content: center;
       border-radius: 50%;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0) 33%, color(tertiary) 100%);
-      animation: spin 1.2s linear infinite;
+      animation: spin 1s linear infinite;
 
       @keyframes spin {
         0% {
