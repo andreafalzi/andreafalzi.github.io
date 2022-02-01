@@ -1,0 +1,41 @@
+.lang-btn {
+  position: fixed;
+  top: 2%;
+  right: 0;
+
+  .bar {
+    background-color: color(secondary);
+    display: flex;
+    border-radius: 5px 0 0 5px;
+    font-family: font(title);
+    font-size: size(sm);
+    transform: translateX(100px);
+    transition: 250ms ease-in transform;
+
+    &:hover {
+      @include response(lg) {
+        transform: translateX(0px);
+      }
+    }
+    &.open {
+      transform: translateX(0px);
+    }
+
+    li {
+      padding: 1em;
+      cursor: pointer;
+      width: 50px;
+      text-align: center;
+
+      &[data-lang-active] {
+        background-color: color(tertiary);
+        border-radius: 5px 0 0 5px;
+        order: -1;
+      }
+
+      a {
+        color: color(primary);
+      }
+    }
+  }
+}

@@ -178,6 +178,10 @@ function loader() {
   }, 1500);
 }
 
+function openBtnLang() {
+  document.querySelector('ul.bar').classList.toggle('open');
+}
+
 /*========EXTERNALS========*/
 
 /* SMOOTH SCROLL */

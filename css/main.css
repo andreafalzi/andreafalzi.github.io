@@ -243,6 +243,57 @@
   visibility: visible;
 }
 
+.lang-btn {
+  position: fixed;
+  top: 2%;
+  right: 0;
+}
+
+.lang-btn .bar {
+  background-color: #d2d2d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px 0 0 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: 250ms ease-in transform;
+  transition: 250ms ease-in transform;
+}
+
+@media (min-width: 900px) {
+  .lang-btn .bar:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.lang-btn .bar.open {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.lang-btn .bar li {
+  padding: 1em;
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+}
+
+.lang-btn .bar li[data-lang-active] {
+  background-color: #00ff99;
+  border-radius: 5px 0 0 5px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.lang-btn .bar li a {
+  color: #424242;
+}
+
 * {
   margin: 0;
   padding: 0;
