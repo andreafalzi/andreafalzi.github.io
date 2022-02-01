@@ -560,7 +560,7 @@ nav .navbar-list {
     isolation: isolate;
   }
   nav .navbar-list li a::after {
-    content: "";
+    content: '';
     width: 20px;
     height: 5px;
     border-radius: 2px;
@@ -867,8 +867,10 @@ header .header .svg-container .svg-box .svg .arrow i {
   margin-top: -5px;
 }
 
-header .header .svg-container .svg-box .svg:hover {
-  background-color: #00ff99;
+@media (min-width: 900px) {
+  header .header .svg-container .svg-box .svg:hover {
+    background-color: #00ff99;
+  }
 }
 
 /* !!!SECTION WORKS!!! */
@@ -915,7 +917,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 .works h2.title::before {
-  content: "Works";
+  content: 'Works';
   -webkit-transform: scale(3);
           transform: scale(3);
   font-weight: 700;
@@ -974,7 +976,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 .works .works-container-object .main-content::after {
-  content: "";
+  content: '';
   inset: 0;
   background-color: rgba(51, 51, 51, 0.8);
   display: block;
@@ -990,7 +992,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 .works .works-container-object .main-content::before {
-  content: "more...";
+  content: 'more...';
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -1119,7 +1121,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 .about h3.title::before {
-  content: "About";
+  content: 'About';
   -webkit-transform: scale(3);
           transform: scale(3);
   font-weight: 700;
@@ -1193,7 +1195,7 @@ header .header .svg-container .svg-box .svg:hover {
     display: unset;
   }
   .about .about-content .right .blend-effect::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     background-color: black;
@@ -1251,7 +1253,7 @@ header .header .svg-container .svg-box .svg:hover {
 }
 
 .contact h3.title::before {
-  content: "Contact";
+  content: 'Contact';
   -webkit-transform: scale(3);
           transform: scale(3);
   font-weight: 700;

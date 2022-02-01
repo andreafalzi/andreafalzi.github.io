@@ -44,7 +44,7 @@ nav {
           isolation: isolate;
 
           &::after {
-            content: "";
+            content: '';
             width: 20px;
             height: 5px;
             border-radius: 2px;
@@ -289,7 +289,9 @@ header {
           }
 
           &:hover {
-            background-color: color(tertiary);
+            @include response(lg) {
+              background-color: color(tertiary);
+            }
           }
         }
       }
@@ -347,7 +349,7 @@ header {
     }
 
     &::before {
-      content: "Works";
+      content: 'Works';
       transform: scale(3);
       font-weight: 700;
       font-size: 3rem;
@@ -393,7 +395,7 @@ header {
         position: relative;
 
         &::after {
-          content: "";
+          content: '';
           inset: 0;
           background-color: color(blackOpa80);
           display: block;
@@ -407,7 +409,7 @@ header {
         }
 
         &::before {
-          content: "more...";
+          content: 'more...';
           position: absolute;
           bottom: 5%;
           left: 50%;
@@ -505,7 +507,7 @@ header {
     }
 
     &::before {
-      content: "About";
+      content: 'About';
       transform: scale(3);
       font-weight: 700;
       font-size: 3rem;
@@ -565,7 +567,7 @@ header {
         // width: 50%;
 
         .blend-effect::before {
-          content: "";
+          content: '';
           position: absolute;
           inset: 0;
           background-color: rgb(0, 0, 0);
@@ -616,7 +618,7 @@ header {
     }
 
     &::before {
-      content: "Contact";
+      content: 'Contact';
       transform: scale(3);
       font-weight: 700;
       font-size: 3rem;
