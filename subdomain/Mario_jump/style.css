@@ -1,89 +1,13 @@
-/*========IMPORT========*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-/* font-family: 'Poppins', sans-serif; */
-
-/*========ROOT========*/
-
-/*========TAGS========*/
-html {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-size: 62.5%;
+  overflow: hidden;
 }
 
 body {
-  background-color: rgb(48, 48, 48);
-  color: #f2f2f2;
-}
-
-/*========REUSABLE========*/
-
-/*========CONTENT========*/
-.wrap-mario {
-  position: relative;
-}
-
-#bg {
-  width: 100%;
-}
-
-#mario {
-  width: 4%;
-  position: absolute;
-  bottom: 16%;
-  left: 10%;
-}
-
-#burger {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  width: 10%;
-  opacity: 0;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: 1s ease-in transform 3500ms;
-}
-
-.btn-box {
-  display: flex;
-  justify-content: center;
-}
-
-.btn-mario-big {
-  border: none;
-  border-radius: 5px;
-  width: 200px;
-  margin: 25px 15px 0 15px;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  padding: 12px 20px;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #f2f2f2;
-  box-shadow: 0 9px #999;
-}
-
-.btn-mario-big:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.red-mario {
-  background-color: rgb(184, 28, 28);
-}
-
-.green-mario {
-  background-color: rgb(0, 102, 0);
-}
-
-/*========MEDIA QUERY========*/
-
-@media screen and (max-width: 450px) {
-  .btn-mario-big {
-    width: 50%;
-    font-size: 1.6rem;
-  }
+  margin: auto;
+  display: grid;
+  place-content: center;
+  background-color: #424242;
 }
