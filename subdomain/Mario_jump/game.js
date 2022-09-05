@@ -255,7 +255,7 @@ scene('game', (levelNumber = 0) => {
   ]);
 
   add([
-    text('Level ' + (levelNumber + 1), { size: 24 }), 
+    text('Level ' + (levelNumber + 1) + ' - ' + (LEVELS.length),
     pos(vec2(160, 120)), 
     color(255, 255, 255), 
     origin('center'), 
