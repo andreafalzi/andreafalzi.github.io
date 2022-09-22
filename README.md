@@ -1,4 +1,4 @@
-# https://andreafalzi.github.io
+# https://andreafalzi.dev
 
 Personal portfolio \
 Developing tech: HTML, SCSS, Vanilla JS. \
